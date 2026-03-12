@@ -1,0 +1,218 @@
+/* ================= GLOBAL ================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ================= LOGIN PAGE FIXED LAYOUT ================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.login-page .top-header {
+  flex: 0 0 auto;
+  padding: 30px 20px 20px 20px;
+}
+
+.login-page .auth-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 0;
+  margin-top: -20px;
+}
+
+/* ================= TOP HEADER ================= */
+
+.top-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.45),
+    transparent
+  );
+}
+
+.top-header h1 {
+  color: #ffffff;
+  font-size: 38px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.top-header p {
+  color: #f1f5f9;
+  font-size: 17px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= MAIN WRAPPER ================= */
+
+.auth-wrapper {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: url("https://images.unsplash.com/photo-1465447142348-e9952c393450?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.auth-left {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 60%,
+    rgba(0, 0, 0, 0.6) 80%,
+    transparent
+  );
+}
+
+.left-content {
+  max-width: 480px;
+}
+
+.brand-title,
+.auth-left h1 {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.brand-subtitle {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #22c55e;
+}
+
+.brand-description {
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.feature-list div {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #f1f5f9;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.auth-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* ================= FORM CARD ================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(18px);
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+}
+
+.auth-card h1,
+.auth-card h2 {
+  color: #ffffff !important;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.auth-card p {
+  color: #cbd5e1;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-subtitle {
+  margin-bottom: 25px !important;
+}
+
+/* ================= INPUTS ================= */
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #f1f5f9;
+  box-sizing: border-box;
+}
+
+/* ================= BUTTON ================= */
+
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-card button:hover {
+  background: #15803d;
+}
+
+/* ================= LINK ================= */
+
+.link-text {
+  margin-top: 20px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.link-text a {
+  color: #22c55e;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-text a:hover {
+  text-decoration: underline;
+}
