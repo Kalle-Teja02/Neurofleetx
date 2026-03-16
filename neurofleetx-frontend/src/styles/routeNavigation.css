@@ -70,6 +70,13 @@
   gap: 20px;
 }
 
+/* Main content wrapper for map and routes side by side */
+.route-main-content {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
 .route-header {
   text-align: center;
   color: white;
@@ -144,6 +151,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   height: 550px;
   overflow: hidden;
+  flex: 1;
 }
 
 .leaflet-map {
@@ -165,31 +173,40 @@
   padding: 25px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   margin-bottom: 15px;
+  flex: 0 0 380px;
+  height: 550px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .routes-container h2 {
   color: #333;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  text-align: left;
+  flex-shrink: 0;
 }
 
 .routes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 0;
+  flex: 1;
+  overflow-y: auto;
 }
 
 /* Route Card */
 .route-card {
   background: #f8f9fa;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
   border-left: 5px solid #ccc;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .route-card:hover {
@@ -207,11 +224,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .route-card-header h3 {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #333;
   margin: 0;
   font-weight: 700;
@@ -226,8 +243,8 @@
 
 .route-card-body {
   display: flex;
-  gap: 20px;
-  margin-bottom: 15px;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 .route-stat {
@@ -238,34 +255,34 @@
 }
 
 .route-stat-icon {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .route-stat-label {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #666;
-  margin: 0 0 3px 0;
+  margin: 0 0 2px 0;
 }
 
 .route-stat-value {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #333;
   margin: 0;
 }
 
 .route-card-footer {
-  padding-top: 12px;
+  padding-top: 8px;
   border-top: 1px solid #ddd;
 }
 
 .route-nodes {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #666;
   margin: 0;
   font-family: 'Courier New', monospace;
   background: white;
-  padding: 8px;
+  padding: 5px;
   border-radius: 5px;
 }
 
@@ -355,9 +372,30 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .route-main-content {
+    flex-direction: column;
+  }
+
+  .map-container {
+    min-width: auto;
+    flex: 1;
+  }
+
+  .routes-container {
+    flex: 0 0 auto;
+    height: auto;
+    max-height: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .route-header h1 {
     font-size: 2rem;
+  }
+
+  .route-main-content {
+    flex-direction: column;
   }
 
   .routes-grid {
@@ -379,6 +417,17 @@
 
   .leaflet-map {
     height: 400px;
+  }
+
+  .map-container {
+    height: 400px;
+    min-width: auto;
+  }
+
+  .routes-container {
+    flex: 0 0 auto;
+    height: auto;
+    max-height: 300px;
   }
 }
 

@@ -19,11 +19,10 @@ public class DriverManagementController {
     @GetMapping("/manager/test")
     public ResponseEntity<List<User>> getDriversForManager() {
         try {
-            // Find any MANAGER user
-            User manager = userRepository.findAll().stream()
-                    .filter(u -> "MANAGER".equals(u.getRole()))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("No MANAGER found"));
+            // Get the authenticated user from the request
+            // For now, find the manager with email abc@gmail.com
+            User manager = userRepository.findByEmail("abc@gmail.com")
+                    .orElseThrow(() -> new RuntimeException("Manager not found"));
             
             List<User> drivers = userRepository.findByRoleAndFleetManagerId("DRIVER", manager.getId());
             System.out.println("✅ Found " + drivers.size() + " drivers for manager " + manager.getId());

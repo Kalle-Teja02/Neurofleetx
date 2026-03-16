@@ -685,7 +685,53 @@ export default function RouteNavigation() {
         </div>
 
         {/* Map Container */}
-        <div className="map-container">
+        <div className="route-main-content">
+          {/* Route Cards Sidebar - Left Side */}
+          <div className="routes-container">
+            <h2>🚀 Available Routes</h2>
+            <div className="routes-grid">
+            {routes.length > 0 ? (
+              routes.map((route, idx) => (
+                <div
+                  key={idx}
+                  className={`route-card ${selectedRoute?.type === route.type ? 'selected' : ''}`}
+                  onClick={() => setSelectedRoute(route)}
+                  style={{ borderLeftColor: route.color }}
+                >
+                  <div className="route-card-header">
+                    <h3>{route.name}</h3>
+                    <div className="route-indicator" style={{ backgroundColor: route.color }}></div>
+                  </div>
+                  <div className="route-card-body">
+                    <div className="route-stat">
+                      <span className="route-stat-icon">📏</span>
+                      <div>
+                        <p className="route-stat-label">Distance</p>
+                        <p className="route-stat-value">{route.distance} km</p>
+                      </div>
+                    </div>
+                    <div className="route-stat">
+                      <span className="route-stat-icon">⏱️</span>
+                      <div>
+                        <p className="route-stat-label">ETA</p>
+                        <p className="route-stat-value">{route.eta}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="route-card-footer">
+                    <p className="route-nodes">Path: {route.nodes.join(' → ')}</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#999' }}>
+                Enter locations and click "Calculate Route" to see available routes
+              </p>
+            )}
+            </div>
+          </div>
+
+          <div className="map-container">
           {/* Route Legend */}
           <div className="route-legend">
             <div className="legend-title">📍 Route Types</div>
@@ -791,50 +837,6 @@ export default function RouteNavigation() {
               </Marker>
             )}
           </MapContainer>
-        </div>
-
-        {/* Route Cards */}
-        <div className="routes-container">
-          <h2>🚀 Available Routes (AI Optimized)</h2>
-          <div className="routes-grid">
-            {routes.length > 0 ? (
-              routes.map((route, idx) => (
-                <div
-                  key={idx}
-                  className={`route-card ${selectedRoute?.type === route.type ? 'selected' : ''}`}
-                  onClick={() => setSelectedRoute(route)}
-                  style={{ borderLeftColor: route.color }}
-                >
-                  <div className="route-card-header">
-                    <h3>{route.name}</h3>
-                    <div className="route-indicator" style={{ backgroundColor: route.color }}></div>
-                  </div>
-                  <div className="route-card-body">
-                    <div className="route-stat">
-                      <span className="route-stat-icon">📏</span>
-                      <div>
-                        <p className="route-stat-label">Distance</p>
-                        <p className="route-stat-value">{route.distance} km</p>
-                      </div>
-                    </div>
-                    <div className="route-stat">
-                      <span className="route-stat-icon">⏱️</span>
-                      <div>
-                        <p className="route-stat-label">ETA</p>
-                        <p className="route-stat-value">{route.eta}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="route-card-footer">
-                    <p className="route-nodes">Path: {route.nodes.join(' → ')}</p>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <p style={{ gridColumn: '1 / -1', textAlign: 'center', color: '#999' }}>
-                Enter locations and click "Calculate Route" to see available routes
-              </p>
-            )}
           </div>
         </div>
 

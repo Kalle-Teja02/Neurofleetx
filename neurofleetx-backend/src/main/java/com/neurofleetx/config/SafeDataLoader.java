@@ -51,24 +51,26 @@ public class SafeDataLoader implements CommandLineRunner {
         
         System.out.println("🔥 Reloading dashboard dummy data...");
         
-        // 1️⃣ Find existing Fleet Manager
-        User fleetManager = userRepository.findAll().stream()
-                .filter(u -> "MANAGER".equals(u.getRole()))
-                .findFirst()
-                .orElse(null);
+        // 1️⃣ Find or create Fleet Manager with credentials abc@gmail.com / 12345
+        User fleetManager = userRepository.findByEmail("abc@gmail.com").orElse(null);
         
         if (fleetManager == null) {
-            System.out.println("⚠️  WARNING: No Fleet Manager found in database!");
             System.out.println("💡 Creating default Fleet Manager...");
-            
             fleetManager = new User();
-            fleetManager.setEmail("manager@neurofleetx.com");
-            fleetManager.setPassword(passwordEncoder.encode("manager123"));
+            fleetManager.setEmail("abc@gmail.com");
+            fleetManager.setPassword(passwordEncoder.encode("12345"));
             fleetManager.setName("Fleet Manager");
             fleetManager.setRole("MANAGER");
             fleetManager.setActive(true);
             fleetManager.setPhone("9876543210");
             fleetManager = userRepository.save(fleetManager);
+            System.out.println("✅ Created new Fleet Manager with email: abc@gmail.com");
+        } else {
+            // Update password to ensure it matches
+            System.out.println("✅ Found existing Fleet Manager: " + fleetManager.getEmail());
+            fleetManager.setPassword(passwordEncoder.encode("12345"));
+            fleetManager = userRepository.save(fleetManager);
+            System.out.println("✅ Updated password for Fleet Manager");
         }
         
         Long managerId = fleetManager.getId();
@@ -80,11 +82,11 @@ public class SafeDataLoader implements CommandLineRunner {
         tripRepository.deleteAll();
         vehicleRepository.deleteAll();
         
-        // Delete only dummy drivers (those with fleetManagerId set)
-        List<User> dummyDrivers = userRepository.findByRoleAndFleetManagerId("DRIVER", managerId);
-        if (!dummyDrivers.isEmpty()) {
-            userRepository.deleteAll(dummyDrivers);
-            System.out.println("✅ Cleared " + dummyDrivers.size() + " dummy drivers");
+        // Delete all drivers (not just dummy ones)
+        List<User> allDrivers = userRepository.findByRole("DRIVER");
+        if (!allDrivers.isEmpty()) {
+            userRepository.deleteAll(allDrivers);
+            System.out.println("✅ Cleared " + allDrivers.size() + " drivers");
         }
         
         // 3️⃣ Insert 5 Drivers
@@ -141,35 +143,36 @@ public class SafeDataLoader implements CommandLineRunner {
             driver.setFleetManagerId(managerId);
             driver.setPhone("98765432" + (10 + i));
             driver.setLicense("DL" + (1000000000L + i));
-            drivers.add(userRepository.save(driver));
+            User savedDriver = userRepository.save(driver);
+            System.out.println("✅ Created driver: " + savedDriver.getName() + " (ID: " + savedDriver.getId() + ", ManagerID: " + savedDriver.getFleetManagerId() + ")");
+            drivers.add(savedDriver);
         }
         return drivers;
     }
 
     private List<Vehicle> createVehicles(Long managerId) {
         String[] vehicleNumbers = {
-            "TS09AB1234",
-            "TS08XY5678",
-            "TS10CD9012",
-            "TS07EF3456",
-            "TS09GH7890",
-            "TS08IJ2345",
-            "TS10KL6789",
-            "TS07MN0123"
+            "TS09AB1234", "TS08XY5678", "TS10CD9012", "TS07EF3456", "TS09GH7890", "TS08IJ2345", "TS10KL6789", "TS07MN0123",
+            "TS09OP4567", "TS08QR8901", "TS10ST2345", "TS07UV6789", "TS09WX0123", "TS08YZ4567", "TS10AB8901", "TS07CD2345",
+            "TS09EF6789", "TS08GH0123", "TS10IJ4567", "TS07KL8901", "TS09MN2345", "TS08OP6789", "TS10QR0123", "TS07ST4567",
+            "TS09UV8901", "TS08WX2345", "TS10YZ6789", "TS07AB0123", "TS09CD4567", "TS08EF8901", "TS10GH2345", "TS07IJ6789",
+            "TS09KL0123", "TS08MN4567", "TS10OP8901", "TS07QR2345", "TS09ST6789", "TS08UV0123", "TS10WX4567", "TS07YZ8901",
+            "TS09AB2345", "TS08CD6789", "TS10EF0123", "TS07GH4567", "TS09IJ8901"
         };
 
         String[] models = {
-            "Toyota Innova",
-            "Maruti Ertiga",
-            "Honda City",
-            "Hyundai Creta",
-            "Mahindra Scorpio",
-            "Tata Nexon",
-            "Kia Seltos",
-            "MG Hector"
+            "Toyota Innova", "Maruti Ertiga", "Honda City", "Hyundai Creta", "Mahindra Scorpio", "Tata Nexon", "Kia Seltos", "MG Hector",
+            "Toyota Fortuner", "Maruti Swift", "Honda Accord", "Hyundai Venue", "Mahindra XUV500", "Tata Harrier", "Kia Sonet", "MG Astor",
+            "Toyota Camry", "Maruti Baleno", "Honda Jazz", "Hyundai i20", "Mahindra Bolero", "Tata Altroz", "Kia Carens", "MG ZS EV",
+            "Toyota Fortuner", "Maruti Ciaz", "Honda CR-V", "Hyundai Creta", "Mahindra XUV300", "Tata Nexon EV", "Kia Niro", "MG Hector Plus",
+            "Toyota Innova", "Maruti Ertiga", "Honda City", "Hyundai Venue", "Mahindra Scorpio", "Tata Nexon", "Kia Seltos", "MG Astor",
+            "Toyota Camry", "Maruti Swift", "Honda Accord", "Hyundai i20", "Mahindra Bolero"
         };
 
-        String[] statuses = {"AVAILABLE", "IN_USE", "AVAILABLE", "IN_USE", "AVAILABLE", "IN_USE", "MAINTENANCE", "AVAILABLE"};
+        String[] statuses = new String[45];
+        for (int i = 0; i < 45; i++) {
+            statuses[i] = i % 3 == 0 ? "MAINTENANCE" : (i % 2 == 0 ? "AVAILABLE" : "IN_USE");
+        }
 
         // Base coordinates for Hyderabad
         double baseLatitude = 17.385044;

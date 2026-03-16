@@ -59,11 +59,9 @@ public class FleetDashboardController {
         try {
             System.out.println("🔍 Test endpoint called - no auth required");
             
-            // Find any MANAGER user
-            User manager = userRepository.findAll().stream()
-                    .filter(u -> "MANAGER".equals(u.getRole()))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("No MANAGER found"));
+            // Find manager with email abc@gmail.com
+            User manager = userRepository.findByEmail("abc@gmail.com")
+                    .orElseThrow(() -> new RuntimeException("Manager abc@gmail.com not found"));
             
             System.out.println("✅ Using MANAGER: " + manager.getEmail());
             

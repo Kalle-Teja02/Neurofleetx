@@ -1,0 +1,235 @@
+.maintenance-dashboard {
+  padding: 20px;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.refresh-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.refresh-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.dashboard-section {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-section h3 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.alerts-table,
+.maintenance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.alerts-table thead,
+.maintenance-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.alerts-table th,
+.maintenance-table th {
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.alerts-table td,
+.maintenance-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.alerts-table tbody tr:hover,
+.maintenance-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.vehicle-id {
+  font-weight: 600;
+  color: #333;
+}
+
+.issue-cell {
+  font-weight: 500;
+  color: #555;
+}
+
+.action-cell {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.date-cell {
+  color: #666;
+  font-weight: 500;
+}
+
+.mileage-cell {
+  font-weight: 600;
+  color: #333;
+}
+
+.status-badge {
+  display: inline-block;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Alert Severity Styling */
+.severity-high {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.severity-medium {
+  border-left: 4px solid #f59e0b;
+  background: #fffbf0;
+}
+
+.severity-low {
+  border-left: 4px solid #3b82f6;
+  background: #f0f9ff;
+}
+
+/* Maintenance Status Styling */
+.status-healthy {
+  border-left: 4px solid #10b981;
+  background: #f0fdf4;
+}
+
+.status-due-soon {
+  border-left: 4px solid #f59e0b;
+  background: #fffbf0;
+}
+
+.status-critical {
+  border-left: 4px solid #ef4444;
+  background: #fef2f2;
+}
+
+.no-alerts,
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #10b981;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #f0fdf4;
+  border-radius: 8px;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #dc2626;
+}
+
+.maintenance-dashboard-loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .alerts-table,
+  .maintenance-table {
+    font-size: 0.85rem;
+  }
+
+  .alerts-table th,
+  .maintenance-table th,
+  .alerts-table td,
+  .maintenance-table td {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintenance-dashboard {
+    padding: 10px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .dashboard-section {
+    padding: 15px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .alerts-table,
+  .maintenance-table {
+    font-size: 0.75rem;
+  }
+
+  .alerts-table th,
+  .maintenance-table th,
+  .alerts-table td,
+  .maintenance-table td {
+    padding: 8px;
+  }
+}

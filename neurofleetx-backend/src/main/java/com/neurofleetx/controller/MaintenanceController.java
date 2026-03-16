@@ -2,8 +2,10 @@ package com.neurofleetx.controller;
 
 import com.neurofleetx.entity.Maintenance;
 import com.neurofleetx.entity.User;
+import com.neurofleetx.entity.Vehicle;
 import com.neurofleetx.repository.MaintenanceRepository;
 import com.neurofleetx.repository.UserRepository;
+import com.neurofleetx.repository.VehicleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,18 +23,29 @@ public class MaintenanceController {
 
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private VehicleRepository vehicleRepository;
 
-    @GetMapping("/manager/test")
+    @GetMapping("/test")
     public ResponseEntity<List<Map<String, Object>>> getMaintenanceForManager() {
         try {
-            // Find any MANAGER user
-            User manager = userRepository.findAll().stream()
-                    .filter(u -> "MANAGER".equals(u.getRole()))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("No MANAGER found"));
+            // Find manager with email abc@gmail.com
+            User manager = userRepository.findByEmail("abc@gmail.com")
+                    .orElseThrow(() -> new RuntimeException("Manager not found"));
             
-            // Get all maintenance records for this fleet manager
-            List<Maintenance> maintenanceList = maintenanceRepository.findByFleetManagerId(manager.getId());
+            System.out.println("🔍 Found manager: " + manager.getEmail() + " (ID: " + manager.getId() + ")");
+            
+            // Get all vehicles for this manager
+            List<Vehicle> vehicles = vehicleRepository.findByFleetManagerId(manager.getId());
+            System.out.println("🚗 Found " + vehicles.size() + " vehicles for manager");
+            
+            // Get all maintenance records for these vehicles
+            List<Maintenance> maintenanceList = new ArrayList<>();
+            for (Vehicle vehicle : vehicles) {
+                List<Maintenance> vehicleMaintenance = maintenanceRepository.findByVehicle(vehicle);
+                maintenanceList.addAll(vehicleMaintenance);
+            }
             
             // Convert to response format
             List<Map<String, Object>> maintenanceRecords = maintenanceList.stream()
@@ -41,8 +54,12 @@ public class MaintenanceController {
                         record.put("id", maintenance.getId());
                         record.put("vehicleId", maintenance.getVehicle().getId());
                         record.put("vehicleNumber", maintenance.getVehicle().getVehicleNumber());
+                        record.put("vehicle", new HashMap<String, Object>() {{
+                            put("id", maintenance.getVehicle().getId());
+                            put("vehicleNumber", maintenance.getVehicle().getVehicleNumber());
+                        }});
                         record.put("type", maintenance.getDescription());
-                        record.put("scheduledDate", maintenance.getServiceDate().toString());
+                        record.put("serviceDate", maintenance.getServiceDate().toString());
                         record.put("nextServiceDate", maintenance.getNextServiceDate() != null ? 
                                     maintenance.getNextServiceDate().toString() : null);
                         record.put("status", maintenance.getStatus());

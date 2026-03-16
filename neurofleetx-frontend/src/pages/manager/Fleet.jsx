@@ -4,6 +4,7 @@ import axios from "axios";
 import { deleteVehicle } from "../../services/vehicleService";
 import EditVehicleModal from "../../components/EditVehicleModal";
 import VehicleDetailsModal from "../../components/VehicleDetailsModal";
+import VehicleWearChart from "../../components/VehicleWearChart";
 import "../../styles/pages.css";
 
 function Fleet() {
@@ -18,9 +19,25 @@ function Fleet() {
   const [renderKey, setRenderKey] = useState(0);
 
   useEffect(() => {
-    fetchVehicles();
-    fetchDrivers();
-    fetchTrips();
+    console.log('📋 Drivers loaded:', drivers);
+    console.log('📋 Drivers count:', drivers.length);
+  }, [drivers]);
+
+  useEffect(() => {
+    console.log('🚗 Vehicles loaded:', vehicles);
+    console.log('🚗 Vehicles count:', vehicles.length);
+  }, [vehicles]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      console.log('⏳ Starting data load...');
+      await fetchDrivers();
+      await fetchVehicles();
+      await fetchTrips();
+      console.log('✅ Data load complete');
+    };
+    
+    loadData();
     
     // Auto-refresh trips every 30 seconds to update duration
     const interval = setInterval(() => {
@@ -32,24 +49,39 @@ function Fleet() {
 
   const fetchTrips = async () => {
     try {
-      const response = await fetch('http://localhost:8082/api/trips/test/active');
+      console.log('🔄 Fetching all trips from /api/trips/manager/test');
+      const response = await fetch('http://localhost:8082/api/trips/manager/test');
       if (response.ok) {
         const data = await response.json();
         setTrips(data);
-        console.log("✅ Loaded", data.length, "active trips");
+        console.log("✅ Loaded", data.length, "total trips");
+        console.log("📋 Trip details:", data);
+        return data;
+      } else {
+        console.error("❌ Failed to fetch trips:", response.status);
+        setTrips([]);
+        return [];
       }
     } catch (error) {
       console.error("❌ Error loading trips:", error);
+      setTrips([]);
+      return [];
     }
   };
 
   const fetchDrivers = async () => {
     try {
+      console.log('🔄 Fetching drivers from /api/drivers/manager/test');
       const response = await axios.get('http://localhost:8082/api/drivers/manager/test');
+      console.log('📥 Response received:', response.data);
       setDrivers(response.data);
       console.log("✅ Loaded", response.data.length, "drivers");
+      return response.data;
     } catch (error) {
       console.error("❌ Error loading drivers:", error);
+      console.error("❌ Error details:", error.response?.data || error.message);
+      setDrivers([]);
+      return [];
     }
   };
 
@@ -153,6 +185,12 @@ function Fleet() {
   };
 
   const handleAssignDriver = async (vehicleId) => {
+    if (drivers.length === 0) {
+      alert('No drivers available');
+      return;
+    }
+
+    // Create a formatted list of drivers
     const driverOptions = drivers.map(d => `${d.id}: ${d.name}`).join('\n');
     const driverId = prompt(`Select Driver ID:\n\n${driverOptions}\n\nEnter Driver ID:`);
     
@@ -164,6 +202,13 @@ function Fleet() {
         const vehicle = vehicles.find(v => v.id === vehicleId);
         if (!vehicle) {
           alert('Vehicle not found');
+          return;
+        }
+        
+        // Verify driver exists
+        const selectedDriver = drivers.find(d => d.id === parseInt(driverId));
+        if (!selectedDriver) {
+          alert('Driver not found');
           return;
         }
         
@@ -180,7 +225,8 @@ function Fleet() {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache'
+            'Cache-Control': 'no-cache',
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
           },
           body: JSON.stringify(updatedVehicle)
         });
@@ -192,11 +238,10 @@ function Fleet() {
         const savedVehicle = await response.json();
         console.log('✅ Driver assigned successfully, received:', savedVehicle);
         
-        // Navigate away and back to force refresh
-        navigate('/manager');
-        setTimeout(() => {
-          navigate('/manager/fleet');
-        }, 100);
+        alert(`✅ Driver ${selectedDriver.name} assigned to vehicle ${vehicle.vehicleNumber}`);
+        
+        // Refresh vehicles
+        fetchVehicles();
       } catch (error) {
         console.error('❌ Error assigning driver:', error);
         alert('Failed to assign driver: ' + error.message);
@@ -244,6 +289,12 @@ function Fleet() {
         </div>
       </div>
 
+      {/* Charts & Analytics Section */}
+      <div style={{marginBottom: '30px', backgroundColor: '#fff', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
+        <h2 style={{marginTop: 0, marginBottom: '20px', color: '#333', fontSize: '1.5rem'}}>📊 Vehicle Wear Analysis</h2>
+        <VehicleWearChart />
+      </div>
+
       <div className="table-card">
         {!vehicles || vehicles.length === 0 ? (
           <div className="empty-state">
@@ -266,9 +317,12 @@ function Fleet() {
             <tbody>
               {vehicles?.map((vehicle) => {
                 const assignedDriver = drivers.find(d => d.id === vehicle.assignedDriverId);
+                // Find ANY trip for this vehicle (not just ACTIVE)
+                const vehicleTrip = trips.find(t => t.vehicleId === vehicle.id);
+                // Also check for ACTIVE trips specifically
                 const activeTrip = trips.find(t => t.vehicleId === vehicle.id && t.status === 'ACTIVE');
                 
-                // Calculate duration
+                // Calculate duration for active trips
                 let duration = '-';
                 if (activeTrip && activeTrip.startTime) {
                   const start = new Date(activeTrip.startTime);
@@ -279,7 +333,12 @@ function Fleet() {
                   duration = `${hours}h ${minutes}m`;
                 }
                 
-                console.log(`Vehicle ${vehicle.id}: assignedDriverId=${vehicle.assignedDriverId}, driver=`, assignedDriver);
+                const driverDisplay = assignedDriver 
+                  ? assignedDriver.name 
+                  : (vehicle.assignedDriverId ? `Driver ID: ${vehicle.assignedDriverId}` : 'Not Assigned');
+                
+                console.log(`Vehicle ${vehicle.vehicleNumber}: trip=`, vehicleTrip, 'activeTrip=', activeTrip);
+                
                 return (
                   <tr key={vehicle?.id || Math.random()}>
                     <td>{vehicle?.id || 'N/A'}</td>
@@ -289,17 +348,15 @@ function Fleet() {
                         {vehicle?.status || 'UNKNOWN'}
                       </span>
                     </td>
+                    <td>{driverDisplay}</td>
                     <td>
-                      {assignedDriver ? assignedDriver.name : (vehicle.assignedDriverId ? `Driver ID: ${vehicle.assignedDriverId}` : 'Not Assigned')}
-                    </td>
-                    <td>
-                      {activeTrip && activeTrip.startTime 
-                        ? new Date(activeTrip.startTime).toLocaleString() 
+                      {vehicleTrip && vehicleTrip.startTime 
+                        ? new Date(vehicleTrip.startTime).toLocaleString() 
                         : '-'}
                     </td>
                     <td>
-                      {activeTrip && activeTrip.endTime 
-                        ? new Date(activeTrip.endTime).toLocaleString() 
+                      {vehicleTrip && vehicleTrip.endTime 
+                        ? new Date(vehicleTrip.endTime).toLocaleString() 
                         : (activeTrip ? 'In Progress' : '-')}
                     </td>
                     <td style={{fontWeight: activeTrip ? 'bold' : 'normal', color: activeTrip ? '#6f42c1' : 'inherit'}}>

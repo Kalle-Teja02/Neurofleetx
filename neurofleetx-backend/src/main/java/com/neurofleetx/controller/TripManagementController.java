@@ -30,11 +30,9 @@ public class TripManagementController {
     @GetMapping("/manager/test")
     public ResponseEntity<List<Trip>> getTripsForManager() {
         try {
-            // Find any MANAGER user
-            User manager = userRepository.findAll().stream()
-                    .filter(u -> "MANAGER".equals(u.getRole()))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("No MANAGER found"));
+            // Get the manager with email abc@gmail.com
+            User manager = userRepository.findByEmail("abc@gmail.com")
+                    .orElseThrow(() -> new RuntimeException("Manager not found"));
             
             List<Trip> trips = tripRepository.findByFleetManagerId(manager.getId());
             System.out.println("✅ Found " + trips.size() + " trips for manager " + manager.getId());
