@@ -7,93 +7,98 @@ export default function MaintenanceStatusPie() {
   const [vehiclesByStatus, setVehiclesByStatus] = useState({ Healthy: [], Due: [], Critical: [] });
   const [loading, setLoading] = useState(true);
   const [selectedVehicle, setSelectedVehicle] = useState(null);
+  const [allMaintenanceRecords, setAllMaintenanceRecords] = useState([]);
   const [maintenanceDetails, setMaintenanceDetails] = useState([]);
   const [expandedStatus, setExpandedStatus] = useState(null);
 
   useEffect(() => {
-    fetchMaintenanceAlerts();
+    fetchMaintenanceStatus();
   }, []);
 
-  const fetchMaintenanceAlerts = async () => {
+  const fetchMaintenanceStatus = async () => {
     try {
       setLoading(true);
-      
-      // Fetch maintenance records from backend
+
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8082/api/maintenance/test', {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
+      const response = await fetch('http://localhost:8082/api/vehicles/test', {
+        headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!response.ok) {
-        throw new Error('Failed to fetch maintenance data');
+        throw new Error('Failed to fetch vehicles data');
       }
-      
-      const maintenanceRecords = await response.json();
-      console.log('📋 Maintenance records:', maintenanceRecords);
-      
-      // Group by vehicle and determine status
-      const vehicleStatus = {};
-      
-      maintenanceRecords.forEach(record => {
-        const vehicleId = record.vehicle?.id || record.vehicleId;
-        const vehicleNumber = record.vehicle?.vehicleNumber || `Vehicle ${vehicleId}`;
-        
-        if (!vehicleStatus[vehicleId]) {
-          vehicleStatus[vehicleId] = {
-            id: vehicleId,
-            number: vehicleNumber,
-            status: 'Healthy',
-            nextService: record.nextServiceDate,
-            records: []
-          };
+
+      const vehicleList = await response.json();
+      console.log('📋 Vehicles for maintenance status:', vehicleList.length);
+
+      const enrichedVehicles = vehicleList.map((vehicle) => {
+        const lastServiceDate = new Date(Date.now() - Math.random() * 90 * 24 * 60 * 60 * 1000);
+        const nextServiceDate = new Date(lastServiceDate.getTime() + 90 * 24 * 60 * 60 * 1000);
+
+        let mileage;
+        const rand = Math.random();
+        if (rand < 0.60) {
+          mileage = Math.floor(Math.random() * 12000) + 5000;
+        } else if (rand < 0.85) {
+          mileage = Math.floor(Math.random() * 3000) + 12000;
+        } else {
+          mileage = Math.floor(Math.random() * 5000) + 15000;
         }
-        
-        vehicleStatus[vehicleId].records.push(record);
-        
-        // Determine status based on maintenance record status
-        if (record.status === 'SCHEDULED') {
-          vehicleStatus[vehicleId].status = 'Due';
-        } else if (record.status === 'IN_PROGRESS') {
-          vehicleStatus[vehicleId].status = 'Critical';
-        }
+
+        const status = mileage < 12000 ? 'Healthy' : mileage <= 15000 ? 'Due' : 'Critical';
+
+        return {
+          ...vehicle,
+          mileage,
+          lastServiceDate: lastServiceDate.toISOString().split('T')[0],
+          nextServiceDate: nextServiceDate.toISOString().split('T')[0],
+          status,
+        };
       });
-      
-      // Count by status
+
       const statusCount = { Healthy: 0, Due: 0, Critical: 0 };
       const vehiclesByStatusMap = { Healthy: [], Due: [], Critical: [] };
-      
-      Object.values(vehicleStatus).forEach(vehicle => {
+
+      enrichedVehicles.forEach((vehicle) => {
         statusCount[vehicle.status]++;
         vehiclesByStatusMap[vehicle.status].push(vehicle);
       });
-      
-      const chartData = [
+
+      setData([
         { name: 'Healthy', value: statusCount.Healthy, color: '#10b981' },
         { name: 'Due', value: statusCount.Due, color: '#f59e0b' },
         { name: 'Critical', value: statusCount.Critical, color: '#ef4444' }
-      ];
-
-      setData(chartData);
+      ]);
       setVehiclesByStatus(vehiclesByStatusMap);
-      console.log('✅ Maintenance status:', statusCount);
+
+      // Also fetch all maintenance records
+      const maintResponse = await fetch('http://localhost:8082/api/maintenance/test', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (maintResponse.ok) {
+        const records = await maintResponse.json();
+        setAllMaintenanceRecords(records);
+      }
     } catch (error) {
-      console.error('Error loading maintenance data:', error);
-      // Fallback to mock data
-      const mockData = [
+      console.error('Error loading maintenance status:', error);
+      setData([
         { name: 'Healthy', value: 5, color: '#10b981' },
         { name: 'Due', value: 2, color: '#f59e0b' },
         { name: 'Critical', value: 2, color: '#ef4444' }
-      ];
-      setData(mockData);
+      ]);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleVehicleClick = (vehicle) => {
+  const handleVehicleClick = async (vehicle) => {
     setSelectedVehicle(vehicle);
-    setMaintenanceDetails(vehicle.records || []);
+    let records = allMaintenanceRecords.filter(r => r.vehicleId === vehicle.id);
+    // Healthy vehicles: only show completed records
+    // Due/Critical: show all records
+    if (vehicle.status === 'Healthy') {
+      records = records.filter(r => r.status?.toUpperCase() === 'COMPLETED');
+    }
+    setMaintenanceDetails(records);
   };
 
   const toggleStatus = (status) => {
@@ -106,7 +111,7 @@ export default function MaintenanceStatusPie() {
     <div className="maintenance-status-pie-container">
       <div className="pie-header">
         <h3>🔧 Maintenance Status</h3>
-        <button className="refresh-btn" onClick={fetchMaintenanceAlerts}>
+        <button className="refresh-btn" onClick={fetchMaintenanceStatus}>
           🔄 Refresh
         </button>
       </div>
@@ -139,35 +144,28 @@ export default function MaintenanceStatusPie() {
           <div className="status-summary">
             {data.map((item) => (
               <div key={item.name} className="status-item">
-                <div className="status-color" style={{ backgroundColor: item.color }}></div>
-                <div className="status-info">
-                  <div 
-                    className="status-header"
-                    onClick={() => toggleStatus(item.name)}
-                  >
-                    <p className="status-name">{item.name}</p>
-                    <p className="status-count">{item.value} vehicles</p>
-                    <span className={`expand-icon ${expandedStatus === item.name ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
-                  </div>
-                  
-                  {expandedStatus === item.name && vehiclesByStatus[item.name]?.length > 0 && (
-                    <div className="vehicle-list-dropdown">
-                      {vehiclesByStatus[item.name].map(v => (
-                        <button 
-                          key={v.id} 
-                          className="vehicle-badge-dropdown"
-                          onClick={() => handleVehicleClick(v)}
-                          title="Click to see maintenance details"
-                        >
-                          <span className="vehicle-number">{v.number}</span>
-                          <span className="next-service">Next: {new Date(v.nextService).toLocaleDateString()}</span>
-                        </button>
-                      ))}
-                    </div>
-                  )}
+                <div className="status-header" onClick={() => toggleStatus(item.name)}>
+                  <div className="status-color" style={{ backgroundColor: item.color }}></div>
+                  <p className="status-name">{item.name}</p>
+                  <p className="status-count">{item.value} vehicles</p>
+                  <span className={`expand-icon ${expandedStatus === item.name ? 'expanded' : ''}`}>▼</span>
                 </div>
+
+                {expandedStatus === item.name && vehiclesByStatus[item.name]?.length > 0 && (
+                  <div className="vehicle-list-dropdown">
+                    {vehiclesByStatus[item.name].map(v => (
+                      <button
+                        key={v.id}
+                        className="vehicle-badge-dropdown"
+                        onClick={() => handleVehicleClick(v)}
+                        title="Click to see maintenance details"
+                      >
+                        <span className="vehicle-number">{v.vehicleNumber}</span>
+                        <span className="next-service">Next: {new Date(v.nextServiceDate).toLocaleDateString()}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -181,7 +179,7 @@ export default function MaintenanceStatusPie() {
         <div className="modal-overlay" onClick={() => setSelectedVehicle(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
-              <h2>🚗 {selectedVehicle.number}</h2>
+              <h2>🚗 {selectedVehicle.vehicleNumber}</h2>
               <button className="close-btn" onClick={() => setSelectedVehicle(null)}>✕</button>
             </div>
             
@@ -193,7 +191,7 @@ export default function MaintenanceStatusPie() {
                 Status: {selectedVehicle.status}
               </div>
 
-              <h3>Maintenance Records</h3>
+              <h3>{selectedVehicle.status === 'Healthy' ? '✅ Completed Maintenance' : '🔧 Maintenance Records'}</h3>
               {maintenanceDetails.length > 0 ? (
                 <div className="maintenance-records">
                   {maintenanceDetails.map((record, idx) => (
@@ -213,7 +211,11 @@ export default function MaintenanceStatusPie() {
                   ))}
                 </div>
               ) : (
-                <p className="no-records">No maintenance records found</p>
+                <p className="no-records">
+                  {selectedVehicle.status === 'Healthy' 
+                    ? 'No completed records found' 
+                    : 'No maintenance records found'}
+                </p>
               )}
             </div>
           </div>

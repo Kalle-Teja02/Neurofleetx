@@ -4,7 +4,6 @@ import axios from "axios";
 import { deleteVehicle } from "../../services/vehicleService";
 import EditVehicleModal from "../../components/EditVehicleModal";
 import VehicleDetailsModal from "../../components/VehicleDetailsModal";
-import VehicleWearChart from "../../components/VehicleWearChart";
 import "../../styles/pages.css";
 
 function Fleet() {
@@ -287,12 +286,6 @@ function Fleet() {
           <button className="primary-btn" onClick={() => setRenderKey(prev => prev + 1)}>🔄 Refresh</button>
           <button className="primary-btn" onClick={handleAddVehicle}>Add Vehicle</button>
         </div>
-      </div>
-
-      {/* Charts & Analytics Section */}
-      <div style={{marginBottom: '30px', backgroundColor: '#fff', padding: '20px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-        <h2 style={{marginTop: 0, marginBottom: '20px', color: '#333', fontSize: '1.5rem'}}>📊 Vehicle Wear Analysis</h2>
-        <VehicleWearChart />
       </div>
 
       <div className="table-card">

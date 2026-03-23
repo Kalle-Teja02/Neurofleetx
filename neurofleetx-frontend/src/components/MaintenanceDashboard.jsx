@@ -10,160 +10,112 @@ export default function MaintenanceDashboard() {
 
   useEffect(() => {
     fetchVehicleData();
-    const interval = setInterval(fetchVehicleData, 30000); // Refresh every 30 seconds
+    const interval = setInterval(fetchVehicleData, 30000);
     return () => clearInterval(interval);
   }, []);
 
-  const fetchVehicleData = async () => {
-    try {
-      setLoading(true);
-      const token = localStorage.getItem('token');
-      
-      // Fetch vehicles
-      const vehicleResponse = await fetch('http://localhost:8082/api/vehicles/test', {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      
-      if (!vehicleResponse.ok) throw new Error('Failed to fetch vehicles');
-      
-      const vehiclesData = await vehicleResponse.json();
-      console.log('📊 Total vehicles fetched:', vehiclesData.length);
-      
-      // Enrich vehicles with simulated sensor data and maintenance dates
-      // Distribute mileage to create realistic status distribution
-      const enrichedVehicles = vehiclesData.map((vehicle, index) => {
-        const lastServiceDate = new Date(Date.now() - Math.random() * 90 * 24 * 60 * 60 * 1000);
-        const nextServiceDate = new Date(lastServiceDate.getTime() + 90 * 24 * 60 * 60 * 1000);
-        
-        // Distribute mileage: 60% Healthy, 25% Due Soon, 15% Critical
-        let mileage;
-        const rand = Math.random();
-        if (rand < 0.60) {
-          // Healthy: < 12,000 km
-          mileage = Math.floor(Math.random() * 12000) + 5000;
-        } else if (rand < 0.85) {
-          // Due Soon: 12,000-15,000 km
-          mileage = Math.floor(Math.random() * 3000) + 12000;
-        } else {
-          // Critical: > 15,000 km
-          mileage = Math.floor(Math.random() * 5000) + 15000;
-        }
-        
-        return {
-          ...vehicle,
-          engineHealth: Math.floor(Math.random() * 40) + 60, // 60-100
-          tireCondition: Math.floor(Math.random() * 60) + 40, // 40-100
-          fuelLevel: Math.floor(Math.random() * 70) + 30, // 30-100
-          batteryHealth: Math.floor(Math.random() * 60) + 40, // 40-100
-          speed: Math.floor(Math.random() * 60) + 60, // 60-120
-          mileage: mileage,
-          lastServiceDate: lastServiceDate.toISOString().split('T')[0],
-          nextServiceDate: nextServiceDate.toISOString().split('T')[0],
-          maintenanceStatus: getMaintenanceStatus(mileage)
-        };
-      });
-      
-      setVehicles(enrichedVehicles);
-      console.log('✅ Enriched vehicles:', enrichedVehicles.length);
-      
-      // Generate alerts based on new rules
-      const generatedAlerts = generateAlerts(enrichedVehicles);
-      setAlerts(generatedAlerts);
-      console.log('⚠️ Generated alerts:', generatedAlerts.length);
-      
-      // Generate maintenance predictions
-      const predictions = generateMaintenancePredictions(enrichedVehicles);
-      setMaintenancePredictions(predictions);
-      
-      setError(null);
-    } catch (err) {
-      console.error('Error fetching vehicle data:', err);
-      setError('Failed to load vehicle data');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const getMaintenanceStatus = (mileage) => {
     if (mileage < 12000) return 'Healthy';
-    if (mileage >= 12000 && mileage <= 15000) return 'Due Soon';
+    if (mileage <= 15000) return 'Due Soon';
     return 'Critical';
   };
 
   const generateAlerts = (vehiclesList) => {
     const alertsList = [];
-    
     vehiclesList.forEach(vehicle => {
-      // Overspeed alert (speed > 100 km/h)
-      if (vehicle.speed > 100) {
-        alertsList.push({
-          id: `${vehicle.id}-speed`,
-          vehicleId: vehicle.id,
-          vehicleNumber: vehicle.vehicleNumber,
-          issue: 'Overspeed Warning',
-          actionNeeded: 'Notify Driver',
-          severity: 'high'
-        });
-      }
-      
-      // Tire alert (tireCondition < 40)
-      if (vehicle.tireCondition < 40) {
-        alertsList.push({
-          id: `${vehicle.id}-tire`,
-          vehicleId: vehicle.id,
-          vehicleNumber: vehicle.vehicleNumber,
-          issue: 'Tire Pressure Low',
-          actionNeeded: 'Inflate Tire',
-          severity: 'high'
-        });
-      }
-
-      // Battery alert (batteryHealth < 35)
-      if (vehicle.batteryHealth < 35) {
-        alertsList.push({
-          id: `${vehicle.id}-battery`,
-          vehicleId: vehicle.id,
-          vehicleNumber: vehicle.vehicleNumber,
-          issue: 'Battery Weak',
-          actionNeeded: 'Replace Battery',
-          severity: 'high'
-        });
-      }
-
-      // Engine alert (engineHealth < 50)
       if (vehicle.engineHealth < 50) {
-        alertsList.push({
-          id: `${vehicle.id}-engine`,
-          vehicleId: vehicle.id,
-          vehicleNumber: vehicle.vehicleNumber,
-          issue: 'Engine Overheat',
-          actionNeeded: 'Service Engine',
-          severity: 'high'
-        });
+        alertsList.push({ id: `${vehicle.id}-engine-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Engine Health Critical', actionNeeded: 'Schedule Immediate Service', severity: 'high' });
+      } else if (vehicle.engineHealth < 70) {
+        alertsList.push({ id: `${vehicle.id}-engine-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'Engine Health Degrading', actionNeeded: 'Monitor Performance', severity: 'medium' });
+      }
+      if (vehicle.tireCondition < 40) {
+        alertsList.push({ id: `${vehicle.id}-tire-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Tire Pressure Low', actionNeeded: 'Inflate Tire', severity: 'high' });
+      } else if (vehicle.tireCondition < 60) {
+        alertsList.push({ id: `${vehicle.id}-tire-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'Tire Condition Degrading', actionNeeded: 'Check Tire Pressure', severity: 'medium' });
+      }
+      if (vehicle.batteryHealth < 35) {
+        alertsList.push({ id: `${vehicle.id}-bat-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Battery Weak', actionNeeded: 'Replace Battery', severity: 'high' });
+      } else if (vehicle.batteryHealth < 50) {
+        alertsList.push({ id: `${vehicle.id}-bat-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'Battery Health Low', actionNeeded: 'Plan Battery Replacement', severity: 'medium' });
+      }
+      if (vehicle.fuelLevel < 30) {
+        alertsList.push({ id: `${vehicle.id}-fuel-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Fuel Level Low', actionNeeded: 'Refuel Vehicle', severity: 'medium' });
+      } else if (vehicle.fuelLevel < 50) {
+        alertsList.push({ id: `${vehicle.id}-fuel-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'Fuel Level Moderate', actionNeeded: 'Plan Refueling', severity: 'medium' });
+      }
+      if (vehicle.speed > 100) {
+        alertsList.push({ id: `${vehicle.id}-spd-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Overspeed Warning', actionNeeded: 'Notify Driver', severity: 'high' });
+      } else if (vehicle.speed > 80) {
+        alertsList.push({ id: `${vehicle.id}-spd-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'High Speed Detected', actionNeeded: 'Monitor Driver', severity: 'medium' });
+      }
+      if (vehicle.mileage > 15000) {
+        alertsList.push({ id: `${vehicle.id}-mil-c`, vehicleNumber: vehicle.vehicleNumber, issue: 'Mileage Critical', actionNeeded: 'Schedule Maintenance', severity: 'high' });
+      } else if (vehicle.mileage > 12000) {
+        alertsList.push({ id: `${vehicle.id}-mil-w`, vehicleNumber: vehicle.vehicleNumber, issue: 'Mileage Due Soon', actionNeeded: 'Schedule Maintenance', severity: 'medium' });
+      }
+      if (Math.random() > 0.75) {
+        alertsList.push({ id: `${vehicle.id}-brk`, vehicleNumber: vehicle.vehicleNumber, issue: 'Brake Wear High', actionNeeded: 'Schedule Brake Inspection', severity: 'medium' });
+      }
+      if (Math.random() > 0.8) {
+        alertsList.push({ id: `${vehicle.id}-oil`, vehicleNumber: vehicle.vehicleNumber, issue: 'Oil Change Due', actionNeeded: 'Schedule Oil Service', severity: 'medium' });
       }
     });
-    
     return alertsList;
   };
 
   const generateMaintenancePredictions = (vehiclesList) => {
     return vehiclesList.map(vehicle => ({
       id: vehicle.id,
-      vehicleId: vehicle.id,
       vehicleNumber: vehicle.vehicleNumber,
       lastServiceDate: vehicle.lastServiceDate,
       nextServiceDate: vehicle.nextServiceDate,
-      status: vehicle.maintenanceStatus,
+      status: vehicle.maintenanceStatus || 'Healthy',
       mileage: vehicle.mileage
     }));
   };
 
-  const getSeverityColor = (severity) => {
-    switch (severity) {
-      case 'high': return '#ef4444';
-      case 'medium': return '#f59e0b';
-      case 'low': return '#3b82f6';
-      default: return '#6b7280';
+  const fetchVehicleData = async () => {
+    try {
+      setLoading(true);
+      const token = localStorage.getItem('token');
+      const vehicleResponse = await fetch('http://localhost:8082/api/vehicles/test', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      if (!vehicleResponse.ok) throw new Error('Failed to fetch vehicles');
+      const vehiclesData = await vehicleResponse.json();
+
+      const enrichedVehicles = vehiclesData.map((vehicle) => {
+        const lastServiceDate = new Date(Date.now() - Math.random() * 90 * 24 * 60 * 60 * 1000);
+        const nextServiceDate = new Date(lastServiceDate.getTime() + 90 * 24 * 60 * 60 * 1000);
+        const rand = Math.random();
+        let mileage;
+        if (rand < 0.60) mileage = Math.floor(Math.random() * 7000) + 5000;
+        else if (rand < 0.85) mileage = Math.floor(Math.random() * 3000) + 12000;
+        else mileage = Math.floor(Math.random() * 5000) + 15000;
+
+        return {
+          ...vehicle,
+          engineHealth: Math.floor(Math.random() * 40) + 60,
+          tireCondition: Math.floor(Math.random() * 60) + 40,
+          fuelLevel: Math.floor(Math.random() * 70) + 30,
+          batteryHealth: Math.floor(Math.random() * 60) + 40,
+          speed: Math.floor(Math.random() * 60) + 60,
+          mileage,
+          lastServiceDate: lastServiceDate.toISOString().split('T')[0],
+          nextServiceDate: nextServiceDate.toISOString().split('T')[0],
+          maintenanceStatus: getMaintenanceStatus(mileage)
+        };
+      });
+
+      setVehicles(enrichedVehicles);
+      setAlerts(generateAlerts(enrichedVehicles));
+      setMaintenancePredictions(generateMaintenancePredictions(enrichedVehicles));
+      setError(null);
+    } catch (err) {
+      console.error('Error fetching vehicle data:', err);
+      setError('Failed to load vehicle data. Make sure the backend is running.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -237,15 +189,12 @@ export default function MaintenanceDashboard() {
               </thead>
               <tbody>
                 {maintenancePredictions.map(prediction => (
-                  <tr key={prediction.id} className={`status-${prediction.status.toLowerCase().replace(' ', '-')}`}>
+                  <tr key={prediction.id} className={`status-${(prediction.status || 'healthy').toLowerCase().replace(/ /g, '-')}`}>
                     <td className="vehicle-id">{prediction.vehicleNumber}</td>
                     <td className="date-cell">{new Date(prediction.lastServiceDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</td>
                     <td className="date-cell">{new Date(prediction.nextServiceDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</td>
                     <td>
-                      <span 
-                        className="status-badge"
-                        style={{ backgroundColor: getStatusColor(prediction.status) }}
-                      >
+                      <span className="status-badge" style={{ backgroundColor: getStatusColor(prediction.status) }}>
                         {prediction.status}
                       </span>
                     </td>
