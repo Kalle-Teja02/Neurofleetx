@@ -27,7 +27,7 @@ import Maintenance from "./pages/manager/Maintenance";
 import Reports from "./pages/manager/Reports";
 import FleetInventoryPage from "./pages/FleetInventoryPage";
 
-// Driver Pages
+import CustomerBookingPage from "./pages/customer/CustomerBookingPage";
 import MyTripsDriver from "./pages/driver/MyTripsDriver";
 import Earnings from "./pages/driver/Earnings";
 import Schedule from "./pages/driver/Schedule";
@@ -89,6 +89,7 @@ function App() {
         <Route path="/customer/my-trips" element={<ProtectedRoute><MyTrips /></ProtectedRoute>} />
         <Route path="/customer/my-bookings" element={<ProtectedRoute><MyBookings /></ProtectedRoute>} />
         <Route path="/customer/plan-trip" element={<ProtectedRoute><PlanTrip /></ProtectedRoute>} />
+        <Route path="/customer/book" element={<ProtectedRoute><CustomerBookingPage /></ProtectedRoute>} />
         <Route path="/customer/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Routes>
     </Router>

@@ -43,7 +43,7 @@ function CustomerDashboard() {
   };
 
   const handleBookCab = () => {
-    setShowBookingModal(true);
+    navigate('/customer/book');
   };
 
   const handleCancelTrip = (tripId) => {
@@ -70,7 +70,7 @@ function CustomerDashboard() {
         <div className="navbar-brand">NeuroFleetX</div>
         <ul className="navbar-menu">
           <li className="active" onClick={() => navigate("/customer")}>Dashboard</li>
-          <li onClick={() => navigate("/customer/plan-trip")}>Plan Trip & Book</li>
+          <li onClick={() => navigate("/customer/book")}>Plan Trip & Book</li>
           <li onClick={() => navigate("/customer/my-bookings")}>My Bookings</li>
           <li onClick={() => navigate("/customer/my-trips")}>My Trips</li>
           <li onClick={() => navigate("/customer/profile")}>Profile</li>
