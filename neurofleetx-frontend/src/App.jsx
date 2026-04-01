@@ -73,6 +73,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/driver/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
         <Route path="/driver/my-trips" element={<ProtectedRoute><MyTripsDriver /></ProtectedRoute>} />
         <Route path="/driver/earnings" element={<ProtectedRoute><Earnings /></ProtectedRoute>} />
         <Route path="/driver/schedule" element={<ProtectedRoute><Schedule /></ProtectedRoute>} />

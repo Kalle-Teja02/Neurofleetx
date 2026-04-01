@@ -561,3 +561,23 @@
 .map-container {
   position: relative;
 }
+
+/* ── Load Balancing ── */
+.route-card.best-route {
+  border-left-color: #1d4ed8 !important;
+  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  box-shadow: 0 4px 16px rgba(29,78,216,0.18);
+}
+
+.best-route-label {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: inline-block;
+}

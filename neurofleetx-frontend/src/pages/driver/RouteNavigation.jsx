@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/routeNavigation.css';
 import { dijkstra, getIntermediateNodes } from '../../utils/dijkstra';
 import { cityGraph, cityCoordinates } from '../../utils/cityGraph';
+import { scoreRoutes, trafficLabel } from '../../utils/loadBalancer';
 
 // Fix marker icons
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -366,17 +367,9 @@ export default function RouteNavigation() {
       console.log('✅ Route 3 (High Traffic):', { distance: route3.distance + ' km', eta: route3.eta, duration: route3.duration });
     }
 
-    setRoutes(calculatedRoutes);
-    setSelectedRoute(calculatedRoutes[0]);
-    
-    console.log('═══════════════════════════════════════');
-    console.log('📊 FINAL ROUTE DISTANCES:');
-    calculatedRoutes.forEach((route, idx) => {
-      console.log(`Route ${idx + 1} (${route.name}): ${route.distance} km | ${route.eta}`);
-    });
-    console.log('═══════════════════════════════════════');
-    console.log('✅ ALL ROUTES CALCULATED SUCCESSFULLY');
-    console.log('═══════════════════════════════════════');
+    const scoredRoutes = scoreRoutes(calculatedRoutes);
+    setRoutes(scoredRoutes);
+    setSelectedRoute(scoredRoutes[0]);
   };
 
   // Format duration to readable ETA
@@ -530,16 +523,9 @@ export default function RouteNavigation() {
       };
       calculatedRoutes.push(route3);
 
-      setRoutes(calculatedRoutes);
-      setSelectedRoute(calculatedRoutes[0]);
-      
-      console.log('═══════════════════════════════════════');
-      console.log('🔄 ROUTES RECALCULATED WITH NEW TRAFFIC');
-      console.log('═══════════════════════════════════════');
-      console.log('Route 1 (Fastest):', { distance: route1.distance + ' km', eta: route1.eta });
-      console.log('Route 2 (Alternate +15%):', { distance: route2.distance + ' km', eta: route2.eta, traffic: altTrafficMult.toFixed(2) + 'x' });
-      console.log('Route 3 (High Traffic +35%):', { distance: route3.distance + ' km', eta: route3.eta, traffic: trafficMult.toFixed(2) + 'x' });
-      console.log('═══════════════════════════════════════');
+      const scoredRoutes = scoreRoutes(calculatedRoutes);
+      setRoutes(scoredRoutes);
+      setSelectedRoute(scoredRoutes[0]);
     }
     
     toast.dismiss('recalculating');
@@ -694,14 +680,17 @@ export default function RouteNavigation() {
               routes.map((route, idx) => (
                 <div
                   key={idx}
-                  className={`route-card ${selectedRoute?.type === route.type ? 'selected' : ''}`}
+                  className={`route-card ${selectedRoute?.type === route.type ? 'selected' : ''} ${route.isBest ? 'best-route' : ''}`}
                   onClick={() => setSelectedRoute(route)}
-                  style={{ borderLeftColor: route.color }}
+                  style={{ borderLeftColor: route.isBest ? '#2563eb' : route.color }}
                 >
                   <div className="route-card-header">
-                    <h3>{route.name}</h3>
-                    <div className="route-indicator" style={{ backgroundColor: route.color }}></div>
+                    <h3>{route.isBest ? '⭐ ' : ''}{route.name}</h3>
+                    <div className="route-indicator" style={{ backgroundColor: route.isBest ? '#2563eb' : route.color }}></div>
                   </div>
+                  {route.isBest && (
+                    <div className="best-route-label">⭐ Best Route (Load Balanced)</div>
+                  )}
                   <div className="route-card-body">
                     <div className="route-stat">
                       <span className="route-stat-icon">📏</span>
@@ -715,6 +704,20 @@ export default function RouteNavigation() {
                       <div>
                         <p className="route-stat-label">ETA</p>
                         <p className="route-stat-value">{route.eta}</p>
+                      </div>
+                    </div>
+                    <div className="route-stat">
+                      <span className="route-stat-icon">🚦</span>
+                      <div>
+                        <p className="route-stat-label">Traffic</p>
+                        <p className="route-stat-value">{trafficLabel(route.traffic)} ({route.traffic}/10)</p>
+                      </div>
+                    </div>
+                    <div className="route-stat">
+                      <span className="route-stat-icon">📊</span>
+                      <div>
+                        <p className="route-stat-label">Score</p>
+                        <p className="route-stat-value">{route.score}</p>
                       </div>
                     </div>
                   </div>
@@ -735,6 +738,10 @@ export default function RouteNavigation() {
           {/* Route Legend */}
           <div className="route-legend">
             <div className="legend-title">📍 Route Types</div>
+            <div className="legend-item">
+              <div className="legend-line" style={{ borderTop: '3px solid #2563eb' }}></div>
+              <span>⭐ Best Route (Load Balanced)</span>
+            </div>
             <div className="legend-item">
               <div className="legend-line" style={{ borderTop: '3px solid #3b82f6' }}></div>
               <span>Fastest Route</span>
@@ -819,6 +826,28 @@ export default function RouteNavigation() {
                     lineJoin="round"
                   />
                 )}
+
+                {/* Best Route Highlight (Dark Blue, thicker) - Rendered on top of all */}
+                {routes.filter(r => r.isBest).map((route, idx) => (
+                  <Polyline
+                    key={`best-${idx}`}
+                    positions={route.path}
+                    color="#1d4ed8"
+                    weight={8}
+                    opacity={0.95}
+                    dashArray=""
+                    lineCap="round"
+                    lineJoin="round"
+                  >
+                    <Popup>
+                      <strong>⭐ Best Route (Load Balanced)</strong><br />
+                      📏 Distance: {route.distance} km<br />
+                      ⏱️ ETA: {route.eta}<br />
+                      🚦 Traffic: {trafficLabel(route.traffic)} ({route.traffic}/10)<br />
+                      📊 Score: {route.score}
+                    </Popup>
+                  </Polyline>
+                ))}
               </>
             )}
 
