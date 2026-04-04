@@ -18,6 +18,8 @@ import Profile from "./pages/customer/Profile";
 import Users from "./pages/admin/Users";
 import AdminDrivers from "./pages/admin/Drivers";
 import Analytics from "./pages/admin/Analytics";
+import AdminAnalyticsDashboard from "./pages/admin/AdminAnalyticsDashboard";
+import FleetMapDashboard from "./pages/admin/FleetMapDashboard";
 
 // Manager Pages
 import Fleet from "./pages/manager/Fleet";
@@ -51,6 +53,8 @@ function App() {
         <Route path="/admin/users" element={<ProtectedRoute><Users /></ProtectedRoute>} />
         <Route path="/admin/drivers" element={<ProtectedRoute><AdminDrivers /></ProtectedRoute>} />
         <Route path="/admin/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
+        <Route path="/admin/analytics-dashboard" element={<ProtectedRoute><AdminAnalyticsDashboard /></ProtectedRoute>} />
+        <Route path="/admin/fleet-map" element={<ProtectedRoute><FleetMapDashboard /></ProtectedRoute>} />
         <Route
           path="/manager"
           element={

@@ -1,0 +1,5002 @@
+[
+  {
+    "id": 1,
+    "lat": 40.66556616155373,
+    "lng": -73.9507215467985,
+    "hour": 14,
+    "date": "2026-03-22",
+    "vehicleType": "UberPool",
+    "fare": 12.76,
+    "duration": 6
+  },
+  {
+    "id": 2,
+    "lat": 40.76498912374529,
+    "lng": -73.97579454097603,
+    "hour": 1,
+    "date": "2026-03-27",
+    "vehicleType": "UberPool",
+    "fare": 26.44,
+    "duration": 14
+  },
+  {
+    "id": 3,
+    "lat": 40.71563502216954,
+    "lng": -73.80786676653263,
+    "hour": 17,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 6.85,
+    "duration": 30
+  },
+  {
+    "id": 4,
+    "lat": 40.77290879177324,
+    "lng": -73.97962789837788,
+    "hour": 7,
+    "date": "2026-03-07",
+    "vehicleType": "UberPool",
+    "fare": 45.2,
+    "duration": 25
+  },
+  {
+    "id": 5,
+    "lat": 40.72912288261295,
+    "lng": -73.9648775832205,
+    "hour": 15,
+    "date": "2026-03-31",
+    "vehicleType": "UberBlack",
+    "fare": 48.94,
+    "duration": 33
+  },
+  {
+    "id": 6,
+    "lat": 40.77022055528964,
+    "lng": -73.98607534632055,
+    "hour": 17,
+    "date": "2026-03-10",
+    "vehicleType": "UberX",
+    "fare": 24.76,
+    "duration": 40
+  },
+  {
+    "id": 7,
+    "lat": 40.620332090275625,
+    "lng": -73.77080972352883,
+    "hour": 23,
+    "date": "2026-04-04",
+    "vehicleType": "UberX",
+    "fare": 8.11,
+    "duration": 8
+  },
+  {
+    "id": 8,
+    "lat": 40.67054889421224,
+    "lng": -73.80163870263534,
+    "hour": 3,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 35.11,
+    "duration": 28
+  },
+  {
+    "id": 9,
+    "lat": 40.774607277164115,
+    "lng": -73.98233592902224,
+    "hour": 8,
+    "date": "2026-04-01",
+    "vehicleType": "UberComfort",
+    "fare": 6.89,
+    "duration": 29
+  },
+  {
+    "id": 10,
+    "lat": 40.6624443299548,
+    "lng": -73.74968859651159,
+    "hour": 12,
+    "date": "2026-03-15",
+    "vehicleType": "UberBlack",
+    "fare": 17.94,
+    "duration": 27
+  },
+  {
+    "id": 11,
+    "lat": 40.751502686830506,
+    "lng": -74.00785772331155,
+    "hour": 8,
+    "date": "2026-04-01",
+    "vehicleType": "UberBlack",
+    "fare": 36.35,
+    "duration": 38
+  },
+  {
+    "id": 12,
+    "lat": 40.763044253352746,
+    "lng": -73.95048615001933,
+    "hour": 21,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 20.53,
+    "duration": 16
+  },
+  {
+    "id": 13,
+    "lat": 40.71453195461242,
+    "lng": -73.76556008058185,
+    "hour": 13,
+    "date": "2026-04-01",
+    "vehicleType": "UberX",
+    "fare": 24.14,
+    "duration": 45
+  },
+  {
+    "id": 14,
+    "lat": 40.76854447338749,
+    "lng": -73.8747572380069,
+    "hour": 8,
+    "date": "2026-03-15",
+    "vehicleType": "UberBlack",
+    "fare": 16.59,
+    "duration": 20
+  },
+  {
+    "id": 15,
+    "lat": 40.757978233060655,
+    "lng": -73.85092279870341,
+    "hour": 6,
+    "date": "2026-03-08",
+    "vehicleType": "UberXL",
+    "fare": 23.15,
+    "duration": 43
+  },
+  {
+    "id": 16,
+    "lat": 40.71877007152682,
+    "lng": -73.80024458636528,
+    "hour": 13,
+    "date": "2026-04-04",
+    "vehicleType": "UberXL",
+    "fare": 46.21,
+    "duration": 36
+  },
+  {
+    "id": 17,
+    "lat": 40.75007862412461,
+    "lng": -74.00370317592798,
+    "hour": 7,
+    "date": "2026-04-03",
+    "vehicleType": "UberXL",
+    "fare": 25.54,
+    "duration": 48
+  },
+  {
+    "id": 18,
+    "lat": 40.77718416033897,
+    "lng": -73.97488394981623,
+    "hour": 6,
+    "date": "2026-04-04",
+    "vehicleType": "UberX",
+    "fare": 45.37,
+    "duration": 36
+  },
+  {
+    "id": 19,
+    "lat": 40.70601446341262,
+    "lng": -73.79052933560669,
+    "hour": 16,
+    "date": "2026-03-12",
+    "vehicleType": "UberX",
+    "fare": 46.88,
+    "duration": 20
+  },
+  {
+    "id": 20,
+    "lat": 40.73256290467284,
+    "lng": -73.98715142559065,
+    "hour": 14,
+    "date": "2026-03-31",
+    "vehicleType": "UberX",
+    "fare": 28.4,
+    "duration": 50
+  },
+  {
+    "id": 21,
+    "lat": 40.78602382672183,
+    "lng": -73.98628198663447,
+    "hour": 8,
+    "date": "2026-03-17",
+    "vehicleType": "UberPool",
+    "fare": 26.47,
+    "duration": 39
+  },
+  {
+    "id": 22,
+    "lat": 40.63086717758886,
+    "lng": -73.79249873213504,
+    "hour": 21,
+    "date": "2026-03-30",
+    "vehicleType": "UberBlack",
+    "fare": 34.71,
+    "duration": 50
+  },
+  {
+    "id": 23,
+    "lat": 40.783272897943235,
+    "lng": -74.00592671856747,
+    "hour": 10,
+    "date": "2026-03-08",
+    "vehicleType": "UberXL",
+    "fare": 33.3,
+    "duration": 51
+  },
+  {
+    "id": 24,
+    "lat": 40.657517583135416,
+    "lng": -73.94269445935359,
+    "hour": 20,
+    "date": "2026-03-14",
+    "vehicleType": "UberX",
+    "fare": 27.28,
+    "duration": 58
+  },
+  {
+    "id": 25,
+    "lat": 40.75647575368793,
+    "lng": -73.95416089093449,
+    "hour": 4,
+    "date": "2026-03-12",
+    "vehicleType": "UberXL",
+    "fare": 18.18,
+    "duration": 45
+  },
+  {
+    "id": 26,
+    "lat": 40.7822273923717,
+    "lng": -73.86725379128289,
+    "hour": 21,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 16.63,
+    "duration": 25
+  },
+  {
+    "id": 27,
+    "lat": 40.64509334963107,
+    "lng": -73.7628031038301,
+    "hour": 8,
+    "date": "2026-03-16",
+    "vehicleType": "UberX",
+    "fare": 5.46,
+    "duration": 16
+  },
+  {
+    "id": 28,
+    "lat": 40.787820397963316,
+    "lng": -73.97295550057368,
+    "hour": 0,
+    "date": "2026-03-12",
+    "vehicleType": "UberComfort",
+    "fare": 11.03,
+    "duration": 21
+  },
+  {
+    "id": 29,
+    "lat": 40.634186510484874,
+    "lng": -73.76770709126242,
+    "hour": 2,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 24.22,
+    "duration": 20
+  },
+  {
+    "id": 30,
+    "lat": 40.73474167377357,
+    "lng": -73.80604433303299,
+    "hour": 12,
+    "date": "2026-03-20",
+    "vehicleType": "UberX",
+    "fare": 18.71,
+    "duration": 15
+  },
+  {
+    "id": 31,
+    "lat": 40.732137561739364,
+    "lng": -73.79765496268614,
+    "hour": 15,
+    "date": "2026-03-13",
+    "vehicleType": "UberPool",
+    "fare": 25.05,
+    "duration": 39
+  },
+  {
+    "id": 32,
+    "lat": 40.7353712677381,
+    "lng": -73.97495362002812,
+    "hour": 15,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 8.54,
+    "duration": 46
+  },
+  {
+    "id": 33,
+    "lat": 40.8060018646828,
+    "lng": -73.94995715121958,
+    "hour": 8,
+    "date": "2026-03-06",
+    "vehicleType": "UberX",
+    "fare": 30.06,
+    "duration": 53
+  },
+  {
+    "id": 34,
+    "lat": 40.77115338511592,
+    "lng": -73.99348442754976,
+    "hour": 12,
+    "date": "2026-03-18",
+    "vehicleType": "UberPool",
+    "fare": 20.15,
+    "duration": 11
+  },
+  {
+    "id": 35,
+    "lat": 40.71970620096789,
+    "lng": -73.7693353284708,
+    "hour": 22,
+    "date": "2026-03-12",
+    "vehicleType": "UberBlack",
+    "fare": 28.34,
+    "duration": 50
+  },
+  {
+    "id": 36,
+    "lat": 40.72920207186109,
+    "lng": -73.8135828648358,
+    "hour": 15,
+    "date": "2026-03-20",
+    "vehicleType": "UberXL",
+    "fare": 14.61,
+    "duration": 8
+  },
+  {
+    "id": 37,
+    "lat": 40.78280409901575,
+    "lng": -73.85675336721353,
+    "hour": 7,
+    "date": "2026-03-28",
+    "vehicleType": "UberXL",
+    "fare": 9.72,
+    "duration": 9
+  },
+  {
+    "id": 38,
+    "lat": 40.74450061619524,
+    "lng": -73.9633584891747,
+    "hour": 12,
+    "date": "2026-04-04",
+    "vehicleType": "UberPool",
+    "fare": 22.86,
+    "duration": 29
+  },
+  {
+    "id": 39,
+    "lat": 40.76151425844772,
+    "lng": -73.96949831099856,
+    "hour": 13,
+    "date": "2026-03-29",
+    "vehicleType": "UberComfort",
+    "fare": 18.24,
+    "duration": 46
+  },
+  {
+    "id": 40,
+    "lat": 40.73038490402703,
+    "lng": -73.96573528930276,
+    "hour": 6,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 46.44,
+    "duration": 20
+  },
+  {
+    "id": 41,
+    "lat": 40.75093481446216,
+    "lng": -73.7969537564476,
+    "hour": 16,
+    "date": "2026-04-04",
+    "vehicleType": "UberBlack",
+    "fare": 41.18,
+    "duration": 29
+  },
+  {
+    "id": 42,
+    "lat": 40.76210413736695,
+    "lng": -73.95680911492805,
+    "hour": 12,
+    "date": "2026-03-14",
+    "vehicleType": "UberXL",
+    "fare": 14.7,
+    "duration": 53
+  },
+  {
+    "id": 43,
+    "lat": 40.650609003494615,
+    "lng": -73.78178932064735,
+    "hour": 14,
+    "date": "2026-03-10",
+    "vehicleType": "UberPool",
+    "fare": 13.44,
+    "duration": 50
+  },
+  {
+    "id": 44,
+    "lat": 40.7462525937139,
+    "lng": -73.98000381905756,
+    "hour": 9,
+    "date": "2026-03-26",
+    "vehicleType": "UberBlack",
+    "fare": 28.46,
+    "duration": 15
+  },
+  {
+    "id": 45,
+    "lat": 40.61170414154993,
+    "lng": -73.80186428432772,
+    "hour": 8,
+    "date": "2026-03-26",
+    "vehicleType": "UberPool",
+    "fare": 29.15,
+    "duration": 29
+  },
+  {
+    "id": 46,
+    "lat": 40.7392211849993,
+    "lng": -73.95551175302586,
+    "hour": 20,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 22.72,
+    "duration": 55
+  },
+  {
+    "id": 47,
+    "lat": 40.73201364230025,
+    "lng": -73.98484597015512,
+    "hour": 14,
+    "date": "2026-03-12",
+    "vehicleType": "UberPool",
+    "fare": 48.98,
+    "duration": 31
+  },
+  {
+    "id": 48,
+    "lat": 40.662601465509496,
+    "lng": -73.93607606767986,
+    "hour": 16,
+    "date": "2026-04-02",
+    "vehicleType": "UberComfort",
+    "fare": 31.51,
+    "duration": 39
+  },
+  {
+    "id": 49,
+    "lat": 40.78702102429107,
+    "lng": -73.97057904789428,
+    "hour": 21,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 12.56,
+    "duration": 13
+  },
+  {
+    "id": 50,
+    "lat": 40.63042118406169,
+    "lng": -73.78663724089648,
+    "hour": 8,
+    "date": "2026-03-20",
+    "vehicleType": "UberX",
+    "fare": 6.13,
+    "duration": 31
+  },
+  {
+    "id": 51,
+    "lat": 40.793574942335084,
+    "lng": -73.85124124591351,
+    "hour": 8,
+    "date": "2026-03-07",
+    "vehicleType": "UberXL",
+    "fare": 17.39,
+    "duration": 27
+  },
+  {
+    "id": 52,
+    "lat": 40.72845898193621,
+    "lng": -73.80995827111751,
+    "hour": 12,
+    "date": "2026-03-28",
+    "vehicleType": "UberXL",
+    "fare": 6.26,
+    "duration": 59
+  },
+  {
+    "id": 53,
+    "lat": 40.7639290867109,
+    "lng": -73.8501277033759,
+    "hour": 0,
+    "date": "2026-03-21",
+    "vehicleType": "UberComfort",
+    "fare": 5.83,
+    "duration": 18
+  },
+  {
+    "id": 54,
+    "lat": 40.66605091006252,
+    "lng": -73.96977429652061,
+    "hour": 9,
+    "date": "2026-03-28",
+    "vehicleType": "UberX",
+    "fare": 42.95,
+    "duration": 47
+  },
+  {
+    "id": 55,
+    "lat": 40.7551706395427,
+    "lng": -73.99865058299638,
+    "hour": 17,
+    "date": "2026-04-01",
+    "vehicleType": "UberPool",
+    "fare": 31.4,
+    "duration": 55
+  },
+  {
+    "id": 56,
+    "lat": 40.64537918423904,
+    "lng": -73.77819120325404,
+    "hour": 7,
+    "date": "2026-03-10",
+    "vehicleType": "UberXL",
+    "fare": 25.24,
+    "duration": 8
+  },
+  {
+    "id": 57,
+    "lat": 40.66687961271374,
+    "lng": -73.96256825401476,
+    "hour": 18,
+    "date": "2026-03-07",
+    "vehicleType": "UberBlack",
+    "fare": 43.78,
+    "duration": 12
+  },
+  {
+    "id": 58,
+    "lat": 40.73384572245468,
+    "lng": -74.00469907196936,
+    "hour": 10,
+    "date": "2026-03-20",
+    "vehicleType": "UberBlack",
+    "fare": 19.92,
+    "duration": 20
+  },
+  {
+    "id": 59,
+    "lat": 40.613809789538145,
+    "lng": -73.80598186122555,
+    "hour": 8,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 17.76,
+    "duration": 21
+  },
+  {
+    "id": 60,
+    "lat": 40.77627524169054,
+    "lng": -74.00266673903502,
+    "hour": 15,
+    "date": "2026-03-24",
+    "vehicleType": "UberComfort",
+    "fare": 26.78,
+    "duration": 15
+  },
+  {
+    "id": 61,
+    "lat": 40.806654992807886,
+    "lng": -73.8500122728268,
+    "hour": 8,
+    "date": "2026-03-14",
+    "vehicleType": "UberXL",
+    "fare": 34.23,
+    "duration": 5
+  },
+  {
+    "id": 62,
+    "lat": 40.80351019494699,
+    "lng": -73.97482966979997,
+    "hour": 10,
+    "date": "2026-03-14",
+    "vehicleType": "UberPool",
+    "fare": 21.57,
+    "duration": 13
+  },
+  {
+    "id": 63,
+    "lat": 40.760775873317804,
+    "lng": -73.98149044726297,
+    "hour": 11,
+    "date": "2026-03-21",
+    "vehicleType": "UberX",
+    "fare": 42.89,
+    "duration": 34
+  },
+  {
+    "id": 64,
+    "lat": 40.78101785231982,
+    "lng": -73.90255049865046,
+    "hour": 14,
+    "date": "2026-03-27",
+    "vehicleType": "UberXL",
+    "fare": 39.52,
+    "duration": 43
+  },
+  {
+    "id": 65,
+    "lat": 40.77801494108607,
+    "lng": -73.97356051140868,
+    "hour": 14,
+    "date": "2026-03-06",
+    "vehicleType": "UberXL",
+    "fare": 26.03,
+    "duration": 32
+  },
+  {
+    "id": 66,
+    "lat": 40.76607276099281,
+    "lng": -73.97573974526073,
+    "hour": 9,
+    "date": "2026-03-10",
+    "vehicleType": "UberBlack",
+    "fare": 11.35,
+    "duration": 31
+  },
+  {
+    "id": 67,
+    "lat": 40.67103862938942,
+    "lng": -73.75906022795941,
+    "hour": 5,
+    "date": "2026-04-02",
+    "vehicleType": "UberX",
+    "fare": 28.35,
+    "duration": 8
+  },
+  {
+    "id": 68,
+    "lat": 40.764652550283664,
+    "lng": -73.96891203989958,
+    "hour": 12,
+    "date": "2026-03-18",
+    "vehicleType": "UberComfort",
+    "fare": 19.85,
+    "duration": 50
+  },
+  {
+    "id": 69,
+    "lat": 40.75033511501472,
+    "lng": -73.98336013104067,
+    "hour": 16,
+    "date": "2026-03-20",
+    "vehicleType": "UberComfort",
+    "fare": 13.15,
+    "duration": 14
+  },
+  {
+    "id": 70,
+    "lat": 40.72247773586311,
+    "lng": -74.01795404768431,
+    "hour": 20,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 22.71,
+    "duration": 25
+  },
+  {
+    "id": 71,
+    "lat": 40.78523397883507,
+    "lng": -73.84542885144423,
+    "hour": 10,
+    "date": "2026-03-21",
+    "vehicleType": "UberPool",
+    "fare": 16.45,
+    "duration": 30
+  },
+  {
+    "id": 72,
+    "lat": 40.69971882769744,
+    "lng": -73.95783514829418,
+    "hour": 17,
+    "date": "2026-03-25",
+    "vehicleType": "UberX",
+    "fare": 34.89,
+    "duration": 53
+  },
+  {
+    "id": 73,
+    "lat": 40.77172872646522,
+    "lng": -73.99915870950541,
+    "hour": 18,
+    "date": "2026-03-18",
+    "vehicleType": "UberComfort",
+    "fare": 28.92,
+    "duration": 54
+  },
+  {
+    "id": 74,
+    "lat": 40.71119353820301,
+    "lng": -73.77985158135291,
+    "hour": 9,
+    "date": "2026-03-17",
+    "vehicleType": "UberPool",
+    "fare": 34.08,
+    "duration": 27
+  },
+  {
+    "id": 75,
+    "lat": 40.7492040143849,
+    "lng": -73.97233579844854,
+    "hour": 10,
+    "date": "2026-03-28",
+    "vehicleType": "UberBlack",
+    "fare": 26.45,
+    "duration": 9
+  },
+  {
+    "id": 76,
+    "lat": 40.65414130743537,
+    "lng": -73.80408695844098,
+    "hour": 11,
+    "date": "2026-03-24",
+    "vehicleType": "UberComfort",
+    "fare": 48.25,
+    "duration": 56
+  },
+  {
+    "id": 77,
+    "lat": 40.73623544703491,
+    "lng": -74.01111729858987,
+    "hour": 17,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 24.26,
+    "duration": 9
+  },
+  {
+    "id": 78,
+    "lat": 40.740777916719765,
+    "lng": -73.99609037341288,
+    "hour": 17,
+    "date": "2026-03-12",
+    "vehicleType": "UberPool",
+    "fare": 28.67,
+    "duration": 42
+  },
+  {
+    "id": 79,
+    "lat": 40.73277461537809,
+    "lng": -73.80498328603903,
+    "hour": 8,
+    "date": "2026-03-17",
+    "vehicleType": "UberX",
+    "fare": 43.05,
+    "duration": 17
+  },
+  {
+    "id": 80,
+    "lat": 40.78298940678339,
+    "lng": -73.88976174197458,
+    "hour": 17,
+    "date": "2026-03-18",
+    "vehicleType": "UberComfort",
+    "fare": 38.26,
+    "duration": 46
+  },
+  {
+    "id": 81,
+    "lat": 40.761868330629284,
+    "lng": -73.87953266589972,
+    "hour": 11,
+    "date": "2026-03-18",
+    "vehicleType": "UberX",
+    "fare": 5.49,
+    "duration": 25
+  },
+  {
+    "id": 82,
+    "lat": 40.74665494034143,
+    "lng": -73.97533096604984,
+    "hour": 8,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 46.74,
+    "duration": 35
+  },
+  {
+    "id": 83,
+    "lat": 40.79471674187052,
+    "lng": -73.90010106541474,
+    "hour": 2,
+    "date": "2026-03-15",
+    "vehicleType": "UberX",
+    "fare": 39.66,
+    "duration": 5
+  },
+  {
+    "id": 84,
+    "lat": 40.7506466621704,
+    "lng": -73.90300591385603,
+    "hour": 9,
+    "date": "2026-03-22",
+    "vehicleType": "UberPool",
+    "fare": 8.75,
+    "duration": 50
+  },
+  {
+    "id": 85,
+    "lat": 40.76892285420178,
+    "lng": -73.97635462720373,
+    "hour": 8,
+    "date": "2026-03-11",
+    "vehicleType": "UberBlack",
+    "fare": 26.54,
+    "duration": 16
+  },
+  {
+    "id": 86,
+    "lat": 40.73132683462514,
+    "lng": -73.76877236638396,
+    "hour": 16,
+    "date": "2026-03-24",
+    "vehicleType": "UberX",
+    "fare": 41.22,
+    "duration": 38
+  },
+  {
+    "id": 87,
+    "lat": 40.74959308191373,
+    "lng": -73.96705564244596,
+    "hour": 11,
+    "date": "2026-03-20",
+    "vehicleType": "UberXL",
+    "fare": 43.39,
+    "duration": 23
+  },
+  {
+    "id": 88,
+    "lat": 40.742565600324454,
+    "lng": -73.81804407200757,
+    "hour": 9,
+    "date": "2026-03-06",
+    "vehicleType": "UberBlack",
+    "fare": 14.78,
+    "duration": 22
+  },
+  {
+    "id": 89,
+    "lat": 40.75514522509645,
+    "lng": -73.95910293201908,
+    "hour": 13,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 34.75,
+    "duration": 29
+  },
+  {
+    "id": 90,
+    "lat": 40.774692440445364,
+    "lng": -73.97080715262257,
+    "hour": 9,
+    "date": "2026-03-15",
+    "vehicleType": "UberBlack",
+    "fare": 40.39,
+    "duration": 43
+  },
+  {
+    "id": 91,
+    "lat": 40.775393940838924,
+    "lng": -73.86894124260441,
+    "hour": 9,
+    "date": "2026-03-31",
+    "vehicleType": "UberPool",
+    "fare": 17.29,
+    "duration": 50
+  },
+  {
+    "id": 92,
+    "lat": 40.7549014921585,
+    "lng": -73.84623373264006,
+    "hour": 18,
+    "date": "2026-03-13",
+    "vehicleType": "UberXL",
+    "fare": 34.38,
+    "duration": 19
+  },
+  {
+    "id": 93,
+    "lat": 40.63516575509743,
+    "lng": -73.75787864068677,
+    "hour": 9,
+    "date": "2026-03-23",
+    "vehicleType": "UberXL",
+    "fare": 10.44,
+    "duration": 23
+  },
+  {
+    "id": 94,
+    "lat": 40.7232139053367,
+    "lng": -74.0239501143212,
+    "hour": 10,
+    "date": "2026-03-17",
+    "vehicleType": "UberBlack",
+    "fare": 36.13,
+    "duration": 25
+  },
+  {
+    "id": 95,
+    "lat": 40.74334361055332,
+    "lng": -73.78079902703563,
+    "hour": 18,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 15.92,
+    "duration": 56
+  },
+  {
+    "id": 96,
+    "lat": 40.75683524619606,
+    "lng": -73.97801829802998,
+    "hour": 17,
+    "date": "2026-03-06",
+    "vehicleType": "UberXL",
+    "fare": 19.87,
+    "duration": 10
+  },
+  {
+    "id": 97,
+    "lat": 40.75799346881903,
+    "lng": -73.84720334621045,
+    "hour": 16,
+    "date": "2026-03-29",
+    "vehicleType": "UberXL",
+    "fare": 34.77,
+    "duration": 40
+  },
+  {
+    "id": 98,
+    "lat": 40.73460900361998,
+    "lng": -73.9598495782311,
+    "hour": 18,
+    "date": "2026-03-24",
+    "vehicleType": "UberComfort",
+    "fare": 39.05,
+    "duration": 59
+  },
+  {
+    "id": 99,
+    "lat": 40.7078503334383,
+    "lng": -73.78370740491259,
+    "hour": 10,
+    "date": "2026-03-15",
+    "vehicleType": "UberXL",
+    "fare": 49.82,
+    "duration": 53
+  },
+  {
+    "id": 100,
+    "lat": 40.7732104883292,
+    "lng": -73.99969017441614,
+    "hour": 18,
+    "date": "2026-03-14",
+    "vehicleType": "UberPool",
+    "fare": 14.65,
+    "duration": 34
+  },
+  {
+    "id": 101,
+    "lat": 40.79538547079818,
+    "lng": -73.89733145818307,
+    "hour": 13,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 14.63,
+    "duration": 36
+  },
+  {
+    "id": 102,
+    "lat": 40.74351078358615,
+    "lng": -73.97028200514522,
+    "hour": 16,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 28.19,
+    "duration": 49
+  },
+  {
+    "id": 103,
+    "lat": 40.68698023646264,
+    "lng": -73.96010126571964,
+    "hour": 19,
+    "date": "2026-03-21",
+    "vehicleType": "UberPool",
+    "fare": 42.38,
+    "duration": 22
+  },
+  {
+    "id": 104,
+    "lat": 40.659822725563615,
+    "lng": -73.80415421326109,
+    "hour": 13,
+    "date": "2026-03-23",
+    "vehicleType": "UberPool",
+    "fare": 27.56,
+    "duration": 53
+  },
+  {
+    "id": 105,
+    "lat": 40.766346650188815,
+    "lng": -73.90185710793887,
+    "hour": 6,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 36.56,
+    "duration": 24
+  },
+  {
+    "id": 106,
+    "lat": 40.67730560360322,
+    "lng": -73.93922099316366,
+    "hour": 18,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 10.88,
+    "duration": 45
+  },
+  {
+    "id": 107,
+    "lat": 40.76901386974342,
+    "lng": -73.99826763066822,
+    "hour": 16,
+    "date": "2026-03-27",
+    "vehicleType": "UberComfort",
+    "fare": 17.14,
+    "duration": 30
+  },
+  {
+    "id": 108,
+    "lat": 40.786081072800364,
+    "lng": -73.97062323670912,
+    "hour": 8,
+    "date": "2026-03-12",
+    "vehicleType": "UberX",
+    "fare": 16.03,
+    "duration": 21
+  },
+  {
+    "id": 109,
+    "lat": 40.61393720090876,
+    "lng": -73.76229488029405,
+    "hour": 9,
+    "date": "2026-03-20",
+    "vehicleType": "UberComfort",
+    "fare": 14.85,
+    "duration": 34
+  },
+  {
+    "id": 110,
+    "lat": 40.76926264664555,
+    "lng": -74.0117170215285,
+    "hour": 14,
+    "date": "2026-03-09",
+    "vehicleType": "UberPool",
+    "fare": 46.56,
+    "duration": 24
+  },
+  {
+    "id": 111,
+    "lat": 40.74815350019691,
+    "lng": -73.99425880341424,
+    "hour": 18,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 43.84,
+    "duration": 13
+  },
+  {
+    "id": 112,
+    "lat": 40.762874500493425,
+    "lng": -73.9666487812619,
+    "hour": 6,
+    "date": "2026-03-12",
+    "vehicleType": "UberBlack",
+    "fare": 16.71,
+    "duration": 9
+  },
+  {
+    "id": 113,
+    "lat": 40.75468135393617,
+    "lng": -73.95708417419468,
+    "hour": 23,
+    "date": "2026-03-16",
+    "vehicleType": "UberXL",
+    "fare": 33.85,
+    "duration": 31
+  },
+  {
+    "id": 114,
+    "lat": 40.74724938213384,
+    "lng": -73.85889214970106,
+    "hour": 8,
+    "date": "2026-03-24",
+    "vehicleType": "UberPool",
+    "fare": 20.26,
+    "duration": 49
+  },
+  {
+    "id": 115,
+    "lat": 40.7644828183327,
+    "lng": -73.96707181291752,
+    "hour": 8,
+    "date": "2026-03-25",
+    "vehicleType": "UberPool",
+    "fare": 47.14,
+    "duration": 6
+  },
+  {
+    "id": 116,
+    "lat": 40.75987836905873,
+    "lng": -73.9502363085351,
+    "hour": 9,
+    "date": "2026-03-23",
+    "vehicleType": "UberComfort",
+    "fare": 16.84,
+    "duration": 29
+  },
+  {
+    "id": 117,
+    "lat": 40.670476695060756,
+    "lng": -73.80355105394221,
+    "hour": 22,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 30.26,
+    "duration": 5
+  },
+  {
+    "id": 118,
+    "lat": 40.671497094806384,
+    "lng": -73.93097084210773,
+    "hour": 18,
+    "date": "2026-04-02",
+    "vehicleType": "UberBlack",
+    "fare": 29.45,
+    "duration": 27
+  },
+  {
+    "id": 119,
+    "lat": 40.68084210857097,
+    "lng": -73.93015361920887,
+    "hour": 0,
+    "date": "2026-03-18",
+    "vehicleType": "UberXL",
+    "fare": 42.28,
+    "duration": 29
+  },
+  {
+    "id": 120,
+    "lat": 40.78289055776679,
+    "lng": -73.99663183525925,
+    "hour": 16,
+    "date": "2026-03-13",
+    "vehicleType": "UberComfort",
+    "fare": 40.21,
+    "duration": 49
+  },
+  {
+    "id": 121,
+    "lat": 40.765814460227496,
+    "lng": -73.9880940554852,
+    "hour": 5,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 7.3,
+    "duration": 28
+  },
+  {
+    "id": 122,
+    "lat": 40.694031106663516,
+    "lng": -73.94546565062109,
+    "hour": 11,
+    "date": "2026-03-09",
+    "vehicleType": "UberXL",
+    "fare": 44.25,
+    "duration": 11
+  },
+  {
+    "id": 123,
+    "lat": 40.743455370020676,
+    "lng": -73.96483195186048,
+    "hour": 4,
+    "date": "2026-03-12",
+    "vehicleType": "UberPool",
+    "fare": 44.04,
+    "duration": 58
+  },
+  {
+    "id": 124,
+    "lat": 40.753062601221565,
+    "lng": -73.98536005372758,
+    "hour": 8,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 31.65,
+    "duration": 11
+  },
+  {
+    "id": 125,
+    "lat": 40.75333157797119,
+    "lng": -73.79448488090158,
+    "hour": 17,
+    "date": "2026-03-10",
+    "vehicleType": "UberBlack",
+    "fare": 43.46,
+    "duration": 26
+  },
+  {
+    "id": 126,
+    "lat": 40.786090890659914,
+    "lng": -73.87696922902705,
+    "hour": 0,
+    "date": "2026-04-04",
+    "vehicleType": "UberPool",
+    "fare": 45.43,
+    "duration": 49
+  },
+  {
+    "id": 127,
+    "lat": 40.7111082872605,
+    "lng": -73.81984807350922,
+    "hour": 10,
+    "date": "2026-03-08",
+    "vehicleType": "UberX",
+    "fare": 46.67,
+    "duration": 7
+  },
+  {
+    "id": 128,
+    "lat": 40.765264420884904,
+    "lng": -73.8765672005659,
+    "hour": 15,
+    "date": "2026-03-28",
+    "vehicleType": "UberBlack",
+    "fare": 36.13,
+    "duration": 35
+  },
+  {
+    "id": 129,
+    "lat": 40.79571101748189,
+    "lng": -73.88024736566175,
+    "hour": 20,
+    "date": "2026-03-10",
+    "vehicleType": "UberBlack",
+    "fare": 40,
+    "duration": 44
+  },
+  {
+    "id": 130,
+    "lat": 40.75437765016972,
+    "lng": -73.96902501594111,
+    "hour": 15,
+    "date": "2026-03-31",
+    "vehicleType": "UberComfort",
+    "fare": 35.13,
+    "duration": 42
+  },
+  {
+    "id": 131,
+    "lat": 40.79485944643603,
+    "lng": -73.99638938742301,
+    "hour": 7,
+    "date": "2026-03-10",
+    "vehicleType": "UberXL",
+    "fare": 34.89,
+    "duration": 24
+  },
+  {
+    "id": 132,
+    "lat": 40.62432666165741,
+    "lng": -73.80269562045976,
+    "hour": 17,
+    "date": "2026-03-17",
+    "vehicleType": "UberBlack",
+    "fare": 32.32,
+    "duration": 18
+  },
+  {
+    "id": 133,
+    "lat": 40.76323107788999,
+    "lng": -73.84574134080817,
+    "hour": 15,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 11.08,
+    "duration": 56
+  },
+  {
+    "id": 134,
+    "lat": 40.74819281788039,
+    "lng": -73.8024266636424,
+    "hour": 0,
+    "date": "2026-03-11",
+    "vehicleType": "UberXL",
+    "fare": 32.7,
+    "duration": 59
+  },
+  {
+    "id": 135,
+    "lat": 40.78363414858119,
+    "lng": -73.88209511734506,
+    "hour": 8,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 11.36,
+    "duration": 20
+  },
+  {
+    "id": 136,
+    "lat": 40.78911100939176,
+    "lng": -73.99735732173538,
+    "hour": 9,
+    "date": "2026-03-22",
+    "vehicleType": "UberXL",
+    "fare": 36.32,
+    "duration": 35
+  },
+  {
+    "id": 137,
+    "lat": 40.69522258315088,
+    "lng": -73.9357431385802,
+    "hour": 9,
+    "date": "2026-03-21",
+    "vehicleType": "UberX",
+    "fare": 17.02,
+    "duration": 9
+  },
+  {
+    "id": 138,
+    "lat": 40.632876321873034,
+    "lng": -73.7907139985149,
+    "hour": 3,
+    "date": "2026-03-08",
+    "vehicleType": "UberXL",
+    "fare": 28.94,
+    "duration": 32
+  },
+  {
+    "id": 139,
+    "lat": 40.68071652323913,
+    "lng": -73.94124232090026,
+    "hour": 16,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 43.41,
+    "duration": 9
+  },
+  {
+    "id": 140,
+    "lat": 40.662046967409125,
+    "lng": -73.93106123156849,
+    "hour": 17,
+    "date": "2026-03-08",
+    "vehicleType": "UberBlack",
+    "fare": 32.51,
+    "duration": 37
+  },
+  {
+    "id": 141,
+    "lat": 40.730655505619225,
+    "lng": -74.00474806022693,
+    "hour": 17,
+    "date": "2026-03-20",
+    "vehicleType": "UberX",
+    "fare": 8.42,
+    "duration": 51
+  },
+  {
+    "id": 142,
+    "lat": 40.657454910238705,
+    "lng": -73.80225439439059,
+    "hour": 9,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 28.56,
+    "duration": 5
+  },
+  {
+    "id": 143,
+    "lat": 40.72856399836168,
+    "lng": -74.02504258113537,
+    "hour": 17,
+    "date": "2026-03-31",
+    "vehicleType": "UberComfort",
+    "fare": 35.12,
+    "duration": 51
+  },
+  {
+    "id": 144,
+    "lat": 40.7790091569202,
+    "lng": -73.99772296519546,
+    "hour": 17,
+    "date": "2026-03-13",
+    "vehicleType": "UberComfort",
+    "fare": 46.25,
+    "duration": 18
+  },
+  {
+    "id": 145,
+    "lat": 40.74552337114486,
+    "lng": -73.99407789315312,
+    "hour": 19,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 48.37,
+    "duration": 25
+  },
+  {
+    "id": 146,
+    "lat": 40.66253902371627,
+    "lng": -73.76515662246942,
+    "hour": 6,
+    "date": "2026-03-26",
+    "vehicleType": "UberComfort",
+    "fare": 33.71,
+    "duration": 7
+  },
+  {
+    "id": 147,
+    "lat": 40.769722546093114,
+    "lng": -73.8500821423649,
+    "hour": 18,
+    "date": "2026-03-23",
+    "vehicleType": "UberXL",
+    "fare": 29.9,
+    "duration": 7
+  },
+  {
+    "id": 148,
+    "lat": 40.7376236613363,
+    "lng": -74.00151094759445,
+    "hour": 8,
+    "date": "2026-03-15",
+    "vehicleType": "UberXL",
+    "fare": 43.38,
+    "duration": 44
+  },
+  {
+    "id": 149,
+    "lat": 40.70013814542229,
+    "lng": -73.91655498469211,
+    "hour": 15,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 17.2,
+    "duration": 36
+  },
+  {
+    "id": 150,
+    "lat": 40.777448358253054,
+    "lng": -73.99386206461294,
+    "hour": 7,
+    "date": "2026-03-12",
+    "vehicleType": "UberComfort",
+    "fare": 44.45,
+    "duration": 18
+  },
+  {
+    "id": 151,
+    "lat": 40.77489177235562,
+    "lng": -73.98722042099172,
+    "hour": 9,
+    "date": "2026-03-21",
+    "vehicleType": "UberComfort",
+    "fare": 28.28,
+    "duration": 13
+  },
+  {
+    "id": 152,
+    "lat": 40.64162847094279,
+    "lng": -73.77536669139785,
+    "hour": 9,
+    "date": "2026-04-01",
+    "vehicleType": "UberPool",
+    "fare": 29.92,
+    "duration": 51
+  },
+  {
+    "id": 153,
+    "lat": 40.799221311683674,
+    "lng": -73.96357933759961,
+    "hour": 14,
+    "date": "2026-03-09",
+    "vehicleType": "UberXL",
+    "fare": 7.89,
+    "duration": 40
+  },
+  {
+    "id": 154,
+    "lat": 40.688194079262594,
+    "lng": -73.9447010699671,
+    "hour": 15,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 8.88,
+    "duration": 50
+  },
+  {
+    "id": 155,
+    "lat": 40.77335608648764,
+    "lng": -73.89200483861119,
+    "hour": 8,
+    "date": "2026-03-31",
+    "vehicleType": "UberBlack",
+    "fare": 40.22,
+    "duration": 41
+  },
+  {
+    "id": 156,
+    "lat": 40.63227783400852,
+    "lng": -73.78035094479196,
+    "hour": 21,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 16.06,
+    "duration": 55
+  },
+  {
+    "id": 157,
+    "lat": 40.77395540483751,
+    "lng": -73.84819632843622,
+    "hour": 21,
+    "date": "2026-03-14",
+    "vehicleType": "UberPool",
+    "fare": 48.93,
+    "duration": 24
+  },
+  {
+    "id": 158,
+    "lat": 40.664216712205935,
+    "lng": -73.76246880789242,
+    "hour": 8,
+    "date": "2026-04-04",
+    "vehicleType": "UberComfort",
+    "fare": 14.08,
+    "duration": 31
+  },
+  {
+    "id": 159,
+    "lat": 40.79345207104468,
+    "lng": -73.9678101841343,
+    "hour": 8,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 11.61,
+    "duration": 28
+  },
+  {
+    "id": 160,
+    "lat": 40.757976880477294,
+    "lng": -73.88001552131286,
+    "hour": 19,
+    "date": "2026-03-12",
+    "vehicleType": "UberBlack",
+    "fare": 24.29,
+    "duration": 43
+  },
+  {
+    "id": 161,
+    "lat": 40.76977582945301,
+    "lng": -73.9543467276308,
+    "hour": 17,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 46,
+    "duration": 35
+  },
+  {
+    "id": 162,
+    "lat": 40.749807808727255,
+    "lng": -73.97334890561255,
+    "hour": 19,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 24.63,
+    "duration": 46
+  },
+  {
+    "id": 163,
+    "lat": 40.722667803192,
+    "lng": -74.01523159076606,
+    "hour": 8,
+    "date": "2026-03-13",
+    "vehicleType": "UberPool",
+    "fare": 10.08,
+    "duration": 36
+  },
+  {
+    "id": 164,
+    "lat": 40.74972802994756,
+    "lng": -73.9987481020375,
+    "hour": 17,
+    "date": "2026-04-02",
+    "vehicleType": "UberBlack",
+    "fare": 45.67,
+    "duration": 56
+  },
+  {
+    "id": 165,
+    "lat": 40.67431626882168,
+    "lng": -73.91581025478986,
+    "hour": 7,
+    "date": "2026-03-06",
+    "vehicleType": "UberBlack",
+    "fare": 38.42,
+    "duration": 14
+  },
+  {
+    "id": 166,
+    "lat": 40.79585530474133,
+    "lng": -73.84804775073465,
+    "hour": 8,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 15.61,
+    "duration": 10
+  },
+  {
+    "id": 167,
+    "lat": 40.65727905572456,
+    "lng": -73.77990115312612,
+    "hour": 3,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 28.52,
+    "duration": 26
+  },
+  {
+    "id": 168,
+    "lat": 40.73550717590194,
+    "lng": -73.95832083397161,
+    "hour": 14,
+    "date": "2026-03-27",
+    "vehicleType": "UberComfort",
+    "fare": 17.64,
+    "duration": 49
+  },
+  {
+    "id": 169,
+    "lat": 40.61173986240917,
+    "lng": -73.78041430861424,
+    "hour": 15,
+    "date": "2026-03-10",
+    "vehicleType": "UberPool",
+    "fare": 25.65,
+    "duration": 43
+  },
+  {
+    "id": 170,
+    "lat": 40.79355355785116,
+    "lng": -73.89550845745788,
+    "hour": 18,
+    "date": "2026-03-13",
+    "vehicleType": "UberComfort",
+    "fare": 37.32,
+    "duration": 46
+  },
+  {
+    "id": 171,
+    "lat": 40.781909438120245,
+    "lng": -73.84902461346998,
+    "hour": 7,
+    "date": "2026-04-02",
+    "vehicleType": "UberComfort",
+    "fare": 40.61,
+    "duration": 22
+  },
+  {
+    "id": 172,
+    "lat": 40.67686049533391,
+    "lng": -73.92440404460274,
+    "hour": 11,
+    "date": "2026-03-08",
+    "vehicleType": "UberPool",
+    "fare": 39.78,
+    "duration": 47
+  },
+  {
+    "id": 173,
+    "lat": 40.696098549185315,
+    "lng": -73.94184137430813,
+    "hour": 12,
+    "date": "2026-03-31",
+    "vehicleType": "UberComfort",
+    "fare": 6.51,
+    "duration": 8
+  },
+  {
+    "id": 174,
+    "lat": 40.7668487499353,
+    "lng": -74.00853195746639,
+    "hour": 15,
+    "date": "2026-03-06",
+    "vehicleType": "UberXL",
+    "fare": 44.55,
+    "duration": 16
+  },
+  {
+    "id": 175,
+    "lat": 40.70216355764314,
+    "lng": -73.80320591493714,
+    "hour": 8,
+    "date": "2026-03-07",
+    "vehicleType": "UberX",
+    "fare": 15.11,
+    "duration": 30
+  },
+  {
+    "id": 176,
+    "lat": 40.61937018392724,
+    "lng": -73.79348967692698,
+    "hour": 16,
+    "date": "2026-03-22",
+    "vehicleType": "UberPool",
+    "fare": 44.97,
+    "duration": 30
+  },
+  {
+    "id": 177,
+    "lat": 40.6766119023633,
+    "lng": -73.95830897949695,
+    "hour": 16,
+    "date": "2026-03-06",
+    "vehicleType": "UberXL",
+    "fare": 21.5,
+    "duration": 18
+  },
+  {
+    "id": 178,
+    "lat": 40.72893777960761,
+    "lng": -73.8039195146126,
+    "hour": 16,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 22.1,
+    "duration": 11
+  },
+  {
+    "id": 179,
+    "lat": 40.719874291544116,
+    "lng": -73.98268729428416,
+    "hour": 17,
+    "date": "2026-04-04",
+    "vehicleType": "UberBlack",
+    "fare": 25.92,
+    "duration": 48
+  },
+  {
+    "id": 180,
+    "lat": 40.79478376449101,
+    "lng": -73.97985871986731,
+    "hour": 18,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 5.75,
+    "duration": 28
+  },
+  {
+    "id": 181,
+    "lat": 40.74345610855672,
+    "lng": -74.01631361665638,
+    "hour": 2,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 25.93,
+    "duration": 56
+  },
+  {
+    "id": 182,
+    "lat": 40.64043000404323,
+    "lng": -73.75683059333723,
+    "hour": 8,
+    "date": "2026-04-02",
+    "vehicleType": "UberXL",
+    "fare": 33.03,
+    "duration": 57
+  },
+  {
+    "id": 183,
+    "lat": 40.683827881803964,
+    "lng": -73.94245573028525,
+    "hour": 23,
+    "date": "2026-03-14",
+    "vehicleType": "UberPool",
+    "fare": 30.86,
+    "duration": 44
+  },
+  {
+    "id": 184,
+    "lat": 40.639666655500115,
+    "lng": -73.75247871891911,
+    "hour": 16,
+    "date": "2026-04-03",
+    "vehicleType": "UberComfort",
+    "fare": 24.64,
+    "duration": 31
+  },
+  {
+    "id": 185,
+    "lat": 40.75476393721172,
+    "lng": -73.79466207857043,
+    "hour": 12,
+    "date": "2026-03-13",
+    "vehicleType": "UberX",
+    "fare": 12.99,
+    "duration": 27
+  },
+  {
+    "id": 186,
+    "lat": 40.793758568885146,
+    "lng": -73.87659304656339,
+    "hour": 16,
+    "date": "2026-03-29",
+    "vehicleType": "UberComfort",
+    "fare": 47.15,
+    "duration": 25
+  },
+  {
+    "id": 187,
+    "lat": 40.652316855092465,
+    "lng": -73.76826003226896,
+    "hour": 16,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 28.29,
+    "duration": 19
+  },
+  {
+    "id": 188,
+    "lat": 40.75081946378317,
+    "lng": -73.80891682934575,
+    "hour": 13,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 7.55,
+    "duration": 29
+  },
+  {
+    "id": 189,
+    "lat": 40.74035487288468,
+    "lng": -73.77526909263038,
+    "hour": 18,
+    "date": "2026-04-04",
+    "vehicleType": "UberComfort",
+    "fare": 18.64,
+    "duration": 37
+  },
+  {
+    "id": 190,
+    "lat": 40.73498428545547,
+    "lng": -73.99567818398214,
+    "hour": 14,
+    "date": "2026-03-30",
+    "vehicleType": "UberPool",
+    "fare": 17.17,
+    "duration": 10
+  },
+  {
+    "id": 191,
+    "lat": 40.65801208608356,
+    "lng": -73.7840810219842,
+    "hour": 17,
+    "date": "2026-03-26",
+    "vehicleType": "UberComfort",
+    "fare": 46.85,
+    "duration": 31
+  },
+  {
+    "id": 192,
+    "lat": 40.78467789538777,
+    "lng": -73.86865150012733,
+    "hour": 8,
+    "date": "2026-03-18",
+    "vehicleType": "UberBlack",
+    "fare": 48.23,
+    "duration": 14
+  },
+  {
+    "id": 193,
+    "lat": 40.65842766559404,
+    "lng": -73.94883448353498,
+    "hour": 21,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 36.59,
+    "duration": 13
+  },
+  {
+    "id": 194,
+    "lat": 40.80984377245855,
+    "lng": -73.95612598138707,
+    "hour": 6,
+    "date": "2026-04-01",
+    "vehicleType": "UberComfort",
+    "fare": 43.95,
+    "duration": 34
+  },
+  {
+    "id": 195,
+    "lat": 40.62040680469048,
+    "lng": -73.78502324295987,
+    "hour": 3,
+    "date": "2026-03-08",
+    "vehicleType": "UberBlack",
+    "fare": 25.89,
+    "duration": 25
+  },
+  {
+    "id": 196,
+    "lat": 40.74854751706302,
+    "lng": -73.76515012710549,
+    "hour": 8,
+    "date": "2026-03-13",
+    "vehicleType": "UberPool",
+    "fare": 37.94,
+    "duration": 54
+  },
+  {
+    "id": 197,
+    "lat": 40.66484183915001,
+    "lng": -73.96611014259305,
+    "hour": 16,
+    "date": "2026-03-06",
+    "vehicleType": "UberComfort",
+    "fare": 48.1,
+    "duration": 29
+  },
+  {
+    "id": 198,
+    "lat": 40.800270725449764,
+    "lng": -73.98876801003448,
+    "hour": 7,
+    "date": "2026-03-23",
+    "vehicleType": "UberBlack",
+    "fare": 23.94,
+    "duration": 17
+  },
+  {
+    "id": 199,
+    "lat": 40.74800504812708,
+    "lng": -73.9754090801244,
+    "hour": 10,
+    "date": "2026-03-26",
+    "vehicleType": "UberComfort",
+    "fare": 26.13,
+    "duration": 41
+  },
+  {
+    "id": 200,
+    "lat": 40.75000825452325,
+    "lng": -73.9877132935314,
+    "hour": 7,
+    "date": "2026-04-04",
+    "vehicleType": "UberComfort",
+    "fare": 7.44,
+    "duration": 48
+  },
+  {
+    "id": 201,
+    "lat": 40.74659674988108,
+    "lng": -73.7706301671842,
+    "hour": 13,
+    "date": "2026-03-22",
+    "vehicleType": "UberComfort",
+    "fare": 14.51,
+    "duration": 29
+  },
+  {
+    "id": 202,
+    "lat": 40.7948385205631,
+    "lng": -73.8828030325477,
+    "hour": 10,
+    "date": "2026-03-25",
+    "vehicleType": "UberPool",
+    "fare": 38.95,
+    "duration": 19
+  },
+  {
+    "id": 203,
+    "lat": 40.76233634559936,
+    "lng": -73.98103446129547,
+    "hour": 10,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 34.6,
+    "duration": 27
+  },
+  {
+    "id": 204,
+    "lat": 40.77101749815101,
+    "lng": -74.01766755650627,
+    "hour": 22,
+    "date": "2026-03-30",
+    "vehicleType": "UberX",
+    "fare": 33.24,
+    "duration": 23
+  },
+  {
+    "id": 205,
+    "lat": 40.68461356749565,
+    "lng": -73.96513035128623,
+    "hour": 15,
+    "date": "2026-03-07",
+    "vehicleType": "UberPool",
+    "fare": 35.82,
+    "duration": 31
+  },
+  {
+    "id": 206,
+    "lat": 40.80710685275542,
+    "lng": -73.97421309883445,
+    "hour": 18,
+    "date": "2026-03-29",
+    "vehicleType": "UberBlack",
+    "fare": 30.13,
+    "duration": 32
+  },
+  {
+    "id": 207,
+    "lat": 40.75186814382333,
+    "lng": -73.90176673327939,
+    "hour": 12,
+    "date": "2026-03-20",
+    "vehicleType": "UberBlack",
+    "fare": 37.08,
+    "duration": 17
+  },
+  {
+    "id": 208,
+    "lat": 40.6535215623358,
+    "lng": -73.92417318460848,
+    "hour": 9,
+    "date": "2026-03-10",
+    "vehicleType": "UberXL",
+    "fare": 32.76,
+    "duration": 10
+  },
+  {
+    "id": 209,
+    "lat": 40.720932948353585,
+    "lng": -73.76910246279384,
+    "hour": 14,
+    "date": "2026-03-31",
+    "vehicleType": "UberX",
+    "fare": 33.83,
+    "duration": 33
+  },
+  {
+    "id": 210,
+    "lat": 40.67983708832158,
+    "lng": -73.93548642084703,
+    "hour": 10,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 46.85,
+    "duration": 10
+  },
+  {
+    "id": 211,
+    "lat": 40.77375749033513,
+    "lng": -74.01765855844017,
+    "hour": 12,
+    "date": "2026-03-27",
+    "vehicleType": "UberBlack",
+    "fare": 17.4,
+    "duration": 8
+  },
+  {
+    "id": 212,
+    "lat": 40.74890588939772,
+    "lng": -74.0151983276588,
+    "hour": 12,
+    "date": "2026-03-11",
+    "vehicleType": "UberXL",
+    "fare": 6.82,
+    "duration": 5
+  },
+  {
+    "id": 213,
+    "lat": 40.812302326299346,
+    "lng": -73.94121222478404,
+    "hour": 12,
+    "date": "2026-03-29",
+    "vehicleType": "UberPool",
+    "fare": 37.59,
+    "duration": 37
+  },
+  {
+    "id": 214,
+    "lat": 40.72767274915882,
+    "lng": -74.0102323052043,
+    "hour": 10,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 16.46,
+    "duration": 49
+  },
+  {
+    "id": 215,
+    "lat": 40.77290331602226,
+    "lng": -73.97412123400707,
+    "hour": 16,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 48.67,
+    "duration": 48
+  },
+  {
+    "id": 216,
+    "lat": 40.743648644436774,
+    "lng": -74.01416317888815,
+    "hour": 8,
+    "date": "2026-03-22",
+    "vehicleType": "UberComfort",
+    "fare": 8.01,
+    "duration": 26
+  },
+  {
+    "id": 217,
+    "lat": 40.74018773620792,
+    "lng": -73.78840570866949,
+    "hour": 9,
+    "date": "2026-03-19",
+    "vehicleType": "UberBlack",
+    "fare": 45.87,
+    "duration": 11
+  },
+  {
+    "id": 218,
+    "lat": 40.7869366700546,
+    "lng": -73.95983179709701,
+    "hour": 18,
+    "date": "2026-03-09",
+    "vehicleType": "UberPool",
+    "fare": 14.93,
+    "duration": 28
+  },
+  {
+    "id": 219,
+    "lat": 40.7657009500665,
+    "lng": -73.96928816859007,
+    "hour": 14,
+    "date": "2026-03-30",
+    "vehicleType": "UberBlack",
+    "fare": 45.24,
+    "duration": 26
+  },
+  {
+    "id": 220,
+    "lat": 40.65260380851308,
+    "lng": -73.76690253410824,
+    "hour": 16,
+    "date": "2026-04-03",
+    "vehicleType": "UberPool",
+    "fare": 45.95,
+    "duration": 7
+  },
+  {
+    "id": 221,
+    "lat": 40.617302035088294,
+    "lng": -73.7754645056099,
+    "hour": 0,
+    "date": "2026-03-26",
+    "vehicleType": "UberComfort",
+    "fare": 20.17,
+    "duration": 41
+  },
+  {
+    "id": 222,
+    "lat": 40.751423758852816,
+    "lng": -73.97022856982008,
+    "hour": 10,
+    "date": "2026-04-02",
+    "vehicleType": "UberComfort",
+    "fare": 12.23,
+    "duration": 8
+  },
+  {
+    "id": 223,
+    "lat": 40.804925586131304,
+    "lng": -73.9574254856617,
+    "hour": 22,
+    "date": "2026-03-30",
+    "vehicleType": "UberPool",
+    "fare": 45.56,
+    "duration": 15
+  },
+  {
+    "id": 224,
+    "lat": 40.69927813193393,
+    "lng": -73.95446027176686,
+    "hour": 14,
+    "date": "2026-03-16",
+    "vehicleType": "UberXL",
+    "fare": 31.36,
+    "duration": 31
+  },
+  {
+    "id": 225,
+    "lat": 40.73567718516576,
+    "lng": -73.97401886853831,
+    "hour": 7,
+    "date": "2026-03-07",
+    "vehicleType": "UberComfort",
+    "fare": 5.65,
+    "duration": 22
+  },
+  {
+    "id": 226,
+    "lat": 40.67690892963154,
+    "lng": -73.9495030813828,
+    "hour": 8,
+    "date": "2026-03-13",
+    "vehicleType": "UberBlack",
+    "fare": 41.83,
+    "duration": 17
+  },
+  {
+    "id": 227,
+    "lat": 40.64148407800459,
+    "lng": -73.75724455814262,
+    "hour": 10,
+    "date": "2026-03-27",
+    "vehicleType": "UberPool",
+    "fare": 15.31,
+    "duration": 56
+  },
+  {
+    "id": 228,
+    "lat": 40.75226273464372,
+    "lng": -73.84531852609751,
+    "hour": 11,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 12.79,
+    "duration": 35
+  },
+  {
+    "id": 229,
+    "lat": 40.732600387318826,
+    "lng": -73.81276627999571,
+    "hour": 10,
+    "date": "2026-03-30",
+    "vehicleType": "UberXL",
+    "fare": 41.76,
+    "duration": 47
+  },
+  {
+    "id": 230,
+    "lat": 40.67324075170787,
+    "lng": -73.95159132074045,
+    "hour": 22,
+    "date": "2026-03-31",
+    "vehicleType": "UberXL",
+    "fare": 45.35,
+    "duration": 10
+  },
+  {
+    "id": 231,
+    "lat": 40.77830380574697,
+    "lng": -73.97499979902757,
+    "hour": 15,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 32.77,
+    "duration": 10
+  },
+  {
+    "id": 232,
+    "lat": 40.72955108929535,
+    "lng": -73.99523391318422,
+    "hour": 18,
+    "date": "2026-03-16",
+    "vehicleType": "UberXL",
+    "fare": 11.67,
+    "duration": 51
+  },
+  {
+    "id": 233,
+    "lat": 40.69615316320326,
+    "lng": -73.93904718913528,
+    "hour": 17,
+    "date": "2026-03-16",
+    "vehicleType": "UberX",
+    "fare": 9.78,
+    "duration": 39
+  },
+  {
+    "id": 234,
+    "lat": 40.811515763965055,
+    "lng": -73.96867532130868,
+    "hour": 10,
+    "date": "2026-03-25",
+    "vehicleType": "UberBlack",
+    "fare": 45.85,
+    "duration": 30
+  },
+  {
+    "id": 235,
+    "lat": 40.68496703006298,
+    "lng": -73.95972795770074,
+    "hour": 13,
+    "date": "2026-04-02",
+    "vehicleType": "UberPool",
+    "fare": 11.87,
+    "duration": 27
+  },
+  {
+    "id": 236,
+    "lat": 40.79652331229024,
+    "lng": -73.87274145016707,
+    "hour": 16,
+    "date": "2026-03-23",
+    "vehicleType": "UberPool",
+    "fare": 37.45,
+    "duration": 59
+  },
+  {
+    "id": 237,
+    "lat": 40.750651412790305,
+    "lng": -73.85588512769351,
+    "hour": 5,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 7.83,
+    "duration": 31
+  },
+  {
+    "id": 238,
+    "lat": 40.63117415391849,
+    "lng": -73.80366895171291,
+    "hour": 6,
+    "date": "2026-03-18",
+    "vehicleType": "UberBlack",
+    "fare": 12.06,
+    "duration": 11
+  },
+  {
+    "id": 239,
+    "lat": 40.79705249673333,
+    "lng": -73.94427667612857,
+    "hour": 16,
+    "date": "2026-04-04",
+    "vehicleType": "UberXL",
+    "fare": 11.66,
+    "duration": 24
+  },
+  {
+    "id": 240,
+    "lat": 40.776652602037444,
+    "lng": -73.90351316045619,
+    "hour": 1,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 13.63,
+    "duration": 32
+  },
+  {
+    "id": 241,
+    "lat": 40.6385298642218,
+    "lng": -73.76151671017739,
+    "hour": 15,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 20.89,
+    "duration": 33
+  },
+  {
+    "id": 242,
+    "lat": 40.70266480697837,
+    "lng": -73.93715982403677,
+    "hour": 12,
+    "date": "2026-03-30",
+    "vehicleType": "UberX",
+    "fare": 30.13,
+    "duration": 27
+  },
+  {
+    "id": 243,
+    "lat": 40.7473338742847,
+    "lng": -73.88513376211125,
+    "hour": 8,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 35.87,
+    "duration": 23
+  },
+  {
+    "id": 244,
+    "lat": 40.78132284419311,
+    "lng": -73.94773006907906,
+    "hour": 12,
+    "date": "2026-03-20",
+    "vehicleType": "UberBlack",
+    "fare": 5.85,
+    "duration": 11
+  },
+  {
+    "id": 245,
+    "lat": 40.78811153566512,
+    "lng": -73.99837963698481,
+    "hour": 17,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 44.9,
+    "duration": 14
+  },
+  {
+    "id": 246,
+    "lat": 40.65950058702194,
+    "lng": -73.93095076701049,
+    "hour": 21,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 26.34,
+    "duration": 39
+  },
+  {
+    "id": 247,
+    "lat": 40.761604982469244,
+    "lng": -73.9771330588412,
+    "hour": 11,
+    "date": "2026-03-10",
+    "vehicleType": "UberXL",
+    "fare": 48.7,
+    "duration": 29
+  },
+  {
+    "id": 248,
+    "lat": 40.748360331544056,
+    "lng": -73.9696600612686,
+    "hour": 18,
+    "date": "2026-03-14",
+    "vehicleType": "UberXL",
+    "fare": 26.8,
+    "duration": 38
+  },
+  {
+    "id": 249,
+    "lat": 40.76704650205587,
+    "lng": -73.85250621567704,
+    "hour": 8,
+    "date": "2026-03-06",
+    "vehicleType": "UberPool",
+    "fare": 9.46,
+    "duration": 19
+  },
+  {
+    "id": 250,
+    "lat": 40.77170845708561,
+    "lng": -73.983566806626,
+    "hour": 19,
+    "date": "2026-03-25",
+    "vehicleType": "UberXL",
+    "fare": 33.17,
+    "duration": 15
+  },
+  {
+    "id": 251,
+    "lat": 40.66855765224964,
+    "lng": -73.76208689685836,
+    "hour": 15,
+    "date": "2026-03-16",
+    "vehicleType": "UberPool",
+    "fare": 39.04,
+    "duration": 10
+  },
+  {
+    "id": 252,
+    "lat": 40.652548852668346,
+    "lng": -73.77881773062462,
+    "hour": 15,
+    "date": "2026-03-28",
+    "vehicleType": "UberXL",
+    "fare": 34.96,
+    "duration": 20
+  },
+  {
+    "id": 253,
+    "lat": 40.74100832974752,
+    "lng": -73.82070567546015,
+    "hour": 17,
+    "date": "2026-03-21",
+    "vehicleType": "UberPool",
+    "fare": 7.51,
+    "duration": 11
+  },
+  {
+    "id": 254,
+    "lat": 40.74842685591793,
+    "lng": -73.78188075213718,
+    "hour": 19,
+    "date": "2026-03-07",
+    "vehicleType": "UberComfort",
+    "fare": 28.08,
+    "duration": 50
+  },
+  {
+    "id": 255,
+    "lat": 40.763641941514685,
+    "lng": -73.95516013861568,
+    "hour": 19,
+    "date": "2026-03-28",
+    "vehicleType": "UberComfort",
+    "fare": 47.03,
+    "duration": 48
+  },
+  {
+    "id": 256,
+    "lat": 40.621272501642096,
+    "lng": -73.764507203293,
+    "hour": 1,
+    "date": "2026-03-19",
+    "vehicleType": "UberX",
+    "fare": 12.55,
+    "duration": 46
+  },
+  {
+    "id": 257,
+    "lat": 40.67716820848872,
+    "lng": -73.91501243730882,
+    "hour": 5,
+    "date": "2026-03-07",
+    "vehicleType": "UberPool",
+    "fare": 18.81,
+    "duration": 54
+  },
+  {
+    "id": 258,
+    "lat": 40.80527984192043,
+    "lng": -73.87588811121329,
+    "hour": 20,
+    "date": "2026-03-13",
+    "vehicleType": "UberX",
+    "fare": 12.26,
+    "duration": 59
+  },
+  {
+    "id": 259,
+    "lat": 40.7578733027787,
+    "lng": -73.97940208679546,
+    "hour": 20,
+    "date": "2026-03-23",
+    "vehicleType": "UberComfort",
+    "fare": 35.89,
+    "duration": 40
+  },
+  {
+    "id": 260,
+    "lat": 40.80364498252959,
+    "lng": -73.99604840591799,
+    "hour": 14,
+    "date": "2026-03-27",
+    "vehicleType": "UberComfort",
+    "fare": 30.99,
+    "duration": 25
+  },
+  {
+    "id": 261,
+    "lat": 40.663833721034884,
+    "lng": -73.94683190717483,
+    "hour": 3,
+    "date": "2026-03-18",
+    "vehicleType": "UberX",
+    "fare": 15.43,
+    "duration": 51
+  },
+  {
+    "id": 262,
+    "lat": 40.72921722790753,
+    "lng": -73.96014394093267,
+    "hour": 10,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 6.52,
+    "duration": 19
+  },
+  {
+    "id": 263,
+    "lat": 40.68337656781279,
+    "lng": -73.96949020584019,
+    "hour": 16,
+    "date": "2026-03-21",
+    "vehicleType": "UberXL",
+    "fare": 42.37,
+    "duration": 39
+  },
+  {
+    "id": 264,
+    "lat": 40.78245665767239,
+    "lng": -73.96843355406723,
+    "hour": 12,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 43.11,
+    "duration": 12
+  },
+  {
+    "id": 265,
+    "lat": 40.777436969778904,
+    "lng": -73.96611227696279,
+    "hour": 9,
+    "date": "2026-03-31",
+    "vehicleType": "UberBlack",
+    "fare": 48.17,
+    "duration": 23
+  },
+  {
+    "id": 266,
+    "lat": 40.655364794353474,
+    "lng": -73.94146295216265,
+    "hour": 15,
+    "date": "2026-03-15",
+    "vehicleType": "UberX",
+    "fare": 46.72,
+    "duration": 5
+  },
+  {
+    "id": 267,
+    "lat": 40.691898278830074,
+    "lng": -73.92583882740485,
+    "hour": 8,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 14.73,
+    "duration": 46
+  },
+  {
+    "id": 268,
+    "lat": 40.70946631043902,
+    "lng": -73.82083765813593,
+    "hour": 8,
+    "date": "2026-03-23",
+    "vehicleType": "UberBlack",
+    "fare": 28.71,
+    "duration": 55
+  },
+  {
+    "id": 269,
+    "lat": 40.78484895644494,
+    "lng": -73.95989703861606,
+    "hour": 1,
+    "date": "2026-03-06",
+    "vehicleType": "UberX",
+    "fare": 17.8,
+    "duration": 16
+  },
+  {
+    "id": 270,
+    "lat": 40.767302480854866,
+    "lng": -73.9628107285606,
+    "hour": 10,
+    "date": "2026-04-01",
+    "vehicleType": "UberBlack",
+    "fare": 26.83,
+    "duration": 56
+  },
+  {
+    "id": 271,
+    "lat": 40.77565423745607,
+    "lng": -73.84963987151941,
+    "hour": 13,
+    "date": "2026-03-21",
+    "vehicleType": "UberX",
+    "fare": 21.76,
+    "duration": 18
+  },
+  {
+    "id": 272,
+    "lat": 40.71083004715699,
+    "lng": -73.8204755657868,
+    "hour": 19,
+    "date": "2026-03-18",
+    "vehicleType": "UberPool",
+    "fare": 32.29,
+    "duration": 53
+  },
+  {
+    "id": 273,
+    "lat": 40.753983066067,
+    "lng": -73.85880515924731,
+    "hour": 14,
+    "date": "2026-03-18",
+    "vehicleType": "UberX",
+    "fare": 38.74,
+    "duration": 35
+  },
+  {
+    "id": 274,
+    "lat": 40.750952225428065,
+    "lng": -74.02650038311755,
+    "hour": 8,
+    "date": "2026-04-02",
+    "vehicleType": "UberPool",
+    "fare": 34.24,
+    "duration": 50
+  },
+  {
+    "id": 275,
+    "lat": 40.65641139722899,
+    "lng": -73.96609423927839,
+    "hour": 13,
+    "date": "2026-03-13",
+    "vehicleType": "UberXL",
+    "fare": 27.11,
+    "duration": 38
+  },
+  {
+    "id": 276,
+    "lat": 40.76668764009127,
+    "lng": -73.9656718426158,
+    "hour": 19,
+    "date": "2026-03-22",
+    "vehicleType": "UberXL",
+    "fare": 13.6,
+    "duration": 23
+  },
+  {
+    "id": 277,
+    "lat": 40.7379106941339,
+    "lng": -73.98168143065924,
+    "hour": 6,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 24.92,
+    "duration": 8
+  },
+  {
+    "id": 278,
+    "lat": 40.62835627712105,
+    "lng": -73.79621754041216,
+    "hour": 17,
+    "date": "2026-03-28",
+    "vehicleType": "UberComfort",
+    "fare": 22.5,
+    "duration": 52
+  },
+  {
+    "id": 279,
+    "lat": 40.758363216131805,
+    "lng": -74.00614685310947,
+    "hour": 18,
+    "date": "2026-03-13",
+    "vehicleType": "UberX",
+    "fare": 17.35,
+    "duration": 56
+  },
+  {
+    "id": 280,
+    "lat": 40.73716307516772,
+    "lng": -74.00526855258721,
+    "hour": 12,
+    "date": "2026-03-20",
+    "vehicleType": "UberBlack",
+    "fare": 30.37,
+    "duration": 23
+  },
+  {
+    "id": 281,
+    "lat": 40.705266667749164,
+    "lng": -73.95210366978583,
+    "hour": 12,
+    "date": "2026-03-18",
+    "vehicleType": "UberPool",
+    "fare": 33.76,
+    "duration": 32
+  },
+  {
+    "id": 282,
+    "lat": 40.61270558245127,
+    "lng": -73.76627390016797,
+    "hour": 17,
+    "date": "2026-04-01",
+    "vehicleType": "UberComfort",
+    "fare": 17.21,
+    "duration": 23
+  },
+  {
+    "id": 283,
+    "lat": 40.771744854534,
+    "lng": -74.0009192213339,
+    "hour": 19,
+    "date": "2026-03-22",
+    "vehicleType": "UberXL",
+    "fare": 29.78,
+    "duration": 5
+  },
+  {
+    "id": 284,
+    "lat": 40.728353558941606,
+    "lng": -73.78100566635001,
+    "hour": 18,
+    "date": "2026-03-08",
+    "vehicleType": "UberPool",
+    "fare": 48.49,
+    "duration": 39
+  },
+  {
+    "id": 285,
+    "lat": 40.639147885478216,
+    "lng": -73.75573842400267,
+    "hour": 12,
+    "date": "2026-03-16",
+    "vehicleType": "UberX",
+    "fare": 5.27,
+    "duration": 38
+  },
+  {
+    "id": 286,
+    "lat": 40.71869187641491,
+    "lng": -73.98624519656926,
+    "hour": 16,
+    "date": "2026-03-30",
+    "vehicleType": "UberPool",
+    "fare": 22.31,
+    "duration": 48
+  },
+  {
+    "id": 287,
+    "lat": 40.683051213551735,
+    "lng": -73.92556225347421,
+    "hour": 17,
+    "date": "2026-03-22",
+    "vehicleType": "UberPool",
+    "fare": 29.86,
+    "duration": 13
+  },
+  {
+    "id": 288,
+    "lat": 40.729231578106216,
+    "lng": -73.80152965291393,
+    "hour": 14,
+    "date": "2026-03-13",
+    "vehicleType": "UberComfort",
+    "fare": 9.34,
+    "duration": 11
+  },
+  {
+    "id": 289,
+    "lat": 40.78609404036423,
+    "lng": -73.98410447202265,
+    "hour": 6,
+    "date": "2026-03-12",
+    "vehicleType": "UberXL",
+    "fare": 7.1,
+    "duration": 25
+  },
+  {
+    "id": 290,
+    "lat": 40.6745632655937,
+    "lng": -73.94086555289913,
+    "hour": 15,
+    "date": "2026-03-27",
+    "vehicleType": "UberPool",
+    "fare": 7.96,
+    "duration": 46
+  },
+  {
+    "id": 291,
+    "lat": 40.747199453286946,
+    "lng": -74.00247156483495,
+    "hour": 7,
+    "date": "2026-04-03",
+    "vehicleType": "UberPool",
+    "fare": 46.44,
+    "duration": 48
+  },
+  {
+    "id": 292,
+    "lat": 40.71038995560895,
+    "lng": -73.80054202319359,
+    "hour": 8,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 27.57,
+    "duration": 11
+  },
+  {
+    "id": 293,
+    "lat": 40.75416558166762,
+    "lng": -73.97904036129593,
+    "hour": 6,
+    "date": "2026-03-31",
+    "vehicleType": "UberComfort",
+    "fare": 23.81,
+    "duration": 43
+  },
+  {
+    "id": 294,
+    "lat": 40.77585438153973,
+    "lng": -74.00093794705566,
+    "hour": 10,
+    "date": "2026-03-19",
+    "vehicleType": "UberBlack",
+    "fare": 17.02,
+    "duration": 49
+  },
+  {
+    "id": 295,
+    "lat": 40.63236156160883,
+    "lng": -73.75732938348368,
+    "hour": 7,
+    "date": "2026-03-17",
+    "vehicleType": "UberBlack",
+    "fare": 37.92,
+    "duration": 34
+  },
+  {
+    "id": 296,
+    "lat": 40.676633164112346,
+    "lng": -73.9713355942541,
+    "hour": 9,
+    "date": "2026-04-01",
+    "vehicleType": "UberBlack",
+    "fare": 12.48,
+    "duration": 55
+  },
+  {
+    "id": 297,
+    "lat": 40.756934026710496,
+    "lng": -73.86716186971583,
+    "hour": 9,
+    "date": "2026-03-19",
+    "vehicleType": "UberPool",
+    "fare": 11.94,
+    "duration": 58
+  },
+  {
+    "id": 298,
+    "lat": 40.612262274655514,
+    "lng": -73.7528262476669,
+    "hour": 9,
+    "date": "2026-03-06",
+    "vehicleType": "UberX",
+    "fare": 20.3,
+    "duration": 21
+  },
+  {
+    "id": 299,
+    "lat": 40.773004556008665,
+    "lng": -73.98269313948985,
+    "hour": 14,
+    "date": "2026-03-22",
+    "vehicleType": "UberPool",
+    "fare": 40.41,
+    "duration": 38
+  },
+  {
+    "id": 300,
+    "lat": 40.71373933483857,
+    "lng": -73.78550627961562,
+    "hour": 14,
+    "date": "2026-03-28",
+    "vehicleType": "UberXL",
+    "fare": 48.7,
+    "duration": 22
+  },
+  {
+    "id": 301,
+    "lat": 40.61845045486025,
+    "lng": -73.77263897393627,
+    "hour": 10,
+    "date": "2026-03-20",
+    "vehicleType": "UberX",
+    "fare": 37.58,
+    "duration": 37
+  },
+  {
+    "id": 302,
+    "lat": 40.764353488234676,
+    "lng": -73.99221959195972,
+    "hour": 15,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 28.02,
+    "duration": 16
+  },
+  {
+    "id": 303,
+    "lat": 40.75193912547431,
+    "lng": -73.81111138378412,
+    "hour": 14,
+    "date": "2026-03-18",
+    "vehicleType": "UberComfort",
+    "fare": 36.66,
+    "duration": 21
+  },
+  {
+    "id": 304,
+    "lat": 40.61538834742879,
+    "lng": -73.80029289036764,
+    "hour": 17,
+    "date": "2026-03-15",
+    "vehicleType": "UberComfort",
+    "fare": 23.29,
+    "duration": 28
+  },
+  {
+    "id": 305,
+    "lat": 40.77039179921199,
+    "lng": -73.9743961774904,
+    "hour": 0,
+    "date": "2026-03-23",
+    "vehicleType": "UberComfort",
+    "fare": 10.68,
+    "duration": 56
+  },
+  {
+    "id": 306,
+    "lat": 40.811255683208174,
+    "lng": -73.98340975545067,
+    "hour": 12,
+    "date": "2026-03-24",
+    "vehicleType": "UberXL",
+    "fare": 25.09,
+    "duration": 58
+  },
+  {
+    "id": 307,
+    "lat": 40.66044736949283,
+    "lng": -73.9398107744281,
+    "hour": 9,
+    "date": "2026-03-19",
+    "vehicleType": "UberX",
+    "fare": 29.2,
+    "duration": 35
+  },
+  {
+    "id": 308,
+    "lat": 40.8037094026817,
+    "lng": -73.88940493054304,
+    "hour": 6,
+    "date": "2026-03-21",
+    "vehicleType": "UberXL",
+    "fare": 48.17,
+    "duration": 37
+  },
+  {
+    "id": 309,
+    "lat": 40.67304051395595,
+    "lng": -73.9283128055814,
+    "hour": 15,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 13.83,
+    "duration": 11
+  },
+  {
+    "id": 310,
+    "lat": 40.75653221119729,
+    "lng": -73.9944502437832,
+    "hour": 12,
+    "date": "2026-03-29",
+    "vehicleType": "UberComfort",
+    "fare": 30.6,
+    "duration": 46
+  },
+  {
+    "id": 311,
+    "lat": 40.70318182533515,
+    "lng": -73.94058137746826,
+    "hour": 16,
+    "date": "2026-04-04",
+    "vehicleType": "UberX",
+    "fare": 47.21,
+    "duration": 20
+  },
+  {
+    "id": 312,
+    "lat": 40.69987239658461,
+    "lng": -73.82396761612011,
+    "hour": 13,
+    "date": "2026-04-01",
+    "vehicleType": "UberBlack",
+    "fare": 16.15,
+    "duration": 55
+  },
+  {
+    "id": 313,
+    "lat": 40.772338989450496,
+    "lng": -74.00082070261213,
+    "hour": 6,
+    "date": "2026-03-19",
+    "vehicleType": "UberBlack",
+    "fare": 39.44,
+    "duration": 54
+  },
+  {
+    "id": 314,
+    "lat": 40.75773786394386,
+    "lng": -73.99137769824809,
+    "hour": 9,
+    "date": "2026-03-20",
+    "vehicleType": "UberComfort",
+    "fare": 38.06,
+    "duration": 19
+  },
+  {
+    "id": 315,
+    "lat": 40.66529983792065,
+    "lng": -73.76557514612546,
+    "hour": 16,
+    "date": "2026-03-29",
+    "vehicleType": "UberPool",
+    "fare": 37.15,
+    "duration": 8
+  },
+  {
+    "id": 316,
+    "lat": 40.79464168405889,
+    "lng": -73.95771131546032,
+    "hour": 8,
+    "date": "2026-03-29",
+    "vehicleType": "UberBlack",
+    "fare": 32.3,
+    "duration": 54
+  },
+  {
+    "id": 317,
+    "lat": 40.6500399982159,
+    "lng": -73.93622023372166,
+    "hour": 20,
+    "date": "2026-03-19",
+    "vehicleType": "UberBlack",
+    "fare": 32.13,
+    "duration": 14
+  },
+  {
+    "id": 318,
+    "lat": 40.6691007882426,
+    "lng": -73.77714882250804,
+    "hour": 8,
+    "date": "2026-03-06",
+    "vehicleType": "UberX",
+    "fare": 41.29,
+    "duration": 59
+  },
+  {
+    "id": 319,
+    "lat": 40.80220932990917,
+    "lng": -73.98694709746103,
+    "hour": 6,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 35.35,
+    "duration": 30
+  },
+  {
+    "id": 320,
+    "lat": 40.75823965516053,
+    "lng": -73.97327455731588,
+    "hour": 19,
+    "date": "2026-03-10",
+    "vehicleType": "UberPool",
+    "fare": 31.61,
+    "duration": 21
+  },
+  {
+    "id": 321,
+    "lat": 40.71647826949067,
+    "lng": -73.78636417899033,
+    "hour": 8,
+    "date": "2026-03-25",
+    "vehicleType": "UberPool",
+    "fare": 35.54,
+    "duration": 6
+  },
+  {
+    "id": 322,
+    "lat": 40.66457236715968,
+    "lng": -73.76937713139601,
+    "hour": 9,
+    "date": "2026-03-28",
+    "vehicleType": "UberComfort",
+    "fare": 8.32,
+    "duration": 45
+  },
+  {
+    "id": 323,
+    "lat": 40.630913098106404,
+    "lng": -73.78185238853355,
+    "hour": 17,
+    "date": "2026-04-04",
+    "vehicleType": "UberComfort",
+    "fare": 5.22,
+    "duration": 22
+  },
+  {
+    "id": 324,
+    "lat": 40.732290871928775,
+    "lng": -73.78017866566827,
+    "hour": 10,
+    "date": "2026-03-24",
+    "vehicleType": "UberComfort",
+    "fare": 19.66,
+    "duration": 38
+  },
+  {
+    "id": 325,
+    "lat": 40.75550550188742,
+    "lng": -73.77152390012915,
+    "hour": 20,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 31.52,
+    "duration": 31
+  },
+  {
+    "id": 326,
+    "lat": 40.73484961451277,
+    "lng": -73.98805209260702,
+    "hour": 6,
+    "date": "2026-03-26",
+    "vehicleType": "UberPool",
+    "fare": 46.81,
+    "duration": 31
+  },
+  {
+    "id": 327,
+    "lat": 40.73861180125514,
+    "lng": -73.9711865838957,
+    "hour": 10,
+    "date": "2026-03-25",
+    "vehicleType": "UberX",
+    "fare": 39.59,
+    "duration": 37
+  },
+  {
+    "id": 328,
+    "lat": 40.76520929903791,
+    "lng": -73.87082260103354,
+    "hour": 11,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 11.06,
+    "duration": 15
+  },
+  {
+    "id": 329,
+    "lat": 40.72599678647735,
+    "lng": -73.77888252675042,
+    "hour": 17,
+    "date": "2026-04-02",
+    "vehicleType": "UberX",
+    "fare": 29.53,
+    "duration": 44
+  },
+  {
+    "id": 330,
+    "lat": 40.75270262780231,
+    "lng": -74.00697519866304,
+    "hour": 10,
+    "date": "2026-03-19",
+    "vehicleType": "UberPool",
+    "fare": 49.31,
+    "duration": 59
+  },
+  {
+    "id": 331,
+    "lat": 40.780398352312304,
+    "lng": -73.84858240008656,
+    "hour": 14,
+    "date": "2026-03-26",
+    "vehicleType": "UberXL",
+    "fare": 30.94,
+    "duration": 9
+  },
+  {
+    "id": 332,
+    "lat": 40.724330622775504,
+    "lng": -73.79509681190217,
+    "hour": 16,
+    "date": "2026-03-25",
+    "vehicleType": "UberBlack",
+    "fare": 10.13,
+    "duration": 7
+  },
+  {
+    "id": 333,
+    "lat": 40.64761639221117,
+    "lng": -73.77216371202732,
+    "hour": 9,
+    "date": "2026-03-27",
+    "vehicleType": "UberPool",
+    "fare": 16.88,
+    "duration": 54
+  },
+  {
+    "id": 334,
+    "lat": 40.8039399303916,
+    "lng": -73.90018110163288,
+    "hour": 12,
+    "date": "2026-03-24",
+    "vehicleType": "UberPool",
+    "fare": 8.46,
+    "duration": 15
+  },
+  {
+    "id": 335,
+    "lat": 40.648710418612524,
+    "lng": -73.77810337018279,
+    "hour": 8,
+    "date": "2026-03-28",
+    "vehicleType": "UberX",
+    "fare": 37.41,
+    "duration": 55
+  },
+  {
+    "id": 336,
+    "lat": 40.75247588392683,
+    "lng": -73.78284379388974,
+    "hour": 13,
+    "date": "2026-03-18",
+    "vehicleType": "UberPool",
+    "fare": 32.96,
+    "duration": 41
+  },
+  {
+    "id": 337,
+    "lat": 40.76678208847541,
+    "lng": -73.86154531828653,
+    "hour": 7,
+    "date": "2026-03-15",
+    "vehicleType": "UberXL",
+    "fare": 25.39,
+    "duration": 30
+  },
+  {
+    "id": 338,
+    "lat": 40.75231413973898,
+    "lng": -73.9563446411901,
+    "hour": 9,
+    "date": "2026-03-10",
+    "vehicleType": "UberBlack",
+    "fare": 32.59,
+    "duration": 25
+  },
+  {
+    "id": 339,
+    "lat": 40.69065936451848,
+    "lng": -73.9569084673116,
+    "hour": 19,
+    "date": "2026-03-08",
+    "vehicleType": "UberPool",
+    "fare": 46.98,
+    "duration": 7
+  },
+  {
+    "id": 340,
+    "lat": 40.718551836469956,
+    "lng": -73.79776720629924,
+    "hour": 20,
+    "date": "2026-04-04",
+    "vehicleType": "UberComfort",
+    "fare": 45.98,
+    "duration": 22
+  },
+  {
+    "id": 341,
+    "lat": 40.77053609403323,
+    "lng": -73.95464875179869,
+    "hour": 23,
+    "date": "2026-03-28",
+    "vehicleType": "UberXL",
+    "fare": 20,
+    "duration": 57
+  },
+  {
+    "id": 342,
+    "lat": 40.71591381010588,
+    "lng": -73.81390897271704,
+    "hour": 17,
+    "date": "2026-03-09",
+    "vehicleType": "UberPool",
+    "fare": 33.39,
+    "duration": 23
+  },
+  {
+    "id": 343,
+    "lat": 40.77612506322949,
+    "lng": -74.00537029800118,
+    "hour": 15,
+    "date": "2026-03-12",
+    "vehicleType": "UberComfort",
+    "fare": 49.42,
+    "duration": 51
+  },
+  {
+    "id": 344,
+    "lat": 40.69972317637113,
+    "lng": -73.77606016043529,
+    "hour": 7,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 16.42,
+    "duration": 45
+  },
+  {
+    "id": 345,
+    "lat": 40.78898226499784,
+    "lng": -73.89607585494282,
+    "hour": 0,
+    "date": "2026-03-06",
+    "vehicleType": "UberPool",
+    "fare": 5.88,
+    "duration": 13
+  },
+  {
+    "id": 346,
+    "lat": 40.786070038137545,
+    "lng": -73.95243943135131,
+    "hour": 14,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 35.22,
+    "duration": 5
+  },
+  {
+    "id": 347,
+    "lat": 40.76554426211827,
+    "lng": -73.98422361445608,
+    "hour": 2,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 34.34,
+    "duration": 18
+  },
+  {
+    "id": 348,
+    "lat": 40.753910779320016,
+    "lng": -73.80485847636474,
+    "hour": 16,
+    "date": "2026-03-12",
+    "vehicleType": "UberXL",
+    "fare": 44.82,
+    "duration": 36
+  },
+  {
+    "id": 349,
+    "lat": 40.767299274614814,
+    "lng": -73.96108608885996,
+    "hour": 19,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 9.03,
+    "duration": 5
+  },
+  {
+    "id": 350,
+    "lat": 40.79515841549471,
+    "lng": -73.87210955021136,
+    "hour": 12,
+    "date": "2026-03-27",
+    "vehicleType": "UberBlack",
+    "fare": 8.88,
+    "duration": 36
+  },
+  {
+    "id": 351,
+    "lat": 40.709347669625146,
+    "lng": -73.77308659263832,
+    "hour": 20,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 38.9,
+    "duration": 24
+  },
+  {
+    "id": 352,
+    "lat": 40.6387937797593,
+    "lng": -73.79725920168174,
+    "hour": 17,
+    "date": "2026-03-21",
+    "vehicleType": "UberComfort",
+    "fare": 38.35,
+    "duration": 29
+  },
+  {
+    "id": 353,
+    "lat": 40.7776319608839,
+    "lng": -73.95867820863414,
+    "hour": 0,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 45.61,
+    "duration": 29
+  },
+  {
+    "id": 354,
+    "lat": 40.7481710003149,
+    "lng": -73.97668586124131,
+    "hour": 9,
+    "date": "2026-03-18",
+    "vehicleType": "UberBlack",
+    "fare": 43.45,
+    "duration": 11
+  },
+  {
+    "id": 355,
+    "lat": 40.76178502806516,
+    "lng": -73.94124199221737,
+    "hour": 13,
+    "date": "2026-03-06",
+    "vehicleType": "UberPool",
+    "fare": 42.17,
+    "duration": 40
+  },
+  {
+    "id": 356,
+    "lat": 40.73670963741778,
+    "lng": -73.96489607937717,
+    "hour": 15,
+    "date": "2026-03-06",
+    "vehicleType": "UberComfort",
+    "fare": 41.34,
+    "duration": 57
+  },
+  {
+    "id": 357,
+    "lat": 40.75716028620025,
+    "lng": -73.95601848185346,
+    "hour": 8,
+    "date": "2026-04-04",
+    "vehicleType": "UberPool",
+    "fare": 41.36,
+    "duration": 47
+  },
+  {
+    "id": 358,
+    "lat": 40.663007177323216,
+    "lng": -73.78822811574628,
+    "hour": 19,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 44.96,
+    "duration": 27
+  },
+  {
+    "id": 359,
+    "lat": 40.72666461440731,
+    "lng": -73.80861419441689,
+    "hour": 7,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 20.87,
+    "duration": 18
+  },
+  {
+    "id": 360,
+    "lat": 40.7543869712954,
+    "lng": -73.89622226323303,
+    "hour": 20,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 44.68,
+    "duration": 57
+  },
+  {
+    "id": 361,
+    "lat": 40.780811177095856,
+    "lng": -74.00097466849972,
+    "hour": 6,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 45.63,
+    "duration": 11
+  },
+  {
+    "id": 362,
+    "lat": 40.789339469607604,
+    "lng": -73.8556033992485,
+    "hour": 11,
+    "date": "2026-03-18",
+    "vehicleType": "UberBlack",
+    "fare": 17.04,
+    "duration": 49
+  },
+  {
+    "id": 363,
+    "lat": 40.75912454160863,
+    "lng": -73.98619975624837,
+    "hour": 14,
+    "date": "2026-03-31",
+    "vehicleType": "UberPool",
+    "fare": 31.25,
+    "duration": 46
+  },
+  {
+    "id": 364,
+    "lat": 40.74498413044428,
+    "lng": -73.97297954854331,
+    "hour": 7,
+    "date": "2026-03-15",
+    "vehicleType": "UberBlack",
+    "fare": 16.13,
+    "duration": 59
+  },
+  {
+    "id": 365,
+    "lat": 40.660534693241424,
+    "lng": -73.77297187808385,
+    "hour": 18,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 20.33,
+    "duration": 16
+  },
+  {
+    "id": 366,
+    "lat": 40.74498818529029,
+    "lng": -73.97486479154756,
+    "hour": 14,
+    "date": "2026-03-17",
+    "vehicleType": "UberPool",
+    "fare": 40.43,
+    "duration": 25
+  },
+  {
+    "id": 367,
+    "lat": 40.65203629614562,
+    "lng": -73.80131649664182,
+    "hour": 5,
+    "date": "2026-03-16",
+    "vehicleType": "UberXL",
+    "fare": 10.8,
+    "duration": 35
+  },
+  {
+    "id": 368,
+    "lat": 40.78348823223851,
+    "lng": -73.9831900962197,
+    "hour": 14,
+    "date": "2026-03-14",
+    "vehicleType": "UberBlack",
+    "fare": 5.55,
+    "duration": 51
+  },
+  {
+    "id": 369,
+    "lat": 40.73637565402565,
+    "lng": -73.7883525016609,
+    "hour": 9,
+    "date": "2026-03-28",
+    "vehicleType": "UberBlack",
+    "fare": 42.53,
+    "duration": 25
+  },
+  {
+    "id": 370,
+    "lat": 40.751695429470665,
+    "lng": -73.79000755840178,
+    "hour": 10,
+    "date": "2026-03-06",
+    "vehicleType": "UberComfort",
+    "fare": 22.72,
+    "duration": 53
+  },
+  {
+    "id": 371,
+    "lat": 40.79485002572547,
+    "lng": -73.88745835316415,
+    "hour": 18,
+    "date": "2026-03-11",
+    "vehicleType": "UberComfort",
+    "fare": 9.79,
+    "duration": 30
+  },
+  {
+    "id": 372,
+    "lat": 40.80590978674167,
+    "lng": -73.99308781962785,
+    "hour": 9,
+    "date": "2026-03-26",
+    "vehicleType": "UberXL",
+    "fare": 23.76,
+    "duration": 57
+  },
+  {
+    "id": 373,
+    "lat": 40.7325039003723,
+    "lng": -73.97697243789081,
+    "hour": 21,
+    "date": "2026-03-08",
+    "vehicleType": "UberPool",
+    "fare": 34.36,
+    "duration": 56
+  },
+  {
+    "id": 374,
+    "lat": 40.74082420515819,
+    "lng": -73.80972083289393,
+    "hour": 0,
+    "date": "2026-03-20",
+    "vehicleType": "UberPool",
+    "fare": 21.64,
+    "duration": 17
+  },
+  {
+    "id": 375,
+    "lat": 40.774628321881025,
+    "lng": -73.9845852425534,
+    "hour": 16,
+    "date": "2026-03-29",
+    "vehicleType": "UberXL",
+    "fare": 22.22,
+    "duration": 41
+  },
+  {
+    "id": 376,
+    "lat": 40.78322503101428,
+    "lng": -73.84998897126907,
+    "hour": 12,
+    "date": "2026-03-07",
+    "vehicleType": "UberPool",
+    "fare": 14.53,
+    "duration": 59
+  },
+  {
+    "id": 377,
+    "lat": 40.69036321534054,
+    "lng": -73.96247585006498,
+    "hour": 22,
+    "date": "2026-03-21",
+    "vehicleType": "UberXL",
+    "fare": 26.14,
+    "duration": 35
+  },
+  {
+    "id": 378,
+    "lat": 40.77448945705454,
+    "lng": -73.88116218987271,
+    "hour": 23,
+    "date": "2026-04-03",
+    "vehicleType": "UberBlack",
+    "fare": 49.04,
+    "duration": 50
+  },
+  {
+    "id": 379,
+    "lat": 40.78784803096854,
+    "lng": -73.99941087556715,
+    "hour": 8,
+    "date": "2026-03-26",
+    "vehicleType": "UberXL",
+    "fare": 46.7,
+    "duration": 15
+  },
+  {
+    "id": 380,
+    "lat": 40.75759781363772,
+    "lng": -73.96168039921436,
+    "hour": 10,
+    "date": "2026-03-20",
+    "vehicleType": "UberXL",
+    "fare": 19.33,
+    "duration": 40
+  },
+  {
+    "id": 381,
+    "lat": 40.75778171661054,
+    "lng": -73.98407108772629,
+    "hour": 9,
+    "date": "2026-03-08",
+    "vehicleType": "UberBlack",
+    "fare": 31.47,
+    "duration": 13
+  },
+  {
+    "id": 382,
+    "lat": 40.764224796657786,
+    "lng": -73.89746994317542,
+    "hour": 20,
+    "date": "2026-03-14",
+    "vehicleType": "UberX",
+    "fare": 45.57,
+    "duration": 51
+  },
+  {
+    "id": 383,
+    "lat": 40.7536394619466,
+    "lng": -73.81961266281813,
+    "hour": 13,
+    "date": "2026-04-02",
+    "vehicleType": "UberX",
+    "fare": 12.57,
+    "duration": 16
+  },
+  {
+    "id": 384,
+    "lat": 40.77396585040319,
+    "lng": -73.84657186726409,
+    "hour": 16,
+    "date": "2026-03-30",
+    "vehicleType": "UberX",
+    "fare": 29.29,
+    "duration": 19
+  },
+  {
+    "id": 385,
+    "lat": 40.662651265160676,
+    "lng": -73.75989830553264,
+    "hour": 17,
+    "date": "2026-03-25",
+    "vehicleType": "UberX",
+    "fare": 16.42,
+    "duration": 50
+  },
+  {
+    "id": 386,
+    "lat": 40.766027268502185,
+    "lng": -73.97354205085122,
+    "hour": 16,
+    "date": "2026-03-17",
+    "vehicleType": "UberComfort",
+    "fare": 29.08,
+    "duration": 14
+  },
+  {
+    "id": 387,
+    "lat": 40.76012765906826,
+    "lng": -73.95709712097276,
+    "hour": 9,
+    "date": "2026-03-25",
+    "vehicleType": "UberX",
+    "fare": 49.65,
+    "duration": 34
+  },
+  {
+    "id": 388,
+    "lat": 40.748529761130264,
+    "lng": -73.99539111137892,
+    "hour": 9,
+    "date": "2026-03-26",
+    "vehicleType": "UberPool",
+    "fare": 19.79,
+    "duration": 26
+  },
+  {
+    "id": 389,
+    "lat": 40.64314022881346,
+    "lng": -73.79918628354584,
+    "hour": 20,
+    "date": "2026-03-26",
+    "vehicleType": "UberComfort",
+    "fare": 36.57,
+    "duration": 21
+  },
+  {
+    "id": 390,
+    "lat": 40.680106955826915,
+    "lng": -73.95689141391122,
+    "hour": 22,
+    "date": "2026-03-12",
+    "vehicleType": "UberX",
+    "fare": 17.65,
+    "duration": 17
+  },
+  {
+    "id": 391,
+    "lat": 40.73488825712715,
+    "lng": -73.97305736349217,
+    "hour": 19,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 24.21,
+    "duration": 26
+  },
+  {
+    "id": 392,
+    "lat": 40.76746990008868,
+    "lng": -73.89272552991126,
+    "hour": 16,
+    "date": "2026-03-08",
+    "vehicleType": "UberX",
+    "fare": 25.62,
+    "duration": 6
+  },
+  {
+    "id": 393,
+    "lat": 40.788528272537334,
+    "lng": -73.99850582237573,
+    "hour": 6,
+    "date": "2026-03-23",
+    "vehicleType": "UberXL",
+    "fare": 45.98,
+    "duration": 37
+  },
+  {
+    "id": 394,
+    "lat": 40.71985235381626,
+    "lng": -73.81453046721442,
+    "hour": 8,
+    "date": "2026-03-27",
+    "vehicleType": "UberBlack",
+    "fare": 40.14,
+    "duration": 8
+  },
+  {
+    "id": 395,
+    "lat": 40.7789527236024,
+    "lng": -73.97290181640906,
+    "hour": 12,
+    "date": "2026-03-27",
+    "vehicleType": "UberBlack",
+    "fare": 31.68,
+    "duration": 52
+  },
+  {
+    "id": 396,
+    "lat": 40.79926353371223,
+    "lng": -73.97502226604789,
+    "hour": 9,
+    "date": "2026-03-26",
+    "vehicleType": "UberX",
+    "fare": 8.24,
+    "duration": 40
+  },
+  {
+    "id": 397,
+    "lat": 40.76409762196079,
+    "lng": -73.99727681602651,
+    "hour": 5,
+    "date": "2026-03-22",
+    "vehicleType": "UberBlack",
+    "fare": 11.02,
+    "duration": 26
+  },
+  {
+    "id": 398,
+    "lat": 40.811862109030095,
+    "lng": -73.98551799350582,
+    "hour": 17,
+    "date": "2026-03-20",
+    "vehicleType": "UberComfort",
+    "fare": 9.53,
+    "duration": 49
+  },
+  {
+    "id": 399,
+    "lat": 40.753176970685665,
+    "lng": -73.9848794589337,
+    "hour": 6,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 11.5,
+    "duration": 45
+  },
+  {
+    "id": 400,
+    "lat": 40.656208082656775,
+    "lng": -73.92670622919628,
+    "hour": 12,
+    "date": "2026-03-18",
+    "vehicleType": "UberXL",
+    "fare": 39.3,
+    "duration": 40
+  },
+  {
+    "id": 401,
+    "lat": 40.645357708778015,
+    "lng": -73.77769844602861,
+    "hour": 5,
+    "date": "2026-03-28",
+    "vehicleType": "UberComfort",
+    "fare": 21.26,
+    "duration": 32
+  },
+  {
+    "id": 402,
+    "lat": 40.791999755943124,
+    "lng": -73.8791251367209,
+    "hour": 16,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 17.76,
+    "duration": 21
+  },
+  {
+    "id": 403,
+    "lat": 40.6229627476178,
+    "lng": -73.78863417690128,
+    "hour": 9,
+    "date": "2026-03-15",
+    "vehicleType": "UberPool",
+    "fare": 13.19,
+    "duration": 26
+  },
+  {
+    "id": 404,
+    "lat": 40.62793003479906,
+    "lng": -73.77133306116,
+    "hour": 19,
+    "date": "2026-03-19",
+    "vehicleType": "UberXL",
+    "fare": 8.31,
+    "duration": 39
+  },
+  {
+    "id": 405,
+    "lat": 40.76851737141537,
+    "lng": -73.85024566448548,
+    "hour": 23,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 9.71,
+    "duration": 26
+  },
+  {
+    "id": 406,
+    "lat": 40.76238178418125,
+    "lng": -73.88042082706711,
+    "hour": 17,
+    "date": "2026-03-13",
+    "vehicleType": "UberX",
+    "fare": 32.99,
+    "duration": 38
+  },
+  {
+    "id": 407,
+    "lat": 40.635204560853,
+    "lng": -73.79890156507504,
+    "hour": 18,
+    "date": "2026-03-22",
+    "vehicleType": "UberX",
+    "fare": 27.18,
+    "duration": 37
+  },
+  {
+    "id": 408,
+    "lat": 40.72450234486678,
+    "lng": -73.79933006740033,
+    "hour": 8,
+    "date": "2026-04-04",
+    "vehicleType": "UberBlack",
+    "fare": 20.52,
+    "duration": 53
+  },
+  {
+    "id": 409,
+    "lat": 40.76532500615144,
+    "lng": -73.97020743710584,
+    "hour": 9,
+    "date": "2026-03-11",
+    "vehicleType": "UberBlack",
+    "fare": 17.04,
+    "duration": 49
+  },
+  {
+    "id": 410,
+    "lat": 40.66991900641901,
+    "lng": -73.78210903184178,
+    "hour": 20,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 15.17,
+    "duration": 19
+  },
+  {
+    "id": 411,
+    "lat": 40.75361001037203,
+    "lng": -74.02241675949399,
+    "hour": 13,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 5.28,
+    "duration": 43
+  },
+  {
+    "id": 412,
+    "lat": 40.786122785161325,
+    "lng": -73.9575036453526,
+    "hour": 6,
+    "date": "2026-03-29",
+    "vehicleType": "UberXL",
+    "fare": 26.57,
+    "duration": 53
+  },
+  {
+    "id": 413,
+    "lat": 40.774703640416334,
+    "lng": -74.00488776497379,
+    "hour": 9,
+    "date": "2026-04-03",
+    "vehicleType": "UberX",
+    "fare": 20.59,
+    "duration": 34
+  },
+  {
+    "id": 414,
+    "lat": 40.70686907316275,
+    "lng": -73.9667136798933,
+    "hour": 17,
+    "date": "2026-03-28",
+    "vehicleType": "UberBlack",
+    "fare": 7.12,
+    "duration": 18
+  },
+  {
+    "id": 415,
+    "lat": 40.62476633665427,
+    "lng": -73.79414847078058,
+    "hour": 8,
+    "date": "2026-03-20",
+    "vehicleType": "UberXL",
+    "fare": 23.9,
+    "duration": 43
+  },
+  {
+    "id": 416,
+    "lat": 40.75066581404861,
+    "lng": -73.9694389394283,
+    "hour": 16,
+    "date": "2026-03-19",
+    "vehicleType": "UberPool",
+    "fare": 37.81,
+    "duration": 11
+  },
+  {
+    "id": 417,
+    "lat": 40.767070371306694,
+    "lng": -74.01088381114168,
+    "hour": 9,
+    "date": "2026-03-30",
+    "vehicleType": "UberBlack",
+    "fare": 30.24,
+    "duration": 48
+  },
+  {
+    "id": 418,
+    "lat": 40.80809540481976,
+    "lng": -73.96470191806995,
+    "hour": 12,
+    "date": "2026-03-10",
+    "vehicleType": "UberXL",
+    "fare": 7.07,
+    "duration": 34
+  },
+  {
+    "id": 419,
+    "lat": 40.65074449454281,
+    "lng": -73.7672695394152,
+    "hour": 7,
+    "date": "2026-03-09",
+    "vehicleType": "UberBlack",
+    "fare": 48.89,
+    "duration": 56
+  },
+  {
+    "id": 420,
+    "lat": 40.78122576069612,
+    "lng": -73.90336014752117,
+    "hour": 19,
+    "date": "2026-03-23",
+    "vehicleType": "UberXL",
+    "fare": 31.84,
+    "duration": 59
+  },
+  {
+    "id": 421,
+    "lat": 40.6313453103041,
+    "lng": -73.7487584465435,
+    "hour": 9,
+    "date": "2026-03-19",
+    "vehicleType": "UberPool",
+    "fare": 14.98,
+    "duration": 56
+  },
+  {
+    "id": 422,
+    "lat": 40.7480178093675,
+    "lng": -73.77453280882237,
+    "hour": 17,
+    "date": "2026-03-10",
+    "vehicleType": "UberComfort",
+    "fare": 6.57,
+    "duration": 10
+  },
+  {
+    "id": 423,
+    "lat": 40.78392442057765,
+    "lng": -74.00106401338553,
+    "hour": 16,
+    "date": "2026-04-04",
+    "vehicleType": "UberPool",
+    "fare": 24.8,
+    "duration": 43
+  },
+  {
+    "id": 424,
+    "lat": 40.61380415285834,
+    "lng": -73.77170382663375,
+    "hour": 16,
+    "date": "2026-04-02",
+    "vehicleType": "UberXL",
+    "fare": 5.42,
+    "duration": 28
+  },
+  {
+    "id": 425,
+    "lat": 40.77298333176168,
+    "lng": -74.00581872309576,
+    "hour": 11,
+    "date": "2026-03-18",
+    "vehicleType": "UberPool",
+    "fare": 20.42,
+    "duration": 49
+  },
+  {
+    "id": 426,
+    "lat": 40.629606653821185,
+    "lng": -73.76540485572484,
+    "hour": 1,
+    "date": "2026-03-26",
+    "vehicleType": "UberX",
+    "fare": 7.21,
+    "duration": 45
+  },
+  {
+    "id": 427,
+    "lat": 40.698282061873996,
+    "lng": -73.80106439000886,
+    "hour": 8,
+    "date": "2026-04-03",
+    "vehicleType": "UberComfort",
+    "fare": 16.18,
+    "duration": 36
+  },
+  {
+    "id": 428,
+    "lat": 40.69515598719137,
+    "lng": -73.94026941342152,
+    "hour": 13,
+    "date": "2026-03-10",
+    "vehicleType": "UberX",
+    "fare": 12.65,
+    "duration": 22
+  },
+  {
+    "id": 429,
+    "lat": 40.75106807893284,
+    "lng": -73.76619573937981,
+    "hour": 10,
+    "date": "2026-03-19",
+    "vehicleType": "UberBlack",
+    "fare": 29.38,
+    "duration": 50
+  },
+  {
+    "id": 430,
+    "lat": 40.74797294444947,
+    "lng": -73.86397288722978,
+    "hour": 12,
+    "date": "2026-03-13",
+    "vehicleType": "UberPool",
+    "fare": 39.69,
+    "duration": 22
+  },
+  {
+    "id": 431,
+    "lat": 40.70543779281681,
+    "lng": -73.76651389986402,
+    "hour": 6,
+    "date": "2026-03-20",
+    "vehicleType": "UberX",
+    "fare": 18.52,
+    "duration": 52
+  },
+  {
+    "id": 432,
+    "lat": 40.72870391038734,
+    "lng": -73.78317633132754,
+    "hour": 7,
+    "date": "2026-03-20",
+    "vehicleType": "UberXL",
+    "fare": 26.66,
+    "duration": 11
+  },
+  {
+    "id": 433,
+    "lat": 40.65982193006219,
+    "lng": -73.75831427981636,
+    "hour": 17,
+    "date": "2026-03-14",
+    "vehicleType": "UberBlack",
+    "fare": 5.17,
+    "duration": 42
+  },
+  {
+    "id": 434,
+    "lat": 40.69057903422879,
+    "lng": -73.94022116592198,
+    "hour": 10,
+    "date": "2026-03-07",
+    "vehicleType": "UberPool",
+    "fare": 27.06,
+    "duration": 58
+  },
+  {
+    "id": 435,
+    "lat": 40.78241446937397,
+    "lng": -73.98327849955844,
+    "hour": 16,
+    "date": "2026-03-20",
+    "vehicleType": "UberBlack",
+    "fare": 24.95,
+    "duration": 36
+  },
+  {
+    "id": 436,
+    "lat": 40.71309984305724,
+    "lng": -73.8185132417924,
+    "hour": 5,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 28.25,
+    "duration": 54
+  },
+  {
+    "id": 437,
+    "lat": 40.65551921542935,
+    "lng": -73.94799309445932,
+    "hour": 16,
+    "date": "2026-03-29",
+    "vehicleType": "UberPool",
+    "fare": 34.78,
+    "duration": 30
+  },
+  {
+    "id": 438,
+    "lat": 40.762626767136936,
+    "lng": -73.95732630975522,
+    "hour": 9,
+    "date": "2026-03-28",
+    "vehicleType": "UberPool",
+    "fare": 7.67,
+    "duration": 5
+  },
+  {
+    "id": 439,
+    "lat": 40.77702073720175,
+    "lng": -74.01196958587043,
+    "hour": 12,
+    "date": "2026-03-13",
+    "vehicleType": "UberXL",
+    "fare": 35.48,
+    "duration": 26
+  },
+  {
+    "id": 440,
+    "lat": 40.77181788364379,
+    "lng": -74.0062590256147,
+    "hour": 18,
+    "date": "2026-03-30",
+    "vehicleType": "UberBlack",
+    "fare": 43.34,
+    "duration": 13
+  },
+  {
+    "id": 441,
+    "lat": 40.74922195018884,
+    "lng": -73.87398233423416,
+    "hour": 7,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 28.1,
+    "duration": 20
+  },
+  {
+    "id": 442,
+    "lat": 40.732905912894594,
+    "lng": -74.01263326137119,
+    "hour": 7,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 28.7,
+    "duration": 38
+  },
+  {
+    "id": 443,
+    "lat": 40.74388383341402,
+    "lng": -73.97435056556417,
+    "hour": 2,
+    "date": "2026-03-30",
+    "vehicleType": "UberBlack",
+    "fare": 15.66,
+    "duration": 14
+  },
+  {
+    "id": 444,
+    "lat": 40.66310627597723,
+    "lng": -73.91977537792455,
+    "hour": 9,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 5.95,
+    "duration": 45
+  },
+  {
+    "id": 445,
+    "lat": 40.80159804192102,
+    "lng": -73.9631473027591,
+    "hour": 21,
+    "date": "2026-03-07",
+    "vehicleType": "UberX",
+    "fare": 8.73,
+    "duration": 24
+  },
+  {
+    "id": 446,
+    "lat": 40.667349796536755,
+    "lng": -73.92061763106639,
+    "hour": 7,
+    "date": "2026-03-13",
+    "vehicleType": "UberBlack",
+    "fare": 44.36,
+    "duration": 15
+  },
+  {
+    "id": 447,
+    "lat": 40.76162943083551,
+    "lng": -73.99494786401984,
+    "hour": 17,
+    "date": "2026-03-30",
+    "vehicleType": "UberXL",
+    "fare": 18.21,
+    "duration": 26
+  },
+  {
+    "id": 448,
+    "lat": 40.76060192144697,
+    "lng": -73.98835350622564,
+    "hour": 0,
+    "date": "2026-04-01",
+    "vehicleType": "UberXL",
+    "fare": 45.86,
+    "duration": 31
+  },
+  {
+    "id": 449,
+    "lat": 40.74324486212898,
+    "lng": -73.79847363931711,
+    "hour": 16,
+    "date": "2026-03-11",
+    "vehicleType": "UberBlack",
+    "fare": 48.02,
+    "duration": 46
+  },
+  {
+    "id": 450,
+    "lat": 40.764764732376186,
+    "lng": -74.00574455757746,
+    "hour": 15,
+    "date": "2026-03-24",
+    "vehicleType": "UberComfort",
+    "fare": 44.32,
+    "duration": 55
+  },
+  {
+    "id": 451,
+    "lat": 40.62470710807681,
+    "lng": -73.78733851398393,
+    "hour": 17,
+    "date": "2026-03-19",
+    "vehicleType": "UberX",
+    "fare": 7.77,
+    "duration": 29
+  },
+  {
+    "id": 452,
+    "lat": 40.757399142316224,
+    "lng": -74.00008049394866,
+    "hour": 12,
+    "date": "2026-04-01",
+    "vehicleType": "UberBlack",
+    "fare": 39.48,
+    "duration": 30
+  },
+  {
+    "id": 453,
+    "lat": 40.72653636285455,
+    "lng": -73.8181865470417,
+    "hour": 18,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 24.53,
+    "duration": 31
+  },
+  {
+    "id": 454,
+    "lat": 40.65532526331852,
+    "lng": -73.75735251035366,
+    "hour": 9,
+    "date": "2026-03-28",
+    "vehicleType": "UberPool",
+    "fare": 46.73,
+    "duration": 46
+  },
+  {
+    "id": 455,
+    "lat": 40.768130184741715,
+    "lng": -73.85795012651062,
+    "hour": 15,
+    "date": "2026-03-18",
+    "vehicleType": "UberBlack",
+    "fare": 19.69,
+    "duration": 19
+  },
+  {
+    "id": 456,
+    "lat": 40.79824734247941,
+    "lng": -73.86473674326106,
+    "hour": 7,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 6.52,
+    "duration": 29
+  },
+  {
+    "id": 457,
+    "lat": 40.76425596923371,
+    "lng": -73.95658409598575,
+    "hour": 19,
+    "date": "2026-03-22",
+    "vehicleType": "UberComfort",
+    "fare": 46.89,
+    "duration": 23
+  },
+  {
+    "id": 458,
+    "lat": 40.66928596566216,
+    "lng": -73.79544744096548,
+    "hour": 20,
+    "date": "2026-03-09",
+    "vehicleType": "UberComfort",
+    "fare": 6.48,
+    "duration": 41
+  },
+  {
+    "id": 459,
+    "lat": 40.624420013717774,
+    "lng": -73.75920131511322,
+    "hour": 7,
+    "date": "2026-03-15",
+    "vehicleType": "UberXL",
+    "fare": 26.35,
+    "duration": 19
+  },
+  {
+    "id": 460,
+    "lat": 40.73029198182902,
+    "lng": -74.01852504213196,
+    "hour": 14,
+    "date": "2026-03-25",
+    "vehicleType": "UberComfort",
+    "fare": 49.42,
+    "duration": 19
+  },
+  {
+    "id": 461,
+    "lat": 40.79223350139815,
+    "lng": -73.88889495133607,
+    "hour": 6,
+    "date": "2026-03-09",
+    "vehicleType": "UberPool",
+    "fare": 29.19,
+    "duration": 30
+  },
+  {
+    "id": 462,
+    "lat": 40.76970854218089,
+    "lng": -73.99908021098382,
+    "hour": 12,
+    "date": "2026-04-02",
+    "vehicleType": "UberComfort",
+    "fare": 33.98,
+    "duration": 23
+  },
+  {
+    "id": 463,
+    "lat": 40.77567471702758,
+    "lng": -73.99470442918411,
+    "hour": 5,
+    "date": "2026-03-19",
+    "vehicleType": "UberX",
+    "fare": 13.53,
+    "duration": 26
+  },
+  {
+    "id": 464,
+    "lat": 40.76122663708563,
+    "lng": -73.87475349278697,
+    "hour": 16,
+    "date": "2026-03-23",
+    "vehicleType": "UberComfort",
+    "fare": 6.64,
+    "duration": 24
+  },
+  {
+    "id": 465,
+    "lat": 40.72630618965239,
+    "lng": -73.97543257791355,
+    "hour": 2,
+    "date": "2026-03-10",
+    "vehicleType": "UberPool",
+    "fare": 49.26,
+    "duration": 34
+  },
+  {
+    "id": 466,
+    "lat": 40.76293418520017,
+    "lng": -73.85284447513283,
+    "hour": 6,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 30.91,
+    "duration": 58
+  },
+  {
+    "id": 467,
+    "lat": 40.75558133836167,
+    "lng": -73.98077664761513,
+    "hour": 15,
+    "date": "2026-03-27",
+    "vehicleType": "UberComfort",
+    "fare": 40.45,
+    "duration": 35
+  },
+  {
+    "id": 468,
+    "lat": 40.77618330533623,
+    "lng": -73.98623332565657,
+    "hour": 8,
+    "date": "2026-03-29",
+    "vehicleType": "UberX",
+    "fare": 15.51,
+    "duration": 57
+  },
+  {
+    "id": 469,
+    "lat": 40.7764660662941,
+    "lng": -73.9969096769845,
+    "hour": 22,
+    "date": "2026-03-30",
+    "vehicleType": "UberX",
+    "fare": 18.08,
+    "duration": 26
+  },
+  {
+    "id": 470,
+    "lat": 40.73258616567626,
+    "lng": -73.782931370094,
+    "hour": 11,
+    "date": "2026-03-25",
+    "vehicleType": "UberPool",
+    "fare": 29.2,
+    "duration": 50
+  },
+  {
+    "id": 471,
+    "lat": 40.722518145082255,
+    "lng": -73.77719983081481,
+    "hour": 17,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 32.73,
+    "duration": 22
+  },
+  {
+    "id": 472,
+    "lat": 40.72843553597059,
+    "lng": -73.97028371545791,
+    "hour": 21,
+    "date": "2026-03-21",
+    "vehicleType": "UberX",
+    "fare": 15.02,
+    "duration": 31
+  },
+  {
+    "id": 473,
+    "lat": 40.73267415538561,
+    "lng": -74.0062775066852,
+    "hour": 9,
+    "date": "2026-04-03",
+    "vehicleType": "UberPool",
+    "fare": 25.86,
+    "duration": 40
+  },
+  {
+    "id": 474,
+    "lat": 40.64145595494773,
+    "lng": -73.80151645943053,
+    "hour": 7,
+    "date": "2026-03-23",
+    "vehicleType": "UberX",
+    "fare": 35.02,
+    "duration": 24
+  },
+  {
+    "id": 475,
+    "lat": 40.69424988758529,
+    "lng": -73.96293798726217,
+    "hour": 19,
+    "date": "2026-03-26",
+    "vehicleType": "UberBlack",
+    "fare": 36.78,
+    "duration": 34
+  },
+  {
+    "id": 476,
+    "lat": 40.74482208446514,
+    "lng": -73.80516366202798,
+    "hour": 18,
+    "date": "2026-03-11",
+    "vehicleType": "UberX",
+    "fare": 39.72,
+    "duration": 29
+  },
+  {
+    "id": 477,
+    "lat": 40.769836808823634,
+    "lng": -73.89150767202705,
+    "hour": 9,
+    "date": "2026-03-10",
+    "vehicleType": "UberBlack",
+    "fare": 31.3,
+    "duration": 18
+  },
+  {
+    "id": 478,
+    "lat": 40.72760099443158,
+    "lng": -73.7906382676826,
+    "hour": 13,
+    "date": "2026-03-09",
+    "vehicleType": "UberBlack",
+    "fare": 35.31,
+    "duration": 30
+  },
+  {
+    "id": 479,
+    "lat": 40.71128471593892,
+    "lng": -73.82279638552271,
+    "hour": 8,
+    "date": "2026-03-24",
+    "vehicleType": "UberBlack",
+    "fare": 5.48,
+    "duration": 44
+  },
+  {
+    "id": 480,
+    "lat": 40.7984480407921,
+    "lng": -73.99372824524983,
+    "hour": 19,
+    "date": "2026-03-12",
+    "vehicleType": "UberBlack",
+    "fare": 38.88,
+    "duration": 41
+  },
+  {
+    "id": 481,
+    "lat": 40.673368575140245,
+    "lng": -73.96011770281793,
+    "hour": 7,
+    "date": "2026-03-19",
+    "vehicleType": "UberComfort",
+    "fare": 9.8,
+    "duration": 30
+  },
+  {
+    "id": 482,
+    "lat": 40.65654530839098,
+    "lng": -73.77538068781334,
+    "hour": 11,
+    "date": "2026-03-10",
+    "vehicleType": "UberComfort",
+    "fare": 16.12,
+    "duration": 28
+  },
+  {
+    "id": 483,
+    "lat": 40.661379214780844,
+    "lng": -73.92163651897637,
+    "hour": 8,
+    "date": "2026-03-15",
+    "vehicleType": "UberX",
+    "fare": 14.68,
+    "duration": 48
+  },
+  {
+    "id": 484,
+    "lat": 40.675720267289336,
+    "lng": -73.9613167725194,
+    "hour": 9,
+    "date": "2026-03-14",
+    "vehicleType": "UberComfort",
+    "fare": 17.52,
+    "duration": 15
+  },
+  {
+    "id": 485,
+    "lat": 40.73092672063656,
+    "lng": -73.81007552994929,
+    "hour": 16,
+    "date": "2026-04-03",
+    "vehicleType": "UberBlack",
+    "fare": 18.32,
+    "duration": 53
+  },
+  {
+    "id": 486,
+    "lat": 40.74806802769449,
+    "lng": -74.00134268935429,
+    "hour": 15,
+    "date": "2026-03-16",
+    "vehicleType": "UberComfort",
+    "fare": 5.59,
+    "duration": 39
+  },
+  {
+    "id": 487,
+    "lat": 40.75678877755463,
+    "lng": -73.77020775175674,
+    "hour": 15,
+    "date": "2026-03-08",
+    "vehicleType": "UberX",
+    "fare": 25.88,
+    "duration": 28
+  },
+  {
+    "id": 488,
+    "lat": 40.73894118340017,
+    "lng": -73.96062446557829,
+    "hour": 9,
+    "date": "2026-03-23",
+    "vehicleType": "UberPool",
+    "fare": 14.95,
+    "duration": 19
+  },
+  {
+    "id": 489,
+    "lat": 40.74941559996013,
+    "lng": -73.84496767214509,
+    "hour": 14,
+    "date": "2026-03-21",
+    "vehicleType": "UberX",
+    "fare": 14.61,
+    "duration": 38
+  },
+  {
+    "id": 490,
+    "lat": 40.730796783890916,
+    "lng": -73.78465832091285,
+    "hour": 9,
+    "date": "2026-03-24",
+    "vehicleType": "UberX",
+    "fare": 8.6,
+    "duration": 21
+  },
+  {
+    "id": 491,
+    "lat": 40.70046462026041,
+    "lng": -73.77612195283488,
+    "hour": 16,
+    "date": "2026-04-01",
+    "vehicleType": "UberComfort",
+    "fare": 13.48,
+    "duration": 49
+  },
+  {
+    "id": 492,
+    "lat": 40.65821846163156,
+    "lng": -73.94492281042191,
+    "hour": 9,
+    "date": "2026-03-31",
+    "vehicleType": "UberBlack",
+    "fare": 17.91,
+    "duration": 10
+  },
+  {
+    "id": 493,
+    "lat": 40.65693586698605,
+    "lng": -73.96157658319275,
+    "hour": 13,
+    "date": "2026-03-27",
+    "vehicleType": "UberXL",
+    "fare": 34.8,
+    "duration": 51
+  },
+  {
+    "id": 494,
+    "lat": 40.781915621336,
+    "lng": -73.96238132481696,
+    "hour": 16,
+    "date": "2026-03-09",
+    "vehicleType": "UberX",
+    "fare": 5.38,
+    "duration": 12
+  },
+  {
+    "id": 495,
+    "lat": 40.61334448061017,
+    "lng": -73.76840130689851,
+    "hour": 15,
+    "date": "2026-03-21",
+    "vehicleType": "UberBlack",
+    "fare": 8.82,
+    "duration": 34
+  },
+  {
+    "id": 496,
+    "lat": 40.710468525283204,
+    "lng": -73.80552018877025,
+    "hour": 5,
+    "date": "2026-03-16",
+    "vehicleType": "UberBlack",
+    "fare": 22.31,
+    "duration": 17
+  },
+  {
+    "id": 497,
+    "lat": 40.74279088584539,
+    "lng": -73.79437074190137,
+    "hour": 11,
+    "date": "2026-03-23",
+    "vehicleType": "UberBlack",
+    "fare": 48.67,
+    "duration": 42
+  },
+  {
+    "id": 498,
+    "lat": 40.74908183352315,
+    "lng": -73.97768489429318,
+    "hour": 9,
+    "date": "2026-03-14",
+    "vehicleType": "UberXL",
+    "fare": 7.7,
+    "duration": 59
+  },
+  {
+    "id": 499,
+    "lat": 40.6197093828657,
+    "lng": -73.77852948638544,
+    "hour": 1,
+    "date": "2026-03-11",
+    "vehicleType": "UberPool",
+    "fare": 23.74,
+    "duration": 47
+  },
+  {
+    "id": 500,
+    "lat": 40.72213138427708,
+    "lng": -73.76567394790641,
+    "hour": 17,
+    "date": "2026-03-20",
+    "vehicleType": "UberPool",
+    "fare": 23.87,
+    "duration": 39
+  }
+]

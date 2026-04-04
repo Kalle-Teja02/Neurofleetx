@@ -38,6 +38,11 @@ public class Trip {
     private LocalDateTime startTime;
     
     private LocalDateTime endTime;
+
+    private Double pickupLat;
+    private Double pickupLng;
+    private Double dropLat;
+    private Double dropLng;
     
     // Optional: Add JPA relationships if needed
     // @ManyToOne(fetch = FetchType.LAZY)

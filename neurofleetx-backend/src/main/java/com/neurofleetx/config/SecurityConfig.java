@@ -34,6 +34,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll()
                 .requestMatchers("/api/analytics").permitAll()
+                .requestMatchers("/api/admin/**").permitAll()
                 .requestMatchers("/api/diagnostic/**").permitAll()
                 .requestMatchers("/api/fleet/dashboard/test").permitAll()
                 .requestMatchers("/api/vehicles/manager/test").permitAll()
