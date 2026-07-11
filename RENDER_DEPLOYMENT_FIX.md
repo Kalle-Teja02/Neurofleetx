@@ -34,7 +34,7 @@ Go to your Render dashboard for `neurofleetx-frontend` and verify these settings
 #### Environment Variables:
 Make sure this is set:
 - **Key:** `VITE_API_URL`
-- **Value:** `https://neurofleetx-backend.onrender.com`
+- **Value:** `https://neurofleetx-1-ptto.onrender.com`
 
 ### Step 3: Manual Deploy (if needed)
 
@@ -82,7 +82,7 @@ Password: driver123
 
 2. **Check Network Tab**
    - Click on the login request
-   - Check Request URL (should be: https://neurofleetx-backend.onrender.com/api/auth/login)
+   - Check Request URL (should be: https://neurofleetx-1-ptto.onrender.com/api/auth/login)
    - Check Response status
 
 3. **Visit Test Page**
@@ -108,7 +108,7 @@ Backend fix already applied (removed `@CrossOrigin` from AuthController)
 ### Issue 3: Environment variable not working
 **Solution:**
 - Go to Render Dashboard → neurofleetx-frontend → Environment
-- Add: `VITE_API_URL` = `https://neurofleetx-backend.onrender.com`
+- Add: `VITE_API_URL` = `https://neurofleetx-1-ptto.onrender.com`
 - Click "Save Changes"
 - Render will auto-redeploy
 

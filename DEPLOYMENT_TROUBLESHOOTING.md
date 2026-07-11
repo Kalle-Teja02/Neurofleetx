@@ -41,7 +41,7 @@ This page will:
    
    **Frontend Environment Variables:**
    - Go to Render dashboard → neurofleetx-frontend → Environment
-   - Add: `VITE_API_URL` = `https://neurofleetx-backend.onrender.com`
+   - Add: `VITE_API_URL` = `https://neurofleetx-1-ptto.onrender.com`
    - Click "Save Changes"
    - Render will auto-redeploy
 
@@ -125,10 +125,10 @@ Open a terminal and test your backend:
 
 ```bash
 # Test if backend is alive
-curl https://neurofleetx-backend.onrender.com/api/auth/login
+curl https://neurofleetx-1-ptto.onrender.com/api/auth/login
 
 # Test login
-curl -X POST https://neurofleetx-backend.onrender.com/api/auth/login \
+curl -X POST https://neurofleetx-1-ptto.onrender.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"admin@neurofleetx.com","password":"admin123"}'
 ```
@@ -150,7 +150,7 @@ Expected response:
 
 1. Visit `/test-connection` page
 2. Check the "Current API URL" displayed
-3. It should show: `https://neurofleetx-backend.onrender.com`
+3. It should show: `https://neurofleetx-1-ptto.onrender.com`
 
 If it shows `http://localhost:8082`:
 - Your environment variable is not set in Render

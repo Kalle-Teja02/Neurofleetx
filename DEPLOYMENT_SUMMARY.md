@@ -190,7 +190,7 @@ Invalid credentials
 ### Issue: Environment variable not working
 
 **Symptoms:**
-- `/test-connection` shows old URL (neurofleetx-backend.onrender.com)
+- `/test-connection` shows old URL (neurofleetx-1-ptto.onrender.com)
 
 **Fix:**
 1. Go to Render Dashboard → neurofleetx-frontend → Environment
