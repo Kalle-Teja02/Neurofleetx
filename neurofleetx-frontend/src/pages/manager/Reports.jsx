@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/pages.css";
 
+import API_URL from '../../config/api.js';
+
 function Reports() {
   const navigate = useNavigate();
   const [reports, setReports] = useState(null);
@@ -14,7 +16,7 @@ function Reports() {
 
   const fetchReports = async () => {
     try {
-      const response = await axios.get('http://localhost:8082/api/reports/manager/test');
+      const response = await axios.get(`${API_URL}/api/reports/manager/test`);
       setReports(response.data);
       console.log("✅ Loaded reports:", response.data);
     } catch (error) {

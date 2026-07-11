@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import "../../styles/pages.css";
 import "../../styles/analytics.css";
+import API_URL from '../../config/api.js';
 
 const STATUS_COLORS = { AVAILABLE: "#10b981", IN_USE: "#3b82f6", MAINTENANCE: "#ef4444" };
 
@@ -24,7 +25,7 @@ export default function Analytics() {
       setLoading(true);
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:8082/api/analytics?role=${role}&userId=${userId}`,
+        `${API_URL}/api/analytics?role=${role}&userId=${userId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       if (!res.ok) throw new Error("Failed to fetch analytics");

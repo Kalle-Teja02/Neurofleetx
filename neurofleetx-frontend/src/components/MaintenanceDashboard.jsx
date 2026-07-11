@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_URL from '../config/api';
 import '../styles/maintenanceDashboard.css';
 
 export default function MaintenanceDashboard() {
@@ -78,7 +79,7 @@ export default function MaintenanceDashboard() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const vehicleResponse = await fetch('http://localhost:8082/api/vehicles/test', {
+      const vehicleResponse = await fetch(`${API_URL}/api/vehicles/test`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!vehicleResponse.ok) throw new Error('Failed to fetch vehicles');

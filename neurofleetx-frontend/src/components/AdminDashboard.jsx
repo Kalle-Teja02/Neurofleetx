@@ -6,7 +6,9 @@ import "../styles/adminDashboard.css";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-const BASE = 'http://localhost:8082';
+import API_URL from '../config/api.js';
+
+const BASE = API_URL;
 
 function AdminDashboard() {
   const navigate = useNavigate();

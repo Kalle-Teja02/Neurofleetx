@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { tripService } from "../services/tripService";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API_URL from "../config/api";
 import "../styles/driverDashboard.css";
 
 function DriverDashboard() {
@@ -70,7 +71,7 @@ function DriverDashboard() {
 
   const fetchAssignedVehicle = async (userId) => {
     try {
-      const response = await fetch('http://localhost:8082/api/vehicles/test');
+      const response = await fetch(`${API_URL}/api/vehicles/test`);
       if (response.ok) {
         const vehicles = await response.json();
         const assigned = vehicles.find(v => v.assignedDriverId === parseInt(userId));

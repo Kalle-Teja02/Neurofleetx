@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_URL from '../config/api';
 import '../styles/fleetVehicleParameters.css';
 
 export default function FleetVehicleParameters() {
@@ -13,7 +14,7 @@ export default function FleetVehicleParameters() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:8082/api/vehicles/test', {
+      const res = await fetch(`${API_URL}/api/vehicles/test`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed');

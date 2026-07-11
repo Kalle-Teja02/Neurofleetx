@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import API_URL from "../config/api";
 import "../styles/fleetDashboard.css";
 
 const FleetManagerDashboard = () => {
@@ -35,7 +36,7 @@ const FleetManagerDashboard = () => {
       
       // Try test endpoint first (no auth required)
       console.log("🔍 Using TEST endpoint (no auth required)");
-      const response = await axios.get(`http://localhost:8082/api/fleet/dashboard/test`);
+      const response = await axios.get(`${API_URL}/api/fleet/dashboard/test`);
       
       console.log("✅ Dashboard data received:", response.data);
       const data = response.data;

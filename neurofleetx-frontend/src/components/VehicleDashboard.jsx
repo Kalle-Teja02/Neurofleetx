@@ -4,6 +4,7 @@ import EditVehicleModal from './EditVehicleModal';
 import { tripService } from '../services/tripService';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import API_URL from '../config/api';
 import '../styles/vehicleDashboard.css';
 
 const VehicleDashboard = ({ refreshTrigger }) => {
@@ -24,7 +25,7 @@ const VehicleDashboard = ({ refreshTrigger }) => {
       setError(null);
       
       // Direct fetch with no-cache headers
-      const response = await fetch('http://localhost:8082/api/vehicles/test', {
+      const response = await fetch(`${API_URL}/api/vehicles/test`, {
         method: 'GET',
         headers: {
           'Cache-Control': 'no-cache, no-store, must-revalidate',
@@ -63,7 +64,7 @@ const VehicleDashboard = ({ refreshTrigger }) => {
 
   const fetchDriverNames = async (vehicleList) => {
     try {
-      const response = await fetch('http://localhost:8082/api/drivers/manager/test', {
+      const response = await fetch(`${API_URL}/api/drivers/manager/test`, {
         headers: {
           'Cache-Control': 'no-cache'
         }
@@ -151,7 +152,7 @@ const VehicleDashboard = ({ refreshTrigger }) => {
           }
 
           // Update backend silently
-          fetch(`http://localhost:8082/api/vehicles/test/${vehicle.id}`, {
+          fetch(`${API_URL}/api/vehicles/test/${vehicle.id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedVehicle)
@@ -172,7 +173,7 @@ const VehicleDashboard = ({ refreshTrigger }) => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8082/api/vehicles/test/${id}`, {
+      const response = await fetch(`${API_URL}/api/vehicles/test/${id}`, {
         method: 'DELETE'
       });
       
@@ -205,7 +206,7 @@ const VehicleDashboard = ({ refreshTrigger }) => {
 
   const handleServiceComplete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8082/api/vehicles/${id}/service-complete`, {
+      const response = await fetch(`${API_URL}/api/vehicles/${id}/service-complete`, {
         method: 'PUT'
       });
       

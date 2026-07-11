@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import API_URL from '../config/api';
 import '../styles/alertNotifications.css';
 
 export default function AlertNotifications() {
@@ -19,7 +20,7 @@ export default function AlertNotifications() {
       const token = localStorage.getItem('token');
       
       // Fetch vehicles
-      const vehicleResponse = await fetch('http://localhost:8082/api/vehicles/test', {
+      const vehicleResponse = await fetch(`${API_URL}/api/vehicles/test`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       

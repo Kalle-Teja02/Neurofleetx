@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from 'recharts';
+import API_URL from '../config/api';
 import '../styles/maintenanceStatusPie.css';
 
 export default function MaintenanceStatusPie() {
@@ -20,7 +21,7 @@ export default function MaintenanceStatusPie() {
       setLoading(true);
 
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8082/api/vehicles/test', {
+      const response = await fetch(`${API_URL}/api/vehicles/test`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!response.ok) {
@@ -71,7 +72,7 @@ export default function MaintenanceStatusPie() {
       setVehiclesByStatus(vehiclesByStatusMap);
 
       // Also fetch all maintenance records
-      const maintResponse = await fetch('http://localhost:8082/api/maintenance/test', {
+      const maintResponse = await fetch(`${API_URL}/api/maintenance/test`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (maintResponse.ok) {

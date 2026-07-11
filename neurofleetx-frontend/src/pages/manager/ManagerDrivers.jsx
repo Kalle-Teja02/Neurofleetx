@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/pages.css";
 
+import API_URL from '../../config/api.js';
+
 function ManagerDrivers() {
   const navigate = useNavigate();
   const [drivers, setDrivers] = useState([]);
@@ -33,7 +35,7 @@ function ManagerDrivers() {
 
   const fetchDrivers = async () => {
     try {
-      const response = await axios.get('http://localhost:8082/api/drivers/manager/test');
+      const response = await axios.get(`${API_URL}/api/drivers/manager/test`);
       const data = response.data;
       
       if (Array.isArray(data)) {
@@ -52,7 +54,7 @@ function ManagerDrivers() {
 
   const fetchVehicles = async () => {
     try {
-      const response = await axios.get('http://localhost:8082/api/vehicles/manager/test');
+      const response = await axios.get(`${API_URL}/api/vehicles/manager/test`);
       const data = response.data;
       
       if (Array.isArray(data)) {
@@ -106,7 +108,7 @@ function ManagerDrivers() {
     
     try {
       const response = await axios.put(
-        `http://localhost:8082/api/drivers/manager/test/${selectedDriver}/assign/${selectedVehicle}`
+        `${API_URL}/api/drivers/manager/test/${selectedDriver}/assign/${selectedVehicle}`
       );
       
       console.log("✅ Assignment successful:", response.data);

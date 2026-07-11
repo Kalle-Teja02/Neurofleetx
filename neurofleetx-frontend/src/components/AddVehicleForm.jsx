@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import API_URL from '../config/api';
 import '../styles/addVehicleForm.css';
 
 const AddVehicleForm = ({ onVehicleAdded }) => {
@@ -27,7 +28,7 @@ const AddVehicleForm = ({ onVehicleAdded }) => {
 
   const fetchDrivers = async () => {
     try {
-      const response = await fetch('http://localhost:8082/api/drivers/manager/test');
+      const response = await fetch(`${API_URL}/api/drivers/manager/test`);
       if (response.ok) {
         const data = await response.json();
         setDrivers(data);
@@ -56,7 +57,7 @@ const AddVehicleForm = ({ onVehicleAdded }) => {
     try {
       console.log('📤 Submitting vehicle:', formData);
       
-      const response = await fetch('http://localhost:8082/api/vehicles/test', {
+      const response = await fetch(`${API_URL}/api/vehicles/test`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

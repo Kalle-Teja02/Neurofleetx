@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import API_URL from '../config/api';
 import '../styles/vehicleWearChart.css';
 
 export default function VehicleWearChart() {
@@ -20,7 +21,7 @@ export default function VehicleWearChart() {
   const fetchVehicles = async () => {
     try {
       // Fetch vehicles from backend
-      const response = await fetch('http://localhost:8082/api/vehicles/test');
+      const response = await fetch(`${API_URL}/api/vehicles/test`);
       if (response.ok) {
         const vehicleList = await response.json();
         setVehicles(vehicleList);

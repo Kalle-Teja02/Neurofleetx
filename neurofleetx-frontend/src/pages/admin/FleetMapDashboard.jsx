@@ -13,7 +13,9 @@ L.Icon.Default.mergeOptions({
   shadowUrl:     new URL('leaflet/dist/images/marker-shadow.png',  import.meta.url).href,
 });
 
-const BASE = 'http://localhost:8082';
+import API_URL from '../../config/api.js';
+
+const BASE = API_URL;
 const STATUS_COLOR = { AVAILABLE: '#10b981', IN_USE: '#3b82f6', MAINTENANCE: '#f59e0b' };
 
 const safeJson = async (url, token) => {

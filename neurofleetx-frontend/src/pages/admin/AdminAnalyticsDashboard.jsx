@@ -10,7 +10,9 @@ import '../../styles/pages.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, ArcElement, Title, Tooltip, Legend);
 
-const BASE = 'http://localhost:8082';
+import API_URL from '../../config/api.js';
+
+const BASE = API_URL;
 const safeJson = async (url, token) => {
   const r = await fetch(url, { headers: { Authorization: `Bearer ${token}` } });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);

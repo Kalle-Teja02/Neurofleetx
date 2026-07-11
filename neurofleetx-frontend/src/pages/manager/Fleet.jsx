@@ -6,6 +6,8 @@ import EditVehicleModal from "../../components/EditVehicleModal";
 import VehicleDetailsModal from "../../components/VehicleDetailsModal";
 import "../../styles/pages.css";
 
+import API_URL from '../../config/api.js';
+
 function Fleet() {
   const navigate = useNavigate();
   const [vehicles, setVehicles] = useState([]);
@@ -49,7 +51,7 @@ function Fleet() {
   const fetchTrips = async () => {
     try {
       console.log('🔄 Fetching all trips from /api/trips/manager/test');
-      const response = await fetch('http://localhost:8082/api/trips/manager/test');
+      const response = await fetch(`${API_URL}/api/trips/manager/test`);
       if (response.ok) {
         const data = await response.json();
         setTrips(data);
@@ -71,7 +73,7 @@ function Fleet() {
   const fetchDrivers = async () => {
     try {
       console.log('🔄 Fetching drivers from /api/drivers/manager/test');
-      const response = await axios.get('http://localhost:8082/api/drivers/manager/test');
+      const response = await axios.get(`${API_URL}/api/drivers/manager/test`);
       console.log('📥 Response received:', response.data);
       setDrivers(response.data);
       console.log("✅ Loaded", response.data.length, "drivers");
@@ -91,7 +93,7 @@ function Fleet() {
       
       // Fetch ALL vehicles
       const timestamp = new Date().getTime();
-      const response = await axios.get(`http://localhost:8082/api/vehicles/test?_=${timestamp}`);
+      const response = await axios.get(`${API_URL}/api/vehicles/test?_=${timestamp}`);
       const data = response.data;
       
       // Ensure we have an array
@@ -125,7 +127,7 @@ function Fleet() {
     // Fetch active trip if exists
     let tripInfo = null;
     try {
-      const response = await fetch(`http://localhost:8082/api/trips/test/driver/${vehicle.assignedDriverId}`);
+      const response = await fetch(`${API_URL}/api/trips/test/driver/${vehicle.assignedDriverId}`);
       if (response.ok) {
         const trips = await response.json();
         const activeTrip = trips.find(t => t.status === 'ACTIVE' && t.vehicleId === vehicle.id);
@@ -220,7 +222,7 @@ function Fleet() {
         console.log('📤 Sending update:', updatedVehicle);
         
         // Use direct fetch with no cache
-        const response = await fetch(`http://localhost:8082/api/vehicles/test/${vehicleId}`, {
+        const response = await fetch(`${API_URL}/api/vehicles/test/${vehicleId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

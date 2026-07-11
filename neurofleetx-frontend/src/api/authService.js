@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API = "http://localhost:8082/api/auth";
+import API_URL from '../config/api.js';
+
+const API = `${API_URL}/api/auth`;
 
 // Add JWT token to all requests
 axios.interceptors.request.use(

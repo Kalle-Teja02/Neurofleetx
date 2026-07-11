@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:8082/api/trips';
+import API_URL from '../config/api.js';
+
+const API_BASE_URL = `${API_URL}/api/trips`;
 
 export const tripService = {
   // Start a new trip

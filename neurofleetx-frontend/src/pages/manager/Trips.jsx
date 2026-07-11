@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/pages.css";
 
+import API_URL from '../../config/api.js';
+
 function Trips() {
   const navigate = useNavigate();
   const [trips, setTrips] = useState([]);
@@ -14,7 +16,7 @@ function Trips() {
 
   const fetchTrips = async () => {
     try {
-      const response = await axios.get('http://localhost:8082/api/trips/manager/test');
+      const response = await axios.get(`${API_URL}/api/trips/manager/test`);
       setTrips(response.data);
       console.log("✅ Loaded", response.data.length, "trips");
     } catch (error) {

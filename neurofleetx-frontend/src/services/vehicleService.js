@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8082/api/vehicles';
+import API_URL from '../config/api.js';
+
+const BASE_URL = `${API_URL}/api/vehicles`;
 
 export const getVehicles = async () => {
   // Use manager test endpoint to bypass authentication
