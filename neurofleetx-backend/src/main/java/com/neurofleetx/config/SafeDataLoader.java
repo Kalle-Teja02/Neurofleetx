@@ -30,7 +30,7 @@ public class SafeDataLoader implements CommandLineRunner {
     @Autowired private MaintenanceRepository maintenanceRepository;
     @Autowired private PasswordEncoder       passwordEncoder;
 
-    private static final boolean FORCE_RELOAD = false;
+    private static final boolean FORCE_RELOAD = true;
 
     private static final double[][] HOTSPOTS = {
         {17.3850, 78.4867}, {17.4399, 78.4983}, {17.4126, 78.4071},
@@ -62,7 +62,9 @@ public class SafeDataLoader implements CommandLineRunner {
     private void ensureSeedAccounts() {
         createUserIfMissing("admin@neurofleetx.com",    "admin123",    "Admin",         "ADMIN");
         createUserIfMissing("abc@gmail.com",            "12345",       "Fleet Manager", "MANAGER");
-        createUserIfMissing("customer@neurofleetx.com", "customer123", "Customer",      "CUSTOMER");
+        createUserIfMissing("customer@neurofleetx.com", "customer123", "Priya Sharma",  "CUSTOMER");
+        createUserIfMissing("customer2@neurofleetx.com","customer123", "Ananya Reddy",  "CUSTOMER");
+        createUserIfMissing("customer3@neurofleetx.com","customer123", "Meera Patel",   "CUSTOMER");
     }
 
     private void createUserIfMissing(String email, String pwd, String name, String role) {
@@ -76,7 +78,10 @@ public class SafeDataLoader implements CommandLineRunner {
     }
 
     private List<User> createDrivers(Long managerId) {
-        String[] names = {"Rajesh Kumar","Amit Singh","Priya Sharma","Vikram Patel","Suresh Reddy"};
+        String[] names = {
+            "Rajesh Kumar","Amit Singh","Priya Sharma","Vikram Patel","Suresh Reddy",
+            "Kiran Kumar","Sanjay Gupta","Deepak Verma","Ramesh Naidu","Anil Rao"
+        };
         List<User> drivers = new ArrayList<>();
         for (int i = 0; i < names.length; i++) {
             User d = new User();
@@ -139,27 +144,41 @@ public class SafeDataLoader implements CommandLineRunner {
         int totalWeight = 0;
         for (int w : hourWeights) totalWeight += w;
         List<Trip> trips = new ArrayList<>();
-        for (int i = 0; i < 300; i++) {
+        
+        // Create more trips for better data distribution
+        for (int i = 0; i < 500; i++) {
             Trip t = new Trip();
             t.setDriverId(drivers.get(rnd.nextInt(drivers.size())).getId());
             t.setVehicleId(vehicles.get(rnd.nextInt(vehicles.size())).getId());
             t.setFleetManagerId(managerId);
+            
+            // Status distribution: 75% completed, 15% active, 10% cancelled
             int sr = rnd.nextInt(100);
-            if (sr < 70) t.setStatus("COMPLETED");
+            if (sr < 75) t.setStatus("COMPLETED");
             else if (sr < 90) t.setStatus("ACTIVE");
             else t.setStatus("CANCELLED");
-            t.setFare(300.0 + rnd.nextDouble() * 1200.0);
-            int daysAgo = rnd.nextInt(100) < 80 ? rnd.nextInt(7) : 7 + rnd.nextInt(23);
+            
+            // More realistic fare distribution
+            double baseFare = 250.0 + rnd.nextDouble() * 1500.0;
+            t.setFare(Math.round(baseFare * 100.0) / 100.0);
+            
+            // Date distribution: 60% last 7 days, 40% older
+            int daysAgo = rnd.nextInt(100) < 60 ? rnd.nextInt(7) : 7 + rnd.nextInt(23);
+            
+            // Hour selection based on weights
             int pick = rnd.nextInt(totalWeight), cum = 0, hour = 0;
             for (int h = 0; h < 24; h++) { cum += hourWeights[h]; if (pick < cum) { hour = h; break; } }
+            
             LocalDateTime createdAt = LocalDateTime.now().minusDays(daysAgo).withHour(hour).withMinute(rnd.nextInt(60));
             t.setCreatedAt(createdAt);
+            
             if ("COMPLETED".equals(t.getStatus())) {
                 t.setStartTime(createdAt);
-                t.setEndTime(createdAt.plusMinutes(30 + rnd.nextInt(150)));
+                t.setEndTime(createdAt.plusMinutes(25 + rnd.nextInt(120)));
             } else if ("ACTIVE".equals(t.getStatus())) {
                 t.setStartTime(LocalDateTime.now().minusHours(rnd.nextInt(3)));
             }
+            
             double[] pu = HOTSPOTS[rnd.nextInt(HOTSPOTS.length)];
             double[] dr = HOTSPOTS[rnd.nextInt(HOTSPOTS.length)];
             t.setPickupLat(pu[0] + (rnd.nextDouble()-0.5)*0.04);
