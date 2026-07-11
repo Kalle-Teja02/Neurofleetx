@@ -3,6 +3,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminDashboard from "./components/AdminDashboard";
+import TestConnection from "./pages/TestConnection";
 import FleetManagerDashboard from "./components/FleetManagerDashboard";
 import DriverDashboard from "./components/DriverDashboard";
 import CustomerDashboard from "./components/CustomerDashboard";
@@ -42,6 +43,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/test-connection" element={<TestConnection />} />
         <Route
           path="/admin"
           element={
